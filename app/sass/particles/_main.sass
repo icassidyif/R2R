@@ -1,0 +1,71 @@
+body
+  background-color: $base-color
+  color: $font-color
+  font-family: Ubuntu, sans-serif
+  font-size: $body-text
+  line-height: $body-lh
+  &.lock
+    overflow: hidden
+h1,h2,h3,h4
+  font-family: MontserratAlternates, sans-serif
+  font-weight: 700
+  color: #FFFFFF
+  span
+    color: $accent-color
+    font-weight: inherit
+    font-size: inherit
+    line-height: inherit
+    margin: 0 10px
+h1,.text-size-1
+  font-size: $h3-size
+  line-height: $h3-lh
+  +breakpoint(sm)
+    font-size: $h2-size
+    line-height: $h2-lh
+  +breakpoint(md)
+    font-size: $h1-size
+    line-height: $h1-lh
+h2,.text-size-2
+  font-size: $h2-size
+  line-height: $h2-lh
+h3,.text-size-3
+  font-size: $h3-size
+  line-height: $h3-lh
+h4,.text-size-4
+  font-size: $h4-size
+  line-height: $h4-lh
+h5,.text-size-5
+  font-size: $h5-size
+  line-height: $h5-lh
+
+.wrapper
+  display: flex
+  flex-direction: column
+  padding: 100px 0 0 0
+  height: 100%
+.page
+  flex: 1 auto
+
+.container
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+
+
+.page-block
+  margin: 0 0 55px 0
+  position: relative
+  +breakpoint(md)
+    margin: 0 0 70px 0
+  +breakpoint(lg)
+    margin: 0 0 100px 0
+
+.self-block
+  padding: 50px 0
+  +breakpoint(md)
+    padding: 70px 0
+  +breakpoint(lg)
+    padding: 100px 0
+
+

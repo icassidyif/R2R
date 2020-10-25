@@ -1,0 +1,66 @@
+header.header
+  .header__container.container
+    .header__body
+      nav.header__menu.main-menu
+        video(autoplay muted loop)#menu-block-video
+          source(src='assets/wave-menu.mp4' type='video/mp4')
+        ul
+          li
+            a(href='/') Головна
+          li
+            a(href='/portfolio.html') Портфоліо
+          li
+            a(href='/pro-nas.html') Про нас
+          li
+            a(href='/contacts.html') Контакти
+      .header__burger#burger-menu
+      .header__social
+        a(href='#')
+          +icon('telegram-header','icon_min')
+        a(href='#')
+          +icon('messenger-header','icon_min')
+        a(href='#')
+          +icon('whatsapp-header','icon_min')
+      .header__logo
+        a(href='/')
+          +image('logo.svg')
+      .header__switcher.switcher
+        span#ua.active ua
+        span#en en
+      .header__btn
+        a(href='#modal-order').btn.btn_header.modal-trigger
+          span.btn__text Замовити
+          +icon('btn-arrow')
+          +icon('order')
+
+
+#modal-order.modal
+  a(href="#!").modal-close
+    +icon('close-btn')
+  h3 Замовити<span>послугу</span>
+  form#order-form.form
+    .form__wrapper
+      .input-field
+        select(name='service')
+          option(value="" disabled selected) Виберіть послугу
+          option(value="1") Розробка сайтів
+          option(value="2") Автоматизація бізнесу
+          option(value="3") Дизайн рішення
+          option(value="4") Просування та реклама
+      .input-field
+        input(id="name-order" name='name' type="text").validate
+        label(for="name-order") Ваше ім'я
+      .input-field
+        input(id="phone-order" name='phone' type="text").validate
+        label(for="phone-order") Контактний номер
+      .input-field
+        input(id="mail-order" name='email' type="email")
+        label(for="mail-order") Електронна пошта
+      .input-field
+        textarea(id="message-order" name='message').materialize-textarea
+        label(for="message-order") Ваше повідомлення
+    .form__captcha.captcha
+      |Captcha
+    button(type='submit').form__btn.btn
+      span.btn__text Надіслати
+      +icon('btn-send')
