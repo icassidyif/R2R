@@ -1,0 +1,150 @@
+section.section.page-block
+  .section__container.container
+    ul.section__breadcrumbs.breadcrumbs
+      li.breadcumbs__item
+        a(href='#') Головна
+      li.breadcumbs__item
+        a(href='#') Забудовники
+      li.breadcumbs__item
+        a(href='#') Ярковиця
+      li.breadcumbs__item
+        a(href='#') Містечко Липки Секція І
+    .section__title-block
+      h1.title Містечко Липки Секція І
+      ul.section__menu
+        li
+          a(href='#').menu-opener
+            +icon('settings')
+          ul.section__submenu
+            li
+              a(href='#') Редагувати інформацію
+            li
+              a(href='#') Редагувати фотогалерею
+            li
+              a(href='#') Додати звіт
+            li.line
+              a(href='#') додати підїзд
+            li
+              a(href='#') показати усім ріелторам
+            li.line
+              a(href='#') Закрити від усіх ріелторів
+            li
+              a(href='#').green активувати
+            li
+              a(href='#').red Деактивувати
+        li
+          a(href='#apartment-table')#table
+            +icon('table')
+        li
+          a(href='#').menu-opener
+            +icon('share')
+          ul.section__submenu
+            li
+              span Поділитися
+              .section__social
+                a(href='#')
+                  +icon('telegram')
+                a(href='#')
+                  +icon('viber')
+                a(href='#')
+                  +icon('whatsapp')
+                a(href='#')
+                  +icon('messenger')
+                a(href='#')
+                  +icon('instagram')
+  .section__wrapper
+    .section__container.container
+      .section__slider-block
+        .slider-section-single.section__slider#lightgallery
+          .section__slider__item
+            div.item-gallery(data-src='../img/section-lupky/01.jpeg' data-sub-html='text')
+              +image('../img/section-lupky/01.jpeg')
+          .section__slider__item
+            div.item-gallery(data-src='../img/section-lupky/02.jpeg' data-sub-html='text')
+              +image('../img/section-lupky/02.jpeg')
+          .section__slider__item
+            div.item-gallery(data-src='../img/section-lupky/03.jpeg' data-sub-html='text')
+              +image('../img/section-lupky/03.jpeg')
+          .section__slider__item
+            div.item-gallery(data-src='../img/section-lupky/04.jpeg' data-sub-html='text')
+              +image('../img/section-lupky/04.jpeg')
+          .section__slider__item
+            div.item-gallery(data-src='../img/section-lupky/05.jpeg' data-sub-html='text')
+              +image('../img/section-lupky/05.jpeg')
+          .section__slider__item
+            div.item-gallery(data-src='../img/section-lupky/01.jpeg' data-sub-html='text')
+              +image('../img/section-lupky/01.jpeg')
+          .section__slider__item
+            div.item-gallery(data-src='../img/section-lupky/02.jpeg' data-sub-html='text')
+              +image('../img/section-lupky/02.jpeg')
+
+        .slider-section-nav.section__slider
+          div(data-item='0').section__slider__item
+            +image('../img/section-lupky/01.jpeg')
+          div(data-item='1').section__slider__item
+            +image('../img/section-lupky/02.jpeg')
+          div(data-item='2').section__slider__item
+            +image('../img/section-lupky/03.jpeg')
+          div(data-item='3').section__slider__item
+            +image('../img/section-lupky/04.jpeg')
+          div(data-item='4').section__slider__item
+            +image('../img/section-lupky/05.jpeg')
+          div(data-item='5').section__slider__item
+            +image('../img/section-lupky/01.jpeg')
+          div(data-item='6').section__slider__item
+            +image('../img/section-lupky/02.jpeg')
+
+  .section__description.description-section
+    .section__container.container
+      .description-section__body
+        .description-section__tabs.tabs-section
+
+
+          <ul class="tabs">
+          <li class="tab col s3"><a href="#test1">Test 1</a></li>
+          <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
+          <li class="tab col s3 disabled"><a href="#test3">Disabled Tab</a></li>
+          <li class="tab col s3"><a href="#test4">Test 4</a></li>
+          </ul>
+          <div id="test1" class="col s12">Test 1</div>
+          <div id="test2" class="col s12">Test 2</div>
+          <div id="test3" class="col s12">Test 3</div>
+          <div id="test4" class="col s12">Test 4</div>
+
+
+
+
+
+        .description-section__realtor.realtor-section
+          .realtor-section__card.realtor-card
+            .realtor-card__photo
+              +image('../img/rieltors/01.png')
+            .realtor-card__info
+              span.realtor-card__depart Відділ продажу
+              h4.realtor-card__name Роман Сурмачевський
+              a(href='tel:+380633565234').realtor-card__phone 0669159819
+
+          .realtor-section__block#realtor-task
+            .realtor-section__icon
+              +icon('calendar')
+            .realtor-section__text
+              h4.realtor-section__title.title-4 IV квартал 2020 року
+              span.realtor-section__label Запланована здача
+          .realtor-section__block#developer
+            .realtor-section__icon
+              +icon('safety')
+            .realtor-section__text
+              h4.realtor-section__title Ярковиця
+              span.realtor-section__label Забудовник
+          .realtor-section__block#adress-building
+            .realtor-section__icon
+              +icon('locate')
+            .realtor-section__text
+              h4.realtor-section__title вул. Мазепи, 164
+              span.realtor-section__label Адреса будинку
+
+
+
+
+
+

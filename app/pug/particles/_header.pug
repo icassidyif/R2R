@@ -1,0 +1,31 @@
+header.header.page-block.login
+  .header__overlay
+  .header__container.container
+    .header__body
+      a(href='/').header__logo
+        +image('Logo.svg')
+      nav.header__menu
+        ul
+          li
+            a(href='#') Забудовники
+          li
+            a(href='#') Про нас
+          li
+            a(href='#') Житлові комплекси
+        a(href='#').header__login.button Увійти
+          +icon('login')
+        ul.header__logout
+          li
+            a(href='#').menu-opener
+              +image('rieltors/01.png')
+            ul.header__logout-submenu
+              li
+                a(href='#') Редагувати профіль
+              li
+                a(href='#') Вийти
+                  +icon('logout')
+
+      .header__search
+        |search
+      .header__burger
+        +icon('burger')

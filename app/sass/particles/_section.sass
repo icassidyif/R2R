@@ -1,0 +1,237 @@
+.section
+  &__title-block
+    display: grid
+    align-items: center
+    +breakpoint(470)
+      grid-column-gap: 30px
+      grid-template-columns: 1fr minmax(210px, auto)
+  &__menu
+    position: relative
+    justify-self: end
+    display: flex
+    margin: 0 0 30px 0
+    +breakpoint(sm)
+      margin: 0 0 55px 0
+    > li
+      margin: 0 30px 0 0
+      &:last-child
+        margin: 0
+      > a
+        padding: 12px
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1)
+        display: flex
+        align-items: center
+        position: relative
+        z-index: 2
+        &.active
+          &:before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            background-color: #ffffff
+            bottom: -10px
+            left: 0
+            z-index: 1
+          svg
+            position: relative
+            z-index: 2
+          + .section__submenu
+            display: block
+
+    a
+      color: $text-color
+      font-weight: 500
+      text-transform: uppercase
+
+  &__submenu
+    display: none
+    padding: 20px 0
+    position: absolute
+    top: 55px
+    right: 0
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1)
+    background-color: #ffffff
+    width: 290px
+    z-index: 2
+    span
+      display: block
+      padding: 10px 30px
+      text-align: right
+      text-transform: uppercase
+      font-weight: 500
+      color: $mid-grey
+
+    li.line
+      border-bottom: 1px solid #EBEBEB
+      margin: 0 0 10px 0
+      padding: 0 0 10px 0
+    a
+      display: block
+      padding: 10px 30px
+      text-align: right
+      &:hover
+        background-color: $accent
+        color: #ffffff
+    .green
+      color: $green
+    .red
+      color: #FB4949
+
+  &__social
+    display: flex
+    padding: 10px 30px
+    a
+      padding: 0
+      margin: 0 20px 0 0
+      &:last-child
+        margin: 0
+      &:hover
+        background-color: unset
+
+  &__wrapper
+    position: relative
+
+  &__slider-block
+    display: grid
+    grid-column-gap: 30px
+    grid-template-columns: 1fr
+    margin: 0 0 55px 0
+    +breakpoint(sm)
+      grid-row-gap: 30px
+    +breakpoint(md)
+      grid-template-columns: 1fr 1fr
+
+
+
+
+
+.section__slider
+  &__item
+    position: relative
+    cursor: pointer
+    z-index: 1
+    img
+      position: absolute
+      object-fit: cover
+      width: 100%
+      height: 100%
+    &.active
+      border: 5px solid $accent
+
+.slider-section-single
+  .slick-slide
+    > div
+      line-height: 0
+  .section__slider__item
+    height: 200px
+    +breakpoint(450)
+      height: 250px
+    +breakpoint(520)
+      height: 400px
+  .slick-arrow
+    position: absolute
+    width: 50px
+    height: 50px
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+    top: calc(50% - 25px)
+    transition: all .2s ease-out
+    z-index: 1
+  .slick-prev
+    left: 15px
+    background: url("../img/icons-sprite/icons.svg#prev-slider") center / 27px no-repeat #ffff
+  .slick-next
+    right: 15px
+    background: url("../img/icons-sprite/icons.svg#next-slider") center / 27px no-repeat #ffff
+
+.slider-section-nav
+  display: none
+  visibility: hidden
+  margin: 0 -15px
+  .slick-slide
+    padding: 0 15px
+    margin: -15px 0
+    > div
+      padding: 15px 0
+      line-height: 0
+  .section__slider__item
+    height: 150px
+    +breakpoint(md)
+      height: 185px
+  +breakpoint(sm)
+    display: block
+    visibility: visible
+
+
+
+
+.description-section
+  &__body
+    display: grid
+    grid-template: 1fr 1fr / 1fr
+    +breakpoint(xl)
+      grid-template: 1fr / 1fr minmax(320px, 370px)
+  &__tabs
+  &__realtor
+    order: -1
+    padding: 0
+    +breakpoint(xl)
+      padding: 0 0 0 30px
+      order: unset
+
+.tabs-section
+  //background-color: #ebebeb
+  border-style: solid
+  border-width: 1px 6px 1px 1px
+  border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+
+
+.realtor-section
+  &__block
+    display: grid
+    grid-template-columns: 25px 1fr
+    grid-column-gap: 20px
+    margin: 0 0 30px 0
+  &__title
+    margin: 0 0 7px 0
+  &__label
+    color: $dark-grey
+    font-weight: 400
+
+
+.realtor-card
+  position: relative
+  display: grid
+  grid-template: minmax(87px, min-content) / 100px 1fr
+  grid-column-gap: 20px
+  margin: 0 0 30px 0
+  border-style: solid
+  border-width: 6px 6px 6px 6px
+  border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+
+  &__photo
+    align-self: center
+    width: 100px
+    height: 100px
+    margin: -6px 0 -6px -6px
+    img
+      max-width: 100%
+  &__info
+    align-self: center
+  &__depart
+    display: inline-block
+    color: $mid-grey
+    font-weight: 500
+    font-size: 10px
+    line-height: 12px
+    text-transform: uppercase
+    margin: 0 0 4px 0
+  &__name,
+  &__phone
+    font-size: 18px
+    line-height: 21px
+    font-weight: 700
+  &__name
+    margin: 0 0 8px 0
+  &__phone
+    color: $accent

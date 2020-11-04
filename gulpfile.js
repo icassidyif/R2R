@@ -22,6 +22,7 @@ const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
 const realFavicon = require ('gulp-real-favicon');
 const fs = require('fs');
+const cheerio = require('gulp-cheerio');
 // File where the favicon markups are stored
 const FAVICON_DATA_FILE = 'faviconData.json';
 
@@ -89,7 +90,7 @@ function browserSyncSet() {
     server: {
       baseDir: `./${projectFolder}/`
     },
-    port: 4000,
+    port: 5000,
     notify: false
   })
 }
@@ -172,6 +173,14 @@ function assetsCopy() {
 }
 function iconSprite() {
   return src(path.app.icons)
+    .pipe(cheerio({
+      run: function ($) {
+        //$('[fill]').removeAttr('fill');
+        // $('[stroke]').removeAttr('stroke');
+        // $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
     .pipe(svgSprite({
       mode: {
         stack: {

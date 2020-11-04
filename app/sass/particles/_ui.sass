@@ -1,0 +1,70 @@
+.title
+  font-size: 22px
+  line-height: 26px
+  font-weight: 700
+  margin: 0 0 30px 0
+  position: relative
+  padding: 0 0 0 31px
+  +breakpoint(sm)
+    font-size: 34px
+    line-height: 40px
+    padding: 0 0 0 42px
+    margin: 0 0 55px 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 3px
+    width: 19px
+    height: 19px
+    background: url("../img/icons-sprite/icons.svg#title-icon-blue")
+    +breakpoint(sm)
+      width: 27px
+      height: 27px
+      top: 5px
+
+  &_2
+
+
+.title-4
+  font-size: 18px
+  line-height: 21px
+
+.breadcrumbs
+  display: flex
+  flex-wrap: wrap
+  margin: 0 0 25px 0
+  +breakpoint(sm)
+    margin: 0 0 30px 0
+  li
+    &:after
+      content: '─'
+      margin: 0 7px
+    &:last-child
+      &:after
+        content: ''
+      a
+        color: $text-color
+        font-weight: 700
+  a
+    color: $mid-grey
+
+
+.button
+  display: flex
+  align-items: center
+  padding: 9px 14px
+  height: min-content!important
+
+  border-style: solid
+  border-width: 6px 6px 6px 6px
+  border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+  svg
+    margin: 0 0 0 10px
+    transition: all .2s ease-out
+  +breakpoint(lg)
+    &:hover
+      svg
+        transform: translateX(2px)
+  &_2
+
