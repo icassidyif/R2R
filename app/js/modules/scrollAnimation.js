@@ -1,4 +1,4 @@
-import * as animIcons from './bodymovin';
+
 // Animation scroll-----
 // .anim-item
 // .anim-no-hide

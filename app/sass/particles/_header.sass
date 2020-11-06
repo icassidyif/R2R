@@ -14,11 +14,17 @@
         text-align: right
         border-bottom: 2px solid #EBEBEB
         margin: 0 0 20px 0
+        > li
+          a
+            img
+              border: none
+              filter: none
         .menu-opener
           margin: 0 0 20px 0
         .header__logout-submenu
           display: flex
           margin: 0 0 20px 0
+
     .header__body
       grid-template-columns: minmax(130px, auto) 1fr auto
     .header__login
@@ -26,15 +32,23 @@
     .header__logout
       display: block
       position: relative
+
       .header__logout-submenu
         display: none
         li:last-child
           a
+            position: relative
             display: flex
             align-items: center
             color: $text-color-blue
-            svg
+            &:after
+              content: ''
               margin: -2px 0 0 10px
+              width: 15px
+              height: 15px
+              background: url("../img/icons-sprite/icons.svg#logout")
+
+
 
       a
         &.active
@@ -46,17 +60,19 @@
             position: absolute
             right: 0
             z-index: 2
+
             a
+              justify-content: flex-end
               padding: 10px 30px
               &:hover
                 background-color: $accent
                 color: #ffffff
-                svg
-                  fill: #ffffff
+                &:after
+                  background: url("../img/icons-sprite/icons.svg#logout-white")
 
 
     .header__search
-      display: block
+      display: flex!important
 
   &.small
     .header__body
@@ -90,6 +106,10 @@
         right: 0
     .header__search
       justify-self: end
+      span
+        display: none!important
+      svg
+        margin: 0!important
     .header__burger
       justify-self: end
       display: flex
@@ -103,9 +123,10 @@
       order: -1
       padding: 0 0 20px 0
       margin: 0 0 20px 0
-    .header__logout
 
 
+  &__search
+    display: none!important
 
   &__overlay
     position: fixed
@@ -186,7 +207,6 @@
         display: inline-block
     .header__logout-submenu
       display: none
-
 
     img
       max-width: 50px

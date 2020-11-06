@@ -12,7 +12,8 @@ header.header.page-block.login
             a(href='#') Про нас
           li
             a(href='#') Житлові комплекси
-        a(href='#').header__login.button Увійти
+        a(href='#').header__login.button
+          span Увійти
           +icon('login')
         ul.header__logout
           li
@@ -23,9 +24,9 @@ header.header.page-block.login
                 a(href='#') Редагувати профіль
               li
                 a(href='#') Вийти
-                  +icon('logout')
 
-      .header__search
-        |search
+      a(href='#').header__search.button
+        span Пошук
+        +icon('search')
       .header__burger
         +icon('burger')

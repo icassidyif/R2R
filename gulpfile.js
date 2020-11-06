@@ -263,6 +263,8 @@ function ttfToWoffConverter() {
   return src(path.app.fonts)
     .pipe(ttf2woff())
     .pipe(dest(path.build.fonts))
+    .pipe(src(path.app.fonts))
+    .pipe(dest(path.build.fonts))
     .pipe(browserSync.stream());
 }
 function otfToTtf() {

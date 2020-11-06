@@ -1,9 +1,8 @@
 import "./modules/function";
-// import "./modules/bodymovin";
 import "./modules/slick";
 import "./modules/gallery";
 // import './modules/scrollAnimation';
-// import './modules/materialize';
+import './modules/materialize';
 // import './modules/validate';
 
 
@@ -72,24 +71,42 @@ window.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('active');
     })
   })
+  // EndSub menu
 
-  // sectionMenuLinks.forEach(link => {
-  //   link.addEventListener('click', e => {
-  //     if(link.getAttribute('href') === '#') {
-  //       e.stopPropagation();
-  //       e.preventDefault();
-  //       link.classList.toggle('active');
-  //       sectionMenuLinks.forEach(link2 => {
-  //         if(link !== link2) {
-  //           link2.classList.remove('active');
-  //         }
-  //       })
-  //       logoutMenuLink.classList.remove('active');
-  //     }
-  //   })
-  // })
+  // collapse
+  const collapseBodies = document.querySelectorAll('.tabs-section__content');
+  collapseBodies.forEach(body => {
+    let bodyHeight;
+    if (body.style.display === 'none') {
+      body.style.display = '';
+      bodyHeight = body.clientHeight;
+      body.style.display = 'none';
+    } else  {
+      bodyHeight = body.clientHeight;
+    }
+    if (bodyHeight > 300) {
+      body.classList.add('extended');
+      body.classList.toggle('collapse');
+      if(body.classList.contains('collapse')) {
+        body.style.height = 300 + 'px';
+      } else  {
+        body.style.height = bodyHeight + 60 + 'px';
+      }
+    }
+    // listener on btns
+    const btn = body.querySelector('.tabs-section__btn');
+    btn.addEventListener('click', evt => {
+      body.classList.toggle('collapse');
+      if(body.classList.contains('collapse')) {
+        body.style.height = 300 + 'px';
+      } else  {
+        body.style.height = bodyHeight + 60 + 'px';
+      }
 
-  // End Section menu
+    })
+    // listener on btns
+  })
+  // END collapse
 })
 
 
