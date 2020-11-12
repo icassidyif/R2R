@@ -11,8 +11,8 @@ section.section.page-block
         a(href='#') Містечко Липки Секція І
     .section__title-block
       h1.title Містечко Липки Секція І
-      ul.section__menu
-        li
+      ul.section__menu.visible
+        li.visible
           a(href='#').menu-opener
             +icon('settings')
           ul.section__submenu
@@ -32,10 +32,10 @@ section.section.page-block
               a(href='#').green активувати
             li
               a(href='#').red Деактивувати
-        li
+        li.visible
           a(href='#apartment-table')#table
             +icon('table')
-        li
+        li.visible
           a(href='#').menu-opener
             +icon('share')
           ul.section__submenu
@@ -105,7 +105,7 @@ section.section.page-block
               li.tab
                 a(href='#options') Характеристики
               li.tab
-                a(href='#course') Хід будівництва
+                a(href='#course').tab-slider Хід будівництва
 
           #about.tabs-section__content
             p Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально.  Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально.
@@ -157,19 +157,58 @@ section.section.page-block
                   li
                     span Ціна за кв.м. (від - до):
                     span 13000
-
             .tabs-section__btn
               +icon('collapse')
 
 
 
-          #course.tabs-section__content.admin-role
+          #course.tabs-section__content
+            .course-block
+              .course-block__header
+                .course-block__info
+                  span.course-block__label Звітність за
+                  span.course-block__date 23.07.2020
+                .course-block__controls.visible
+                  a(href='#').course-block__btn.button-2.visible Редагувати
+                    +icon('edit')
+                  a(href='#').course-block__btn.button-2.visible Редагувати фото
+                    +icon('edit-photo')
+              .course-block__content
+                .course-block__slider.course-block-slider
+                  .course-block-slider__item
+                    div.item-gallery(data-src='https://www.youtube.com/watch?v=pU0RAQWM4SI' data-sub-html='text' )
+                      iframe(type="text/html" width="100%" height='100%' autoplay=0 src="https://www.youtube.com/embed/pU0RAQWM4SI")
+                  .course-block-slider__item
+                    div.item-gallery(data-src='../img/section-lupky/04.jpeg' data-sub-html='text')
+                      +image('../img/section-lupky/04.jpeg')
+                  .course-block-slider__item
+                    div.item-gallery(data-src='../img/section-lupky/02.jpeg' data-sub-html='text')
+                      +image('../img/section-lupky/02.jpeg')
 
 
+            .course-block
+              .course-block__header
+                .course-block__info
+                  span.course-block__label Звітність за
+                  span.course-block__date 23.07.2020
+                .course-block__controls.visible
+                  a(href='#').course-block__btn.button-2.visible Редагувати
+                    +icon('edit')
+                  a(href='#').course-block__btn.button-2.visible Редагувати фото
+                    +icon('edit-photo')
+              .course-block__content
+                .course-block__slider.course-block-slider
+                  .course-block-slider__item
+                    div.item-gallery(data-src='../img/section-lupky/03.jpeg' data-sub-html='text')
+                      +image('../img/section-lupky/03.jpeg')
+                  .course-block-slider__item
+                    div.item-gallery(data-src='../img/section-lupky/04.jpeg' data-sub-html='text')
+                      +image('../img/section-lupky/04.jpeg')
+                  .course-block-slider__item
+                    div.item-gallery(data-src='../img/section-lupky/02.jpeg' data-sub-html='text')
+                      +image('../img/section-lupky/02.jpeg')
             .tabs-section__btn
               +icon('collapse')
-
-
 
 
 
@@ -204,6 +243,235 @@ section.section.page-block
 
 
 
+  .section__table.table-block
+    .section__container.container
+      h2.title Оберіть квартиру
+      .table-block__filter.filter-table
+        ul.input-pick.filter-table__currency
+          li#uah uah
+          li#usd.active usd
+          li#eur eur
+        .filter-table__info.filter-table__update
+          span.filter-table__label Останнє оновлення
+          span.filter-table__value 23.07.2020
+        .filter-table__info.filter-table__free
+          span.filter-table__label Вільні квартири
+          span.filter-table__value 35
+        ul.input-pick.filter-table__rooms
+          li 1К
+          li.active 2К
+          li 3К
+          li 4К+
 
 
+      .table-block__table.table
+        .table__wrapper
+          .table__header(style='width:1475px')
+            .table__cell.table__menu
+              +icon('table-menu')
+            .table__cell(style='grid-column:span 4')
+              span під'їзд 1
+            .table__cell(style='grid-column:span 4')
+              span під'їзд 2
+            .table__cell(style='grid-column:span 4')
+              span під'їзд 3
+            .table__cell
+              span 2к
+            .table__cell
+              span 1к
+            .table__cell
+              span 2к
+            .table__cell
+              span 2к
+            .table__cell
+              span 2к
+            .table__cell
+              span  1к
+            .table__cell
+              span 2к
+            .table__cell
+              span 2к
+            .table__cell
+              span 2к
+            .table__cell
+              span 1к
+            .table__cell
+              span 2к
+            .table__cell
+              span 2к
+
+          .table__body(style='width:1475px; height:280px')
+            .table__cell.table__header-row
+              span Поверх 9
+            .table__cell
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell.booked
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+            .table__cell
+            .table__cell.booked
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell.active.inactive
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+            .table__cell
+            .table__cell
+            .table__cell.soled
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell.table__header-row
+              span Поверх 8
+            .table__cell
+            .table__cell.soled
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell
+            .table__cell.booked.inactive
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell
+            .table__cell
+            .table__cell.active.inactive
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell
+            .table__cell.soled
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell.table__header-row
+              span Поверх 7
+            .table__cell.soled
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell
+            .table__cell.soled
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell.booked
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+            .table__cell
+            .table__cell
+            .table__cell.table__header-row
+              span Поверх 6
+            .table__cell
+            .table__cell.booked
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell.soled
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell
+            .table__cell
+            .table__cell
+            .table__cell.booked
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell
+            .table__cell.table__header-row
+              span Поверх 5
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+            .table__cell
+            .table__cell
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Переуступка
+            .table__cell
+            .table__cell
+            .table__cell
+            .table__cell.booked
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell.booked
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
+              span.table__status Завдаток
+            .table__cell
+            .table__cell
+            .table__cell.active
+              span.table__square 64.50 м2
+              span.table__price 837 000 $
+              span.table__type Дворівнева
 

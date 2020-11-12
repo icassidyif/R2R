@@ -1,11 +1,13 @@
 import "./modules/function";
 import "./modules/slick";
 import "./modules/gallery";
-// import './modules/scrollAnimation';
 import './modules/materialize';
+// import './modules/scrollAnimation';
+
 // import './modules/validate';
-
-
+import './modules/table';
+import $ from "jquery";
+import 'slick-carousel';
 
 
 
@@ -15,7 +17,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const logo = document.querySelector('.header__logo');
   const overlay = document.querySelector('.header__overlay');
   const burger = document.querySelector('.header__burger');
-  if(logo.clientWidth + menu.clientWidth + 30 > window.innerWidth ) {
+  const search = document.querySelector('.header__search');
+  console.log(logo.clientWidth + menu.clientWidth + search.clientWidth + 60);
+  if(logo.clientWidth + menu.clientWidth + search.clientWidth + 60 > window.innerWidth ) {
     const header = document.querySelector('.header');
     header.classList.add('small');
   }
@@ -74,39 +78,46 @@ window.addEventListener('DOMContentLoaded', () => {
   // EndSub menu
 
   // collapse
-  const collapseBodies = document.querySelectorAll('.tabs-section__content');
-  collapseBodies.forEach(body => {
-    let bodyHeight;
-    if (body.style.display === 'none') {
-      body.style.display = '';
-      bodyHeight = body.clientHeight;
-      body.style.display = 'none';
-    } else  {
-      bodyHeight = body.clientHeight;
-    }
-    if (bodyHeight > 300) {
-      body.classList.add('extended');
-      body.classList.toggle('collapse');
-      if(body.classList.contains('collapse')) {
-        body.style.height = 300 + 'px';
-      } else  {
-        body.style.height = bodyHeight + 60 + 'px';
-      }
-    }
-    // listener on btns
-    const btn = body.querySelector('.tabs-section__btn');
-    btn.addEventListener('click', evt => {
-      body.classList.toggle('collapse');
-      if(body.classList.contains('collapse')) {
-        body.style.height = 300 + 'px';
-      } else  {
-        body.style.height = bodyHeight + 60 + 'px';
-      }
-
+  if($('.course-block-slider').length > 1) {
+    let lastSlider = $('.course-block-slider')[$('.course-block-slider').length - 1];
+    lastSlider = $(lastSlider);
+    lastSlider.on('init', (event, slick) => {
+      const collapseBodies = document.querySelectorAll('.tabs-section__content');
+      collapseBodies.forEach(body => {
+        let bodyHeight;
+        if (body.style.display === 'none') {
+          body.style.display = '';
+          bodyHeight = body.clientHeight;
+          body.style.display = 'none';
+        } else  {
+          bodyHeight = body.clientHeight;
+        }
+        if (bodyHeight > 330) {
+          body.classList.add('extended');
+          body.classList.toggle('collapse');
+          if(body.classList.contains('collapse')) {
+            body.style.height = 330 + 'px';
+          } else  {
+            body.style.height = bodyHeight + 60 + 'px';
+          }
+        }
+        // listener on btns
+        const btn = body.querySelector('.tabs-section__btn');
+        btn.addEventListener('click', evt => {
+          body.classList.toggle('collapse');
+          if(body.classList.contains('collapse')) {
+            body.style.height = 330 + 'px';
+          } else  {
+            body.style.height = bodyHeight + 60 + 'px';
+          }
+        })
+        // listener on btns
+      })
+      // END collapse
     })
-    // listener on btns
-  })
-  // END collapse
+  }
+  //
+
 })
 
 

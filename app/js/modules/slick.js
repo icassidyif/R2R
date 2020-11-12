@@ -83,54 +83,57 @@ $(document).ready(function () {
 
 
 
-  // $('.slider-section').slick({
-  //   arrows: false,
-  //   dots: false,
-  //   rows: 2,
-  //   adaptiveHeight: false,
-  //   //slidesPerRow: 3,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   speed: 500,
-  //   easing: 'ease',
-  //   infinite: true,
-  //   initialSlide: 1,
-  //   autoplay: false,
-  //   pauseOnFocus: true,
-  //   pauseOnHover: true,
-  //   draggable: true,
-  //   swipe: true,
-  //   touchThreshold: 5,
-  //   touchMove: true,
-  //   waitForAnimate: true,
-  //   centerMode: false,
-  //   variableWidth: true,
-  //   lazyLoad: 'ondemand',
-  //   mobileFirst: true,
-  //   accessibility: true,
-  //   // responsive: [
-  //   //   {
-  //   //     breakpoint: 576,
-  //   //     settings: {
-  //   //       settings: "unslick",
-  //   //       slidesToShow: 2,
-  //   //       rows: 2,
-  //   //       arrows: true,
-  //   //     }
-  //   //   },
-  //   //   {
-  //   //     breakpoint: 768,
-  //   //     settings: {
-  //   //       settings: "unslick",
-  //   //       slidesToShow: 3,
-  //   //       rows: 2,
-  //   //       arrows: true,
-  //   //     }
-  //   //   }
-  //   // ]
-  // });
+
+  $('.course-block-slider').slick({
+    arrows: true,
+    dots: false,
+    rows: 1,
+    adaptiveHeight: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    easing: 'ease',
+    infinite: true,
+    initialSlide: 0,
+    autoplay: false,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    draggable: true,
+    swipe: true,
+    touchThreshold: 5,
+    touchMove: true,
+    waitForAnimate: true,
+    centerMode: false,
+    variableWidth: false,
+    lazyLoad: 'ondemand',
+    mobileFirst: true,
+    accessibility: true,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          settings: "unslick",
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          settings: "unslick",
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          settings: "unslick",
+          slidesToShow: 2,
+        }
+      }
+    ]
+  });
+
 
 
 
 })
-
