@@ -3,8 +3,21 @@ footer.footer
     .footer__body
       .footer__header
         .footer__logo
-          +image('../img/Logo-footer.svg')
-        nav.footer__menu
-          ul
-            li
-      .footer__copyrught
+          a(href='/')
+            +image('../img/Logo-footer.svg')
+        ul.footer__menu
+          li
+            a(href='#') Забудівники
+          li
+            a(href='#') Житлові комплекси
+          li
+            a(href='#') РЕЄСТРАЦІЯ
+
+        .footer__contacts
+          span ГАРЯЧА ЛІНІЯ
+          a(href='tel:+380666666666') +3 8067 575 75 77
+      .footer__copyright
+        span.footer__year © 2008-2020 R2R.ua
+        .footer__dev
+          span розроблено
+          a(href='https://dwave.space/' target="blank") D-wave studio

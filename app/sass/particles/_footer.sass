@@ -1,5 +1,71 @@
 .footer
   background-color: #4F596C
+  &__header
+    padding: 35px 0 0 0
+    border-style: solid
+    border-width: 0px 0px 6px 0px
+    border-image: url('../img/Rectangle-white.svg') 6 6 6 6 round round
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  &__logo
+    flex: 0 0 125px
+    margin: 0 75px 30px 0
+    img
+      width: 100%
+  &__menu
+    flex: 1 1
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin: 0 0 30px 0
+    li
+      margin: 0 30px 0 0
+      &:last-child
+        margin: 0
+    a
+      color: #ffffff
+      text-transform: uppercase
+      font-weight: 500
+      white-space: nowrap
+    +breakpoint(md)
+      margin: 0 30px 30px 0
+  &__contacts
+    display: flex
+    flex-wrap: wrap
+    flex: 0 0 270px
+    margin: 0 0 30px 0
+    span
+      margin: 0 20px 0 0
+      color: #A7ACB5
+      white-space: nowrap
+    a
+      color: #ffffff
+      white-space: nowrap
+    +breakpoint(md)
+      padding: 15px 0 15px 34px
+      border-style: solid
+      border-width: 0px 0px 0px 6px
+      border-image: url('../img/Rectangle-white.svg') 6 6 6 6 round round
+
+
   &__body
     display: flex
     flex-direction: column
+
+  &__copyright
+    text-transform: uppercase
+    padding: 25px 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    color: #8C939F
+  &__year
+    margin: 0 30px 0 0
+  &__dev
+    span
+      margin: 0 7px 0 0
+    a
+      color: #CACDD3
+
+
