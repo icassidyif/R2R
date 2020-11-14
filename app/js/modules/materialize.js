@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   })
 
+//  modals
+  const modals = document.querySelectorAll('.modal');
+  const modalsInstances = M.Modal.init(modals, {
+    startingTop: '1%',
+    endingTop: '3%'
+  });
+//  modals
 
 
 });

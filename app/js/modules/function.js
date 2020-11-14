@@ -32,3 +32,17 @@ ibg(isWebPi); // запуск перевірки IBG. Функція визна�
 // end footer copyright
 
 
+
+// Work with form data
+export function searchData(data) {
+  console.log('Method searchData()');
+  console.log(data);
+}
+
+export function bookingData(data) {
+  console.log('Method bookingData()');
+  console.log(data);
+}
+// Work with form data
+
+

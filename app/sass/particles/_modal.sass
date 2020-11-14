@@ -1,0 +1,64 @@
+.modal
+  padding: 50px 0
+  background: #ffffff
+  display: none
+  position: fixed
+  left: 0
+  right: 0
+  max-height: 95vh
+  width: 100%
+  max-width: 785px
+  margin: auto
+  overflow-y: scroll
+  border-radius: 2px
+  will-change: top, opacity
+  &:focus
+    outline: none
+  +breakpoint(md)
+    padding: 70px 0
+
+  &_small
+    max-width: 417px
+    .modal__container
+      max-width: 307px!important
+
+
+  &__container
+    max-width: 675px!important
+
+
+
+
+
+.modal-close
+  position: absolute
+  top: 20px
+  right: 20px
+  display: flex
+  justify-content: flex-end
+  margin: 0 0 10px 0
+  svg
+    width: 25px
+    height: 25px
+    transition: all .2s ease-out
+  &:hover
+    svg
+      transform: scale(1.1)
+
+.modal-overlay
+  position: fixed
+  z-index: 999
+  top: -25%
+  left: 0
+  bottom: 0
+  right: 0
+  height: 125%
+  width: 100%
+  background: #000
+  display: none
+  will-change: opacity
+
+
+
+.z-depth-4, .modal
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3)

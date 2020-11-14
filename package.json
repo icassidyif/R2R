@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "core-js": "^3.6.5",
     "gulp-cheerio": "^1.0.0",
     "jquery": "^3.5.1",

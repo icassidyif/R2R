@@ -5,15 +5,124 @@
 
 .input-pick
   display: flex
-  li
-    padding: 8px 16px
+  > input
+    position: absolute
+    z-index: -1
+    opacity: 0
+    &:checked
+     + span
+        background-color: $light-blue
+        color: $text-color
+  > span
+    font-size: 14px
+    line-height: 16px
+    font-weight: 400
+    padding: 12px 15px
     border: 1px solid $dark-blue
     color: $dark-blue
     margin: 0 -1px 0 0
     text-transform: uppercase
     cursor: pointer
-    &:last-child
-      margin: 0
-    &.active
-      color: $text-color
-      background-color: $light-blue
+
+
+
+input.input
+  background-color: $light-blue
+  border-bottom: 1px solid #A1AFC5
+  width: 100%
+  padding: 15px
+  &::placeholder
+    color: $dark-blue
+  &:focus
+    border-bottom: 1px solid #243238
+  &.error
+    border-bottom: 1px solid #EB5757
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+input.input[type='number']
+  -moz-appearance: textfield
+
+select
+  background-color: $light-blue
+  appearance: none
+  background-image: url("../img/icons-sprite/icons.svg#select-arrow")
+  background-repeat: no-repeat
+  background-position-x: calc(100% - 10px)
+  background-position-y: 50%
+  background-size: 11px
+  padding: 15px 30px 15px 15px
+  border-bottom: 1px solid #A1AFC5
+
+
+select#price-currency
+  padding: 15px 30px 15px 10px
+  border: 1px solid #A1AFC5
+  background-color: transparent
+
+
+
+textarea
+  background-color: $light-blue
+  font-family: Roboto, sans-serif
+  font-size: 14px
+  line-height: 16px
+  font-weight: 400
+  padding: 10px 15px
+  width: 100%!important
+  height: 78px!important
+  border-bottom: 1px solid #A1AFC5
+  resize: none
+  &:focus
+    border-bottom: 1px solid #243238
+  &.error
+    border-bottom: 1px solid #EB5757
+
+
+
+label.label
+  > span
+    display: block
+    color: $dark-blue
+    font-size: 12px
+    line-height: 14px
+    margin: 0 0 7px 0
+
+  span.details
+    color: $text-color
+    font-size: 10px
+    line-height: 12px
+    margin: 7px 0 0 0
+
+.input-checkbox
+  cursor: pointer
+  line-height: 16px
+  margin: 0 0 12px 0
+  > input
+    position: absolute
+    z-index: -1
+    opacity: 0
+    &:checked
+      + span
+        &:before
+          background-color: $dark-blue
+          background-image: url("../img/icons-sprite/icons.svg#checkbox")
+  > span
+    display: inline-flex
+    align-items: flex-start
+    user-select: none
+    &:before
+      content: ''
+      display: inline-block
+      width: 15px
+      height: 15px
+      flex-shrink: 0
+      flex-grow: 0
+      border: 1px solid #A1AFC5
+      margin: 0 10px 0 0
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 70% 70%
+

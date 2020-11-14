@@ -2,12 +2,18 @@ import "./modules/function";
 import "./modules/slick";
 import "./modules/gallery";
 import './modules/materialize';
+
 // import './modules/scrollAnimation';
 
-// import './modules/validate';
+
 import './modules/table';
+import './modules/form';
 import $ from "jquery";
 import 'slick-carousel';
+import './modules/validate';
+
+import './modules/datepicker';
+
 
 
 
@@ -18,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const overlay = document.querySelector('.header__overlay');
   const burger = document.querySelector('.header__burger');
   const search = document.querySelector('.header__search');
-  console.log(logo.clientWidth + menu.clientWidth + search.clientWidth + 60);
+  //console.log(logo.clientWidth + menu.clientWidth + search.clientWidth + 60);
   if(logo.clientWidth + menu.clientWidth + search.clientWidth + 60 > window.innerWidth ) {
     const header = document.querySelector('.header');
     header.classList.add('small');
@@ -118,6 +124,24 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   //
 
+  // DatePicker
+  $.fn.datepicker.language['ua'] =  {
+    days: ['неділя', 'понеділок', 'вівторок', 'среда', 'четвер', 'п\'ятница', 'субота'],
+    daysShort: ['нд', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
+    daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    months: ['Лютий', 'Січень', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
+    monthsShort: ['Лют', 'Січ', 'Бер', 'Квіт', 'Трав', 'Черв', 'Лип', 'Серп', 'Вер', 'Жовт', 'Лист', 'Груд'],
+    today: 'Сьогодні',
+    clear: 'Очистити',
+    dateFormat: 'dd.mm.yyyy',
+    timeFormat: 'hh:ii',
+    firstDay: 1
+  };
+  $('.datepicker-here').datepicker({
+    autoClose: true,
+    language: 'ua'
+  })
+  // End DatePicker
 })
 
 

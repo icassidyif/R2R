@@ -17,6 +17,8 @@ section.section.page-block
             +icon('settings')
           ul.section__submenu
             li
+              a(href='#booking-room').modal-trigger Забронювати галіму квартиру
+            li
               a(href='#') Редагувати інформацію
             li
               a(href='#') Редагувати фотогалерею
@@ -247,21 +249,35 @@ section.section.page-block
     .section__container.container
       h2.title Оберіть квартиру
       .table-block__filter.filter-table
-        ul.input-pick.filter-table__currency
-          li#uah uah
-          li#usd.active usd
-          li#eur eur
+        .filter-table__currency
+          label.input-pick
+            input(type='radio' name='currency' value='UAH')
+            span uah
+          label.input-pick
+            input(type='radio' name='currency' checked value='USD')
+            span usd
+          label.input-pick
+            input(type='radio' name='currency' value='EUR')
+            span eur
         .filter-table__info.filter-table__update
           span.filter-table__label Останнє оновлення
           span.filter-table__value 23.07.2020
         .filter-table__info.filter-table__free
           span.filter-table__label Вільні квартири
           span.filter-table__value 35
-        ul.input-pick.filter-table__rooms
-          li 1К
-          li.active 2К
-          li 3К
-          li 4К+
+        .filter-table__rooms
+          label.input-pick
+            input(type='checkbox' checked name='room' value='1К')
+            span 1К
+          label.input-pick
+            input(type='checkbox' name='room' value='2К')
+            span 2К
+          label.input-pick
+            input(type='checkbox' name='room' value='3К')
+            span 3К
+          label.input-pick
+            input(type='checkbox' name='room' value='4К+')
+            span 4К+
 
 
       .table-block__table.table
@@ -481,4 +497,37 @@ section.section.page-block
               span.table__square 64.50 м2
               span.table__price 837 000 $
               span.table__type Дворівнева
+
+
+
+
+
+#booking-room.booking-room.modal.modal_small
+  a(href='#!').modal-close
+    +icon('close-modal')
+  .modal__container.container
+    h2.title.title_3 Забронювати квартиру
+    form#booking-form
+      .booking-room__wrapper
+        p
+          label.label
+            span Деталі бронювання
+            textarea(name='detailsBooking')
+        p
+          label.label
+            span Ім’я та прізвище клієнта
+            input(type='text' name='clientNameBooking').input
+        p
+          label.label
+            span Номер телефону клієнта
+            input(type='text' name='clientPhoneBooking' placeholder='+38 (0--) ').input.input-phone
+            span.details Код мобліьного оператора та номер без 3-х останніх цифр
+        p
+          label.label
+            span До коли (макс. 2 дні)
+            input(type='text' name='deadLineBooking').input.datepicker-here
+
+      button(type='submit').button.booking-room__btn
+        span Забронювати
+
 

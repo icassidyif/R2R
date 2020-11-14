@@ -1,0 +1,73 @@
+.search
+  &__options
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+  &__option
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin: 0 30px 10px 0
+    &:last-child
+      margin: 0 0 10px 0
+    span
+      font-size: 18px
+      line-height: 21px
+      font-weight: 500
+      margin: 0 15px 20px 0
+    input
+      max-width: 55px
+      margin: 0 15px 20px 0
+      &:last-child
+        margin: 0 0 20px 0
+    .input-pick
+      margin: 0 0 20px 0
+    select
+      margin: 0 0 20px 0
+  &__price
+    .input
+      max-width: 100px
+
+  &__control
+    display: flex
+
+
+
+
+.block-search
+  margin: 0 0 30px 0
+  &__header
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin: 0 0 5px 0
+  &__title
+    margin: 0 20px 20px 0
+  &__control
+    margin: 0 0 20px 0
+    .link
+      margin: 0 12px 0 0
+      &:last-child
+        margin: 0
+
+
+  &__body
+    display: grid
+    grid-template-columns: 1fr
+    grid-column-gap: 15px
+    grid-template-rows: repeat(18, auto)
+
+    max-height: 150px
+    overflow-y: scroll
+    +breakpoint(sm)
+      grid-template-columns: 1fr 1fr
+    +breakpoint(md)
+      grid-template-columns: 1fr 1fr 1fr
+
+    .input-checkbox
+      position: relative
+
+
+
+  &__btn
+    display: inline-flex!important

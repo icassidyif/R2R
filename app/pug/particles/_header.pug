@@ -25,8 +25,188 @@ header.header.page-block.login
               li
                 a(href='#') Вийти
 
-      a(href='#').header__search.button
+      a(href='#search-block').header__search.button.modal-trigger
         span Пошук
         +icon('search')
       .header__burger
         +icon('burger')
+
+
+
+
+#search-block.search.modal
+  a(href='#!').modal-close
+    +icon('close-modal')
+  .modal__container.container
+    h2.search__title.title.title_2 Пошук по квартирам
+    form#search-form
+      .search__options
+        .search__option.search__room
+          span Кімнат:
+          label.input-pick
+            input(type='checkbox' checked name='room' value='1К')
+            span 1К
+          label.input-pick
+            input(type='checkbox' name='room' value='2К')
+            span 2К
+          label.input-pick
+            input(type='checkbox' name='room' value='3К')
+            span 3К
+          label.input-pick
+            input(type='checkbox' name='room' value='4К+')
+            span 4К+
+
+
+        .search__option.search__floor
+          span Поверх:
+          input(type='number' name='floorFrom' placeholder='від')#floor-from.input
+          input(type='number' name='floorTo' placeholder='до')#floor-to.input
+        .search__option.search__square
+          span Площа:
+          input(type='number' name='squareFrom' placeholder='від')#square-from.input
+          input(type='number' name='squareTo' placeholder='до')#square-to.input
+        .search__option.search__price
+          span Ціна:
+          input(type='number' name='priceFrom' placeholder='від')#price-from.input
+          input(type='number' name='priceTo' placeholder='до')#price-to.input
+          select(name='currencyForm')#price-currency
+            option UAH
+            option USD
+            option EUR
+        .search__option.search__terms
+          span Термін здачі:
+          select(name='termsForm')#terms
+            option до 2021 IV квартал
+            option до 2020 II квартал
+            option до 2022 V квартал
+
+      .search__block.block-search
+        .block-search__header
+          h4.block-search__title.title-4 Житловий комплекс
+          .block-search__control
+            a(href='#').select-all.link.green Обрати всі
+            a(href='#').reset-all.link.red Скинути
+        .block-search__body
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Житловий комплекс Sttk#3')
+            span Житловий комплекс Sttk#3
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко паркове')
+            span Містечко паркове
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='ЖК Park Residence')
+            span ЖК Park Residence
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Мілленіум')
+            span Мілленіум
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='ЖК Park Residence')
+            span ЖК Park Residence
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='liveComplex' value='Мілленіум')
+            span Мілленіум
+
+
+
+      .search__block.block-search
+        .block-search__header
+          h4.block-search__title.title-4 Район
+          .block-search__control
+            a(href='#').select-all.link.green Обрати всі
+            a(href='#').reset-all.link.red Скинути
+        .block-search__body
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Житловий комплекс Sttk#3')
+            span Житловий комплекс Sttk#3
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко паркове')
+            span Містечко паркове
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='ЖК Park Residence')
+            span ЖК Park Residence
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Мілленіум')
+            span Мілленіум
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Містечко липки')
+            span Містечко липки
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='ЖК Park Residence')
+            span ЖК Park Residence
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Опришківська слобода')
+            span Опришківська слобода
+          label.input-checkbox
+            input(type='checkbox' name='neighbourhood' value='Мілленіум')
+            span Мілленіум
+
+
+      button(type='submit').button.block-search__btn
+        span Шукати
+        +icon('search')
