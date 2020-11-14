@@ -137,9 +137,16 @@ window.addEventListener('DOMContentLoaded', () => {
     timeFormat: 'hh:ii',
     firstDay: 1
   };
+
+  // $$ change available range of days
+  let minDay = new Date();
+  let maxDay = new Date();
+  maxDay.setDate(maxDay.getDate() + 2);
   $('.datepicker-here').datepicker({
     autoClose: true,
-    language: 'ua'
+    language: 'ua',
+    minDate: minDay,
+    maxDate: maxDay,
   })
   // End DatePicker
 })

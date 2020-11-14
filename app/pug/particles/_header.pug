@@ -1,4 +1,5 @@
-header.header.page-block.login
+// $$ You can add class login to header
+header.header.page-block
   .header__overlay
   .header__container.container
     .header__body
@@ -12,7 +13,7 @@ header.header.page-block.login
             a(href='#') Про нас
           li
             a(href='#') Житлові комплекси
-        a(href='#').header__login.button
+        a(href='#login-block').header__login.button.modal-trigger
           span Увійти
           +icon('login')
         ul.header__logout
@@ -30,6 +31,64 @@ header.header.page-block.login
         +icon('search')
       .header__burger
         +icon('burger')
+
+
+
+#login-block.login-block.modal.modal_small
+  a(href='#!').modal-close
+    +icon('close-modal')
+  .modal__container.container
+    ul.tabs
+      li.tab
+        a(href='#registration').active Реєстрація для ріелтора
+      li.tab
+        a(href='#login-tab') Вхід
+
+    #registration
+      form.form#registration-form
+        .form__wrapper
+          p
+            label.label
+              span Елекстронна пошта:
+              input(type='text' name='emailRegistration').input
+          p
+            label.label
+              span Повне ім’я та прізвище:
+              input(type='text' name='nameRegistration').input
+          p
+            label.label
+              span Номер телефону:
+              input(type='text' name='phoneRegistration' placeholder='+38 (0--)').input.input-full-phone
+          p
+            label.label
+              span Пароль:
+              input(type='password' name='passwordRegistration').input
+        button(type='submit').button.booking-room__btn
+          span Зареєструватись
+          +icon('registration')
+
+    #login-tab
+      form.form#login-form
+        .form__wrapper
+          p
+            label.label
+              span Елекстронна пошта:
+              input(type='text' name='emailLogin').input
+          p
+            label.label
+              span Пароль:
+              input(type='password' name='passwordLogin').input
+          p
+            label.input-checkbox
+              input(type='checkbox' name='rememberMe' value='true')
+              span Запам’ятати мене
+          p
+            span.form__info Якщо ви забули пароль, ви може його
+            a(href='#').link.blue відновити
+
+        button(type='submit').button.booking-room__btn
+          span Увійти
+          +icon('login')
 
 
 

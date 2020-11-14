@@ -33,7 +33,8 @@ ibg(isWebPi); // запуск перевірки IBG. Функція визна�
 
 
 
-// Work with form data
+// Work with form data $$
+
 export function searchData(data) {
   console.log('Method searchData()');
   console.log(data);
@@ -41,6 +42,16 @@ export function searchData(data) {
 
 export function bookingData(data) {
   console.log('Method bookingData()');
+  console.log(data);
+}
+
+export function registerData(data) {
+  console.log('Method registerData()');
+  console.log(data);
+}
+
+export function loginData(data) {
+  console.log('Method loginData()');
   console.log(data);
 }
 // Work with form data
