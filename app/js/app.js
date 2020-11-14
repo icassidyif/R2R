@@ -2,6 +2,7 @@ import "./modules/function";
 import "./modules/slick";
 import "./modules/gallery";
 import './modules/materialize';
+import './modules/smoothScroll';
 
 // import './modules/scrollAnimation';
 
@@ -142,6 +143,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let minDay = new Date();
   let maxDay = new Date();
   maxDay.setDate(maxDay.getDate() + 2);
+
   $('.datepicker-here').datepicker({
     autoClose: true,
     language: 'ua',
