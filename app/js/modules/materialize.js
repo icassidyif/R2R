@@ -1,11 +1,14 @@
 import $ from "jquery";
 import 'slick-carousel';
 import 'materialize-css';
+
 import {supportsTouch} from "./function";
 
 document.addEventListener('DOMContentLoaded', function() {
-  const tabs = document.querySelectorAll('.tabs');
-  let TabsInstances = M.Tabs.init(tabs, {
+
+
+  const allTabs = document.querySelectorAll('.tabs');
+  let TabsInstances = M.Tabs.init(allTabs, {
   });
 
   const sliderTabs = document.querySelectorAll('.tab-slider');
@@ -19,12 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   })
 
-//  modals
+  //  modals
   const modals = document.querySelectorAll('.modal');
   const modalsInstances = M.Modal.init(modals, {
     startingTop: '1%',
-    endingTop: '3%'
+    endingTop: '3%',
+    onOpenEnd: function () {
+      const modalTabs = document.querySelectorAll('.modal .tabs');
+      let modalTabsInstances = M.Tabs.init(modalTabs, {
+      });
+    }
   });
+
+
 //  modals
 
 

@@ -90,6 +90,71 @@ $(document).ready(function(){
 
 
 
+  $('#search-form-aside').validate({
+    rules: {
+      floorFrom: {
+        required: false,
+        maxlength: 2
+      },
+      floorTo: {
+        required: false,
+        maxlength: 2
+        // customPhone: true
+      },
+      squareFrom: {
+        required: false,
+        maxlength: 3
+      },
+      squareTo: {
+        required: false,
+        maxlength: 3
+      },
+      priceFrom: {
+        required: false,
+        maxlength: 6
+      },
+      priceTo: {
+        required: false,
+        maxlength: 6
+      },
+    },
+    messages: {
+      floorFrom: {
+        required: "",
+        maxlength: ''
+      },
+      floorTo: {
+        required: "",
+        maxlength: ''
+      },
+      squareFrom: {
+        required: "",
+        maxlength: ''
+      },
+      squareTo: {
+        required: "",
+        maxlength: ''
+      },
+      priceFrom: {
+        required: "",
+        maxlength: ''
+      },
+      priceTo: {
+        required: "",
+        maxlength: ''
+      },
+    },
+    submitHandler: function (form) {
+      let formData = $(form).serializeArray();
+      searchData(formData);
+      const modal = document.querySelector('#search-block');
+      const modalInst = M.Modal.getInstance(modal);
+      modalInst.close();
+    }
+  });
+
+
+
   $('#booking-form').validate({
     rules: {
       detailsBooking: {

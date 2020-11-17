@@ -24,12 +24,31 @@
       margin: 0 0 20px 0
     select
       margin: 0 0 20px 0
+  &__group
+    display: flex
   &__price
     .input
       max-width: 100px
 
   &__control
     display: flex
+
+
+  &_filter
+    .search__option
+      margin: 0 0 10px 0
+    .search__price
+      span
+        display: block
+        width: 100%
+    .block-search
+      &__body
+        +breakpoint(sm)
+          grid-template-columns: unset
+        +breakpoint(md)
+          grid-template-columns: unset
+
+
 
 
 

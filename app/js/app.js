@@ -9,6 +9,7 @@ import './modules/smoothScroll';
 
 import './modules/table';
 import './modules/form';
+//import './modules/scrollBar';
 import $ from "jquery";
 import 'slick-carousel';
 import './modules/validate';

@@ -9,13 +9,51 @@ body
 
 
 .wrapper
-  display: flex
-  flex-direction: column
-  height: 100%
-
+  display: grid
+  grid-template-areas: "header" "page" "footer"
+  grid-template-columns: 100%
+  grid-template-rows: minmax(min-content, auto) 1fr minmax(min-content, auto)
+  height: 100vh
 .page
-  flex: 1 auto
+  grid-area: page
+  display: grid
+  grid-template-columns: 100%
+.page-aside
+  display: grid
+  grid-template-columns: 270px 1fr
+  grid-template-areas: "sidebar content"
+  grid-column-gap: 30px
 
+.sidebar
+  grid-area: sidebar
+.content
+  grid-area: content
+
+
+
+//.wrapper
+//  display: flex
+//  flex-direction: column
+//  height: 100%
+
+//.page
+//  flex: 1 auto
+
+//.page-aside
+//  flex: 1 auto
+//  height: 100%
+//  &__container
+//    height: inherit
+//    display: flex
+//    flex-direction: column
+//  &__wrapper
+//    display: grid
+//    grid-template-columns: 270px 1fr
+//    grid-column-gap: 30px
+//    grid-template-rows: auto
+//    flex: 1 auto
+//
+//
 .container
   max-width: $container
   width: 100%
@@ -23,9 +61,12 @@ body
   padding: 0 15px
 
 
+
+
 .page-block
   margin: 0 0 $v-step-small 0
   position: relative
+
   +breakpoint(md)
     margin: 0 0 $v-step-medium 0
   +breakpoint(lg)

@@ -199,7 +199,7 @@
   min-width: 0
   +breakpoint(md)
     border-style: solid
-    border-width: 1px 6px 1px 1px
+    border-width: 0 6px 0 0
     border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
     padding: 0 24px 0 0
   &__btn
@@ -340,6 +340,10 @@
   overflow-x: auto
   margin: 0 0 20px 0
   white-space: nowrap
+  -ms-overflow-style: none
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
   .indicator
     position: absolute
     bottom: 0
