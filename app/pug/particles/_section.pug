@@ -54,6 +54,7 @@ section.section.page-block
                   +icon('messenger')
                 a(href='#')
                   +icon('link-icon')
+
   .section__wrapper
     .section__container.container
       .section__slider-block
@@ -96,26 +97,26 @@ section.section.page-block
           div(data-item='6').section__slider__item
             +image('../img/section-lupky/02.jpeg')
 
-  .section__description.description-section.page-block
+  .section__description.page-description.page-block
     .section__container.container
-      .description-section__body
-        .description-section__tabs.tabs-section
-          .tabs-section__wrapper
+      .page-description__body
+        .page-description__tabs.tabs-page
+          .tabs-page__wrapper
             ul.tabs
               li.tab
                 a(href='#about').active Про комплекс
               li.tab
                 a(href='#options') Характеристики
               li.tab
-                a(href='#course').tab-slider Хід будівництва
+                a(href='#course').tab-slider-init Хід будівництва
 
-          #about.tabs-section__content
+          #about.tabs-page__content
             p Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально.  Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально.
-            .tabs-section__btn
+            .tabs-page__btn
               +icon('collapse')
 
 
-          #options.tabs-section__content
+          #options.tabs-page__content
             .options
               div
                 h4.options__title Загальна інформація
@@ -159,12 +160,12 @@ section.section.page-block
                   li
                     span Ціна за кв.м. (від - до):
                     span 13000
-            .tabs-section__btn
+            .tabs-page__btn
               +icon('collapse')
 
 
 
-          #course.tabs-section__content
+          #course.tabs-page__content
             .course-block
               .course-block__header
                 .course-block__info
@@ -176,17 +177,16 @@ section.section.page-block
                   a(href='#').course-block__btn.button-2.visible Редагувати фото
                     +icon('edit-photo')
               .course-block__content
-                .course-block__slider.course-block-slider
-                  .course-block-slider__item
+                .course-block__slider.tab-slider
+                  .tab-slider__item
                     div.item-gallery(data-src='https://www.youtube.com/watch?v=pU0RAQWM4SI' data-sub-html='text' )
                       iframe(type="text/html" width="100%" height='100%' autoplay=0 src="https://www.youtube.com/embed/pU0RAQWM4SI")
-                  .course-block-slider__item
+                  .tab-slider__item
                     div.item-gallery(data-src='../img/section-lupky/04.jpeg' data-sub-html='text')
                       +image('../img/section-lupky/04.jpeg')
-                  .course-block-slider__item
+                  .tab-slider__item
                     div.item-gallery(data-src='../img/section-lupky/02.jpeg' data-sub-html='text')
                       +image('../img/section-lupky/02.jpeg')
-
 
             .course-block
               .course-block__header
@@ -199,24 +199,24 @@ section.section.page-block
                   a(href='#').course-block__btn.button-2.visible Редагувати фото
                     +icon('edit-photo')
               .course-block__content
-                .course-block__slider.course-block-slider
-                  .course-block-slider__item
+                .course-block__slider.tab-slider
+                  .tab-slider__item
                     div.item-gallery(data-src='../img/section-lupky/03.jpeg' data-sub-html='text')
                       +image('../img/section-lupky/03.jpeg')
-                  .course-block-slider__item
+                  .tab-slider__item
                     div.item-gallery(data-src='../img/section-lupky/04.jpeg' data-sub-html='text')
                       +image('../img/section-lupky/04.jpeg')
-                  .course-block-slider__item
+                  .tab-slider__item
                     div.item-gallery(data-src='../img/section-lupky/02.jpeg' data-sub-html='text')
                       +image('../img/section-lupky/02.jpeg')
-            .tabs-section__btn
+            .tabs-page__btn
               +icon('collapse')
 
 
 
 
-        .description-section__realtor.realtor-section
-          .realtor-section__card.realtor-card
+        .description-section__realtor.realtor-page
+          .realtor-page__card.realtor-card
             .realtor-card__photo
               +image('../img/rieltors/01.png')
             .realtor-card__info
@@ -224,24 +224,24 @@ section.section.page-block
               h4.realtor-card__name Роман Сурмачевський
               a(href='tel:+380633565234').realtor-card__phone 0669159819
 
-          .realtor-section__block#realtor-task
-            .realtor-section__icon
+          .realtor-page__block#realtor-task
+            .realtor-page__icon
               +icon('calendar')
             .realtor-section__text
-              h4.realtor-section__title.title-4 IV квартал 2020 року
-              span.realtor-section__label Запланована здача
-          .realtor-section__block#developer
-            .realtor-section__icon
+              h4.realtor-page__title.title-4 IV квартал 2020 року
+              span.realtor-page__label Запланована здача
+          .realtor-page__block#developer
+            .realtor-page__icon
               +icon('safety')
-            .realtor-section__text
-              h4.realtor-section__title.title-4  Ярковиця
-              span.realtor-section__label Забудовник
-          .realtor-section__block#adress-building
-            .realtor-section__icon
+            .realtor-page__text
+              h4.realtor-page__title.title-4  Ярковиця
+              span.realtor-page__label Забудовник
+          .realtor-page__block#adress-building
+            .realtor-page__icon
               +icon('locate')
             .realtor-section__text
-              h4.realtor-section__title.title-4  вул. Мазепи, 164
-              span.realtor-section__label Адреса будинку
+              h4.realtor-page__title.title-4  вул. Мазепи, 164
+              span.realtor-page__label Адреса будинку
 
 
 

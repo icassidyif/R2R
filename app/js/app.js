@@ -134,11 +134,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // EndSub menu
 
   // collapse
-  if($('.course-block-slider').length > 1) {
-    let lastSlider = $('.course-block-slider')[$('.course-block-slider').length - 1];
+  if($('.tab-slider').length > 1) {
+    let lastSlider = $('.tab-slider')[$('.tab-slider').length - 1];
     lastSlider = $(lastSlider);
     lastSlider.on('init', (event, slick) => {
-      const collapseBodies = document.querySelectorAll('.tabs-section__content');
+      const collapseBodies = document.querySelectorAll('.tabs-page__content');
       collapseBodies.forEach(body => {
         let bodyHeight;
         if (body.style.display === 'none') {
@@ -158,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
           }
         }
         // listener on btns
-        const btn = body.querySelector('.tabs-section__btn');
+        const btn = body.querySelector('.tabs-page__btn');
         btn.addEventListener('click', evt => {
           body.classList.toggle('collapse');
           if(body.classList.contains('collapse')) {

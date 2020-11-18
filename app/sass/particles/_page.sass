@@ -99,3 +99,268 @@
       &:hover
         background-color: unset
         transform: translateY(-2px)
+
+
+
+.page-description
+  margin: 0 0 70px 0
+  &__body
+    display: grid
+    grid-template: min-content min-content / minmax(0, 1fr)
+    +breakpoint(md)
+      grid-template: minmax(0, 1fr) / minmax(0, 1fr) minmax(320px, 370px)
+
+
+.tabs-page
+  overflow: hidden
+  min-width: 0
+  +breakpoint(md)
+    border-style: solid
+    border-width: 0 6px 0 0
+    border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+    padding: 0 24px 0 0
+  &__btn
+    display: none
+    svg
+      transform: rotate(180deg)
+      transition: all .2s ease-out
+  &__wrapper
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
+      background-image: linear-gradient(to right, rgba(255, 254, 254, 0.05), rgb(255, 255, 255))
+      width: 25%
+      pointer-events: none
+  &__content
+    position: relative
+    color: $dark-grey
+    overflow-y: hidden
+    padding: 10px 0 0 0
+    transition: all .3s ease-out
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      width: 100%
+      height: 30px
+      background-image: linear-gradient(to bottom, rgba(255, 254, 254, 0.5), rgb(255, 255, 255))
+      opacity: 0
+      transition: .2s opacity ease-out
+      pointer-events: none
+      z-index: 1
+      +breakpoint(lg)
+        height: 60px
+    p
+      //margin: 0 0 30px 0
+      &:last-child
+        margin: 0
+    &.collapse
+      //max-height: 300px
+      &:before
+        opacity: 1
+      .tabs-page__btn
+        svg
+          transform: rotate(0deg)
+    &.extended
+      padding: 10px 0 60px 0
+      .tabs-page__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        cursor: pointer
+        bottom: 3px
+        left: calc(50% - 25px / 2)
+        width: 25px
+        height: 25px
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+        background-color: #ffffff
+        z-index: 2
+
+
+.options
+  display: grid
+  grid-column-gap: 30px
+  grid-row-gap: 20px
+  grid-template: min-content min-content / 1fr
+  +breakpoint(lg)
+    grid-template: 1fr / 1fr 1fr
+  &__title
+    font-size: 18px
+    line-height: 21px
+    color: $text-color
+    margin: 0 0 20px 0
+  ul
+    li
+      margin: 0 0 7px 0
+      display: grid
+      grid-column-gap: 10px
+      grid-template-columns: max-content 1fr
+      span:first-child
+        font-weight: 500
+        color: $dark-blue
+
+.course-block
+  padding: 0 0 35px 0
+  margin: 0 0 40px 0
+  border-style: solid
+  border-width: 1px 1px 6px 1px
+  border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+  &:last-child
+    margin: 0!important
+  &__header
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    font-size: 18px
+    line-height: 21px
+    align-items: center
+    margin: 0 0 5px 0
+  &__info
+    margin: 0 30px 30px 0
+  &__controls
+    display: flex
+    flex-wrap: wrap
+  &__btn
+    margin: 0 20px 30px 0
+    display: none!important
+    visibility: hidden!important
+    &:last-child
+      margin: 0 10px 30px 0
+    &.visible
+      display: flex!important
+      visibility: visible!important
+  &__label
+    text-transform: uppercase
+    font-weight: 500
+    color: $dark-blue
+    margin: 0 10px 0 0
+  &__date
+    color: $text-color
+  &__slider
+  iframe
+    pointer-events: none
+
+
+.tabs
+  display: flex
+  position: relative
+  overflow-x: auto
+  margin: 0 0 20px 0
+  white-space: nowrap
+  -ms-overflow-style: none
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+  .indicator
+    position: absolute
+    bottom: 0
+    height: 3px
+    background-color: $text-color
+    will-change: left, right
+  a
+    display: block
+    padding: 10px 20px
+    color: $dark-blue
+    border-bottom: 3px solid $dark-blue
+    &.active
+      color: $text-color
+      border-bottom: none
+.tab
+  margin: 0 5px 0 0
+  &:last-child
+    margin: 0
+
+
+.realtor-page
+  &__block
+    display: grid
+    grid-template-columns: 25px 1fr
+    grid-column-gap: 20px
+    margin: 0 0 30px 0
+  &__title
+    margin: 0 0 7px 0
+  &__label
+    color: $dark-grey
+    font-weight: 400
+
+
+.realtor-card
+  position: relative
+  display: grid
+  grid-template: minmax(87px, min-content) / 100px 1fr
+  grid-column-gap: 20px
+  margin: 0 0 30px 0
+  border-style: solid
+  border-width: 6px 6px 6px 6px
+  border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+
+  &__photo
+    align-self: center
+    width: 100px
+    height: 100px
+    margin: -6px 0 -6px -6px
+    img
+      max-width: 100%
+  &__info
+    align-self: center
+  &__depart
+    display: inline-block
+    color: $mid-grey
+    font-weight: 500
+    font-size: 10px
+    line-height: 12px
+    text-transform: uppercase
+    margin: 0 0 4px 0
+  &__name,
+  &__phone
+    font-size: 18px
+    line-height: 21px
+    font-weight: 700
+  &__name
+    margin: 0 0 8px 0
+  &__phone
+    color: $accent
+
+
+.tab-slider
+  position: relative
+  overflow: hidden
+  &__item
+    position: relative
+    height: 200px!important
+    width: 100% !important
+    cursor: pointer
+    .item-gallery
+      height: 100%
+
+  .slick-list
+    margin: 0 -15px
+
+  .slick-slide
+    margin: 0 15px
+  img
+    position: absolute
+    object-fit: cover
+    height: 100%
+    width: 100%!important
+  .slick-arrow
+    width: 25px
+    height: 50px
+    position: absolute
+    top: calc(50% - 25px)
+    z-index: 2
+    &.slick-disabled
+      display: none
+  .slick-prev
+    left: 0
+    background: url("../img/icons-sprite/icons.svg#prev-slider-course") no-repeat center center #ffffff
+
+
+  .slick-next
+    right: 0
+    background: url("../img/icons-sprite/icons.svg#next-slider-course") no-repeat center center #ffffff

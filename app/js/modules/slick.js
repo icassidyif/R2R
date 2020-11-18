@@ -84,7 +84,7 @@ $(document).ready(function () {
 
 
 
-  $('.course-block-slider').slick({
+  $('.tab-slider').slick({
     arrows: true,
     dots: false,
     rows: 1,

@@ -11,12 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
   let TabsInstances = M.Tabs.init(allTabs, {
   });
 
-  const sliderTabs = document.querySelectorAll('.tab-slider');
+  const sliderTabs = document.querySelectorAll('.tab-slider-init');
   sliderTabs.forEach(tab => {
     tab.addEventListener('click', e => {
-      console.log('dfdf');
       setTimeout(function () {
-        $('.course-block-slider').slick('setPosition');
+        $('.tab-slider').slick('setPosition');
       },100)
 
     })
