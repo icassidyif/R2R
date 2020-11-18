@@ -112,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   // Sub menu
-  const sectionMenuLinks = document.querySelectorAll('.section__menu > li > a');
+  //const sectionMenuLinks = document.querySelectorAll('.section__menu > li > a');
   const menuOpeners = document.querySelectorAll('.menu-opener');
   menuOpeners.forEach(link => {
     link.addEventListener('click', e => {
