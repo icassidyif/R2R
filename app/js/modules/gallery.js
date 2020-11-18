@@ -21,5 +21,12 @@ $(document).ready(function() {
     },
   });
 
+  $(".gallery-search-page").lightGallery({
+    selector: '.item-gallery',
+    zoom: true
+  });
+
+
+
 
 });

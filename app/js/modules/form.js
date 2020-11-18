@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const selectsAll = document.querySelectorAll('.block-search__control .select-all');
   selectsAll.forEach(selectAll => {
     selectAll.addEventListener('click', e => {
+      e.preventDefault();
       const parentBlock = selectAll.closest('.block-search');
       const checkboxes = parentBlock.querySelectorAll('.input-checkbox input');
       checkboxes.forEach(checkbox => {
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const resetsAll = document.querySelectorAll('.block-search__control .reset-all');
   resetsAll.forEach(resetAll => {
     resetAll.addEventListener('click', e => {
+      e.preventDefault();
       const parentBlock = resetAll.closest('.block-search');
       const checkboxes = parentBlock.querySelectorAll('.input-checkbox input');
       checkboxes.forEach(checkbox => {

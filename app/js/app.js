@@ -21,9 +21,10 @@ import './modules/datepicker';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Main menu
+  const body = document.querySelector('body');
   const menu = document.querySelector('.header__menu');
   const logo = document.querySelector('.header__logo');
-  const overlay = document.querySelector('.header__overlay');
+  const overlay = document.querySelector('.overlay');
   const burger = document.querySelector('.header__burger');
   const search = document.querySelector('.header__search');
   //console.log(logo.clientWidth + menu.clientWidth + search.clientWidth + 60);
@@ -34,30 +35,77 @@ window.addEventListener('DOMContentLoaded', () => {
   burger.addEventListener('click', e => {
     menu.classList.add('active');
     overlay.classList.add('active');
+    body.classList.add('lock');
   })
   overlay.addEventListener('click', e => {
     menu.classList.remove('active');
     overlay.classList.remove('active');
+    (document.querySelector('.sidebar'))? sidebar.classList.remove('active') : '';
+    body.classList.remove('lock');
   })
+
+  // sidebar show
+  const sidebar = document.querySelector('.sidebar');
+  if(document.querySelector('.sidebar')) {
+    const sidebarBtn = document.querySelector('.sidebar-show-btn');
+    const sidebarClose = document.querySelector('.sidebar__close');
+
+    sidebarBtn.addEventListener('click', e => {
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+      body.classList.add('lock');
+    })
+
+    sidebarClose.addEventListener('click', e => {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      body.classList.remove('lock');
+    })
+
+  }
 
   //swipe event
   let touchstartX = 0;
   let touchendX = 0;
 
-  let swipedZone = document.querySelector('.header__menu');
+  let swipedZoneMenu = document.querySelector('.header__menu');
 
-  swipedZone.addEventListener('touchstart', function(event) {
+  swipedZoneMenu.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
   }, false);
-  swipedZone.addEventListener('touchend', function(event) {
+  swipedZoneMenu.addEventListener('touchend', function(event) {
     touchendX = event.changedTouches[0].screenX;
-    handleGesure();
+    handleMenu();
   }, false);
 
-  function handleGesure() {
+  if(document.querySelector('.sidebar')) {
+    let swipedZoneSidebar = document.querySelector('.sidebar');
+
+    swipedZoneSidebar.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+    }, false);
+    swipedZoneSidebar.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].screenX;
+      handleSidebar();
+    }, false);
+
+  }
+
+
+
+  function handleMenu() {
     if (touchendX > touchstartX) {
       menu.classList.remove('active');
       overlay.classList.remove('active');
+      body.classList.remove('lock');
+    }
+  }
+
+  function handleSidebar() {
+    if (touchendX < touchstartX) {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      body.classList.remove('lock');
     }
   }
   //END Main menu
@@ -145,7 +193,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let maxDay = new Date();
   maxDay.setDate(maxDay.getDate() + 2);
 
-  $('.datepicker-here').datepicker({
+  $('.datepicker-booking').datepicker({
     autoClose: true,
     language: 'ua',
     minDate: minDay,

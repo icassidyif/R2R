@@ -1,10 +1,8 @@
 section.search-aside
   .search.search_filter
-    .search__title Параметри
+    h2.search__title.title-2 Параметри
     form#search-form-aside
-      button(type='submit').button.block-search__btn
-        span Шукати
-        +icon('search')
+
       .search__options
         .search__option.search__room
           span Кімнат:
@@ -171,8 +169,6 @@ section.search-aside
           label.input-checkbox
             input(type='checkbox' name='neighbourhood' value='Мілленіум')
             span Мілленіум
-
-
-      button(type='submit').button.block-search__btn
+      button(type='submit').button-3
         span Шукати
-        +icon('search')
+        +icon('search-white')

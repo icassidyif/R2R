@@ -14,53 +14,47 @@ body
   grid-template-columns: 100%
   grid-template-rows: minmax(min-content, auto) 1fr minmax(min-content, auto)
   height: 100vh
+
 .page
   grid-area: page
   display: grid
   grid-template-columns: 100%
 .page-aside
   display: grid
-  grid-template-columns: 270px 1fr
-  grid-template-areas: "sidebar content"
-  grid-column-gap: 30px
+  grid-template-columns: minmax(0, 1fr)
+  grid-template-areas: "content"
+  +breakpoint(xl)
+    grid-template-columns: 270px minmax(0, 1fr)
+    grid-template-areas: "sidebar content"
+    grid-column-gap: 30px
+
 
 .sidebar
   grid-area: sidebar
+
 .content
   grid-area: content
+  display: block
 
 
-
-//.wrapper
-//  display: flex
-//  flex-direction: column
-//  height: 100%
-
-//.page
-//  flex: 1 auto
-
-//.page-aside
-//  flex: 1 auto
-//  height: 100%
-//  &__container
-//    height: inherit
-//    display: flex
-//    flex-direction: column
-//  &__wrapper
-//    display: grid
-//    grid-template-columns: 270px 1fr
-//    grid-column-gap: 30px
-//    grid-template-rows: auto
-//    flex: 1 auto
-//
-//
 .container
   max-width: $container
   width: 100%
   margin: 0 auto
   padding: 0 15px
 
-
+.overlay
+  position: fixed
+  background-color: rgba(0, 0, 0, 0.51)
+  height: 100%
+  width: 100%
+  z-index: 4
+  opacity: 0
+  visibility: hidden
+  transition: all .2s ease-out
+  &.active
+    opacity: 1
+    visibility: visible
 
 
 .page-block
