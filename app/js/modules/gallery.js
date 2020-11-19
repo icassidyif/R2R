@@ -8,7 +8,7 @@ $(document).ready(function() {
     selector: '.item-gallery',
     zoom: true
   });
-  $(".course-block-slider").lightGallery({
+  $(".tab-slider").lightGallery({
     selector: '.item-gallery',
     zoom: true,
     autoplayFirstVideo: true,
@@ -26,6 +26,10 @@ $(document).ready(function() {
     zoom: true
   });
 
+  $(".flat-slider-gallery").lightGallery({
+    selector: '.item-gallery',
+    zoom: true
+  });
 
 
 

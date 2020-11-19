@@ -1,0 +1,58 @@
+.flat
+  &__id
+    display: inline-flex
+    padding: 10px 20px
+    background-color: $light-blue
+    margin: 0 0 35px 0
+    span
+      color: $text-color-blue
+
+
+  .title
+    +breakpoint(md)
+      margin: 0 0 35px 0
+  .page__menu
+    +breakpoint(md)
+      margin: 0 0 35px 0
+
+  .realtor-page__title
+    font-size: 22px
+    line-height: 26px
+
+
+
+
+
+
+
+.slider-flat
+  &__item
+    position: relative
+    height: 255px
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+
+  img
+    width: 100%
+    position: absolute
+    object-fit: cover
+    height: 100%
+
+  .slick-list
+    margin: -10px -15px
+  .slick-slide
+    margin: 10px 15px
+  .slick-arrow
+    position: absolute
+    width: 50px
+    height: 50px
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+    top: calc(50% - 25px)
+    transition: all .2s ease-out
+    z-index: 1
+  .slick-prev
+    left: 15px
+    background: url("../img/icons-sprite/icons.svg#prev-slider") center / 27px no-repeat #ffff
+  .slick-next
+    right: 15px
+    background: url("../img/icons-sprite/icons.svg#next-slider") center / 27px no-repeat #ffff
+

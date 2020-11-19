@@ -170,6 +170,56 @@ $(document).ready(function () {
   });
 
 
+  $('.slider-flat').slick({
+    arrows: true,
+    dots: false,
+    adaptiveHeight: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    easing: 'ease',
+    infinite: false,
+    initialSlide: 0,
+    autoplay: false,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    draggable: true,
+    swipe: true,
+    touchThreshold: 5,
+    touchMove: true,
+    waitForAnimate: true,
+    centerMode: false,
+    variableWidth: false,
+    lazyLoad: 'ondemand',
+    mobileFirst: true,
+    accessibility: true,
+    responsive: [
+      {
+        breakpoint: 550,
+        settings: {
+          settings: "unslick",
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 860,
+        settings: {
+          settings: "unslick",
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          settings: "unslick",
+          slidesToShow: 4,
+        }
+      },
+
+    ]
+  });
+
+
 
 
 })

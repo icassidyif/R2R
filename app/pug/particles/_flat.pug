@@ -53,3 +53,251 @@ section.flat.page-block
                   +icon('link-icon')
 
     .flat__id
+      span.title-3 ID: #12-69-2-35
+  .slider-wrapper.page-block
+    .container
+      .flat__slider.slider-flat.flat-slider-gallery
+        .slider-flat__item
+          div.item-gallery(data-src='/img/flats/01.png' data-sub-html='text')
+            +image('flats/01.png')
+        .slider-flat__item
+          div.item-gallery(data-src='/img/flats/02.jpeg' data-sub-html='text')
+            +image('flats/02.jpeg')
+        .slider-flat__item
+          div.item-gallery(data-src='/img/flats/03.jpeg' data-sub-html='text')
+            +image('flats/03.jpeg')
+        .slider-flat__item
+          div.item-gallery(data-src='/img/flats/04.jpeg' data-sub-html='text')
+            +image('flats/04.jpeg')
+        .slider-flat__item
+          div.item-gallery(data-src='/img/flats/02.jpeg' data-sub-html='text')
+            +image('flats/02.jpeg')
+
+
+
+
+  .page-description
+    .container
+      .page-description__body
+        .page-description__tabs.tabs-page
+          .tabs-page__wrapper
+            ul.tabs
+              li.tab
+                a(href='#options').active Характеристики
+              li.tab
+                a(href='#about') Про ЖК
+              li.tab
+                a(href='#photo').tab-slider-init Фото
+              li.tab
+                a(href='#video').tab-slider-init Відео
+
+          #about.tabs-page__content
+            .options
+              div
+                h4.options__title Загальна інформація
+                ul
+                  li
+                    span Район:
+                    span ценрт
+                  li
+                    span Клас житла:
+                    span комфорт
+                  li
+                    span К-сть поверхів:
+                    span 10
+                  li
+                    span Район:
+                    span ценрт
+                  li
+                    span Клас житла:
+                    span комфорт
+                  li
+                    span К-сть поверхів:
+                    span 10
+              div
+                h4.options__title Локація
+                ul
+                  li
+                    span Район:
+                    span ценрт
+                  li
+                    span Клас житла:
+                    span комфорт
+                  li
+                    span К-сть поверхів:
+                    span 10
+                  li
+                    span К-сть будинків:
+                    span 11
+                  li
+                    span К-сть підїздів:
+                    span 40
+                  li
+                    span К-сть квартир:
+                    span 150
+                  li
+                    span Ліфт:
+                    span якісний безшумний ліфт
+                  li
+                    span Ціна за кв.м. (від - до):
+                    span 13000
+            .tabs-page__btn
+              +icon('collapse')
+
+
+          #options.tabs-page__content
+            .options
+              div
+                ul
+                  li
+                    span Номер квартири:
+                    span 37
+                  li
+                    span Кількість кімнат:
+                    span 3
+                  li
+                    span Поверх:
+                    span 9 з 11
+                  li
+                    span Площа житлова:
+                    span 12.00
+                  li
+                    span Площа кухні:
+                    span 27.00
+                  li
+                    span Наповнення:
+                    span гіпсова штукатурка, електророзводка, дерев`яні євровікна, двері
+                  li
+                    span Сторона світу:
+                    span Південь
+                  li
+                    span Вид вікон:
+                    span на парк Шевченка, на місто
+                  li
+                    span Вікна:
+                    span дерев'яні вікна з трьохшарового бруса (iv-78) сучасний енергозберігаючий склопакет.
+              div
+                ul
+                  li
+                    span Двері:
+                    span броньовані двері
+                  li
+                    span Вартість ремонту:
+                    span 10000
+                  li
+                    span Вартість оренди:
+                    span 10
+                  li
+                    span Висота стелі:
+                    span 2.80
+                  li
+                    span Панорамні вікна:
+                    span так
+                  li
+                    span Відкритий балкон:
+                    span так
+                  li
+                    span Лоджія:
+                    span якісний безшумний ліфт
+                  li
+                    span Тераса:
+                    span ні
+            .tabs-page__btn
+              +icon('collapse')
+
+
+
+          #photo.tabs-page__content
+            .tab-slider
+              .tab-slider__item
+                div.item-gallery(data-src='../img/section-lupky/04.jpeg' data-sub-html=' ')
+                  +image('../img/section-lupky/04.jpeg')
+              .tab-slider__item
+                div.item-gallery(data-src='../img/section-lupky/02.jpeg' data-sub-html=' ')
+                  +image('../img/section-lupky/02.jpeg')
+              .tab-slider__item
+                div.item-gallery(data-src='../img/section-lupky/04.jpeg' data-sub-html=' ')
+                  +image('../img/section-lupky/04.jpeg')
+            .tabs-page__btn
+              +icon('collapse')
+
+
+
+          #video.tabs-page__content
+            .tab-slider
+              .tab-slider__item
+                div.item-gallery(data-src='https://www.youtube.com/watch?v=Q6c8X_s1h9Y' data-sub-html='text' )
+                  iframe(type="text/html" width="100%" height='100%' autoplay=0 src="https://www.youtube.com/embed/Q6c8X_s1h9Y")
+              .tab-slider__item
+                div.item-gallery(data-src='https://www.youtube.com/watch?v=R88lUBvbjPo' data-sub-html='text' )
+                  iframe(type="text/html" width="100%" height='100%' autoplay=0 src="https://www.youtube.com/embed/R88lUBvbjPo")
+              .tab-slider__item
+                div.item-gallery(data-src='https://www.youtube.com/watch?v=_fmAbMjbN_A' data-sub-html='text' )
+                  iframe(type="text/html" width="100%" height='100%' autoplay=0 src="https://www.youtube.com/embed/_fmAbMjbN_A")
+              .tab-slider__item
+                div.item-gallery(data-src='https://www.youtube.com/watch?v=pU0RAQWM4SI' data-sub-html='text' )
+                  iframe(type="text/html" width="100%" height='100%' autoplay=0 src="https://www.youtube.com/embed/pU0RAQWM4SI")
+            .tabs-page__btn
+              +icon('collapse')
+
+
+
+
+
+
+        .page-description__realtor.realtor-page
+          .realtor-page__block
+            .realtor-page__icon
+              +icon('price-icon')
+            .realtor-page__wrapper
+              .realtor-page__text
+                h4.realtor-page__title.title-4 35 585 555
+                span.realtor-page__label Ціна
+              .realtor-page__currency
+                label
+                  input(type='radio' name='currency' value='UAH' checked)
+                  span UAH
+                label
+                  input(type='radio' name='currency' value='EUR')
+                  span EUR
+                label
+                  input(type='radio' name='currency' value='USD')
+                  span USD
+
+          .realtor-page__block
+            .realtor-page__icon
+              +icon('price2-icon')
+            .realtor-page__text
+              h4.realtor-page__title.title-4  1 500
+              span.realtor-page__label Ціна за м2
+
+          .realtor-page__block
+            .realtor-page__icon
+              +icon('square-icon')
+            .realtor-page__text
+              h4.realtor-page__title.title-4  58.70 м2
+              span.realtor-page__label Площа
+
+          .realtor-page__wrapper
+            .realtor-page__block
+              .realtor-page__icon
+                +icon('rooms-icon')
+              .realtor-page__text
+                h4.realtor-page__title.title-4  3 к.
+                span.realtor-page__label К-ість кімнат
+
+            .realtor-page__block
+              .realtor-page__icon
+                +icon('floor-icon')
+              .realtor-page__text
+                h4.realtor-page__title.title-4  4 з 11
+                span.realtor-page__label Поверх
+
+          .realtor-page__card.realtor-card
+            .realtor-card__photo
+              +image('../img/rieltors/01.png')
+            .realtor-card__info
+              span.realtor-card__depart Відділ продажу
+              h4.realtor-card__name Роман Сурмачевський
+              a(href='tel:+380633565234').realtor-card__phone 0669159819
+
