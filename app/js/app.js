@@ -134,43 +134,59 @@ window.addEventListener('DOMContentLoaded', () => {
   // EndSub menu
 
   // collapse
-  if($('.tab-slider').length > 1) {
-    let lastSlider = $('.tab-slider')[$('.tab-slider').length - 1];
-    lastSlider = $(lastSlider);
-    lastSlider.on('init', (event, slick) => {
-      const collapseBodies = document.querySelectorAll('.tabs-page__content');
-      collapseBodies.forEach(body => {
-        let bodyHeight;
-        if (body.style.display === 'none') {
-          body.style.display = '';
-          bodyHeight = body.clientHeight;
-          body.style.display = 'none';
-        } else  {
-          bodyHeight = body.clientHeight;
-        }
-        if (bodyHeight > 330) {
-          body.classList.add('extended');
-          body.classList.toggle('collapse');
-          if(body.classList.contains('collapse')) {
-            body.style.height = 330 + 'px';
-          } else  {
-            body.style.height = bodyHeight + 60 + 'px';
-          }
-        }
-        // listener on btns
-        const btn = body.querySelector('.tabs-page__btn');
-        btn.addEventListener('click', evt => {
-          body.classList.toggle('collapse');
-          if(body.classList.contains('collapse')) {
-            body.style.height = 330 + 'px';
-          } else  {
-            body.style.height = bodyHeight + 60 + 'px';
-          }
-        })
-        // listener on btns
+
+  if($('.tab-slider').length) {
+    let lastSlider;
+    if($('.tab-slider').length > 1) {
+      lastSlider = $('.tab-slider')[$('.tab-slider').length - 1];
+      lastSlider = $(lastSlider);
+      lastSlider.on('init', (event, slick) => {
+        collapseInit();
       })
-      // END collapse
+    } else {
+      lastSlider = $('.tab-slider');
+      lastSlider = $(lastSlider);
+      lastSlider.on('init', (event, slick) => {
+        collapseInit();
+      })
+    }
+  } else {
+    collapseInit();
+  }
+
+  function collapseInit() {
+    const collapseBodies = document.querySelectorAll('.tabs-page__content');
+    collapseBodies.forEach(body => {
+      let bodyHeight;
+      if (body.style.display === 'none') {
+        body.style.display = '';
+        bodyHeight = body.clientHeight;
+        body.style.display = 'none';
+      } else  {
+        bodyHeight = body.clientHeight;
+      }
+      if (bodyHeight > 330) {
+        body.classList.add('extended');
+        body.classList.toggle('collapse');
+        if(body.classList.contains('collapse')) {
+          body.style.height = 330 + 'px';
+        } else  {
+          body.style.height = bodyHeight + 60 + 'px';
+        }
+      }
+      // listener on btns
+      const btn = body.querySelector('.tabs-page__btn');
+      btn.addEventListener('click', evt => {
+        body.classList.toggle('collapse');
+        if(body.classList.contains('collapse')) {
+          body.style.height = 330 + 'px';
+        } else  {
+          body.style.height = bodyHeight + 60 + 'px';
+        }
+      })
+      // listener on btns
     })
+    // END collapse
   }
   //
 
