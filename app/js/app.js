@@ -51,12 +51,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const sidebarClose = document.querySelector('.sidebar__close');
 
     sidebarBtn.addEventListener('click', e => {
+      e.preventDefault();
       sidebar.classList.toggle('active');
       overlay.classList.toggle('active');
       body.classList.add('lock');
     })
 
     sidebarClose.addEventListener('click', e => {
+      e.preventDefault();
       sidebar.classList.remove('active');
       overlay.classList.remove('active');
       body.classList.remove('lock');
@@ -92,9 +94,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
 
-
   function handleMenu() {
-    if (touchendX > touchstartX) {
+    if (touchendX > touchstartX + 20) {
       menu.classList.remove('active');
       overlay.classList.remove('active');
       body.classList.remove('lock');
@@ -102,7 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function handleSidebar() {
-    if (touchendX < touchstartX) {
+    if (touchendX < touchstartX - 20) {
       sidebar.classList.remove('active');
       overlay.classList.remove('active');
       body.classList.remove('lock');
