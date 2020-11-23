@@ -1,0 +1,26 @@
+include particles/_mixins
+include particles/_head
+body
+  .overlay
+  .wrapper
+    include particles/_header
+    .page
+      .container
+        ul.breadcrumbs
+          li.breadcumbs__item
+            a(href='#') Головна
+          li.breadcumbs__item
+            a(href='#') Житлові комплекси
+        h1.title Житлові комплекси
+
+        .page-aside
+          aside.sidebar.page-block
+            .sidebar__close
+              +icon('close-modal')
+            include particles/_filter
+          .content.page-block
+            include particles/_complex-content
+            //include particles/_search-content
+    include particles/_footer
+
+  script(src='js/script.js')
