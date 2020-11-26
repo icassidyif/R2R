@@ -21,7 +21,7 @@ $(document).ready(function() {
     },
   });
 
-  $(".gallery-search-page").lightGallery({
+  $(".card-search").lightGallery({
     selector: '.item-gallery',
     zoom: true
   });

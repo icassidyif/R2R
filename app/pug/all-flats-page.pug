@@ -1,0 +1,50 @@
+include particles/_mixins
+include particles/_head
+body
+  .overlay
+  .wrapper
+    include particles/_header
+    .page
+      .container
+        ul.breadcrumbs
+          li.breadcumbs__item
+            a(href='#') Головна
+          li.breadcumbs__item
+            a(href='#') Усі квартири
+        .page__title-block
+          h1.title Усі квартири
+          ul.page__menu.visible
+            li.visible
+              a(href='#').menu-opener
+                +icon('settings')
+              ul.page__submenu
+                li
+                  a(href='#booking-room').modal-trigger Забронювати галіму квартиру
+                li
+                  a(href='#') Редагувати інформацію
+                li
+                  a(href='#') Редагувати фотогалерею
+                li
+                  a(href='#') Додати звіт
+                li.line
+                  a(href='#') додати підїзд
+                li
+                  a(href='#') показати усім ріелторам
+                li.line
+                  a(href='#') Закрити від усіх ріелторів
+                li
+                  a(href='#').green активувати
+                li
+                  a(href='#').red Деактивувати
+
+
+        .page-aside
+          aside.sidebar.page-block
+            .sidebar__close
+              +icon('close-modal')
+            include particles/_flat-aside
+          .content.page-block
+            include particles/_flat-content
+    include particles/_footer
+
+  script(src='js/script.js')

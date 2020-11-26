@@ -45,6 +45,11 @@ export function filterData(data) {
   console.log(data);
 }
 
+export function filterFlatData(data) {
+  console.log('Method filterFlatData()');
+  console.log(data);
+}
+
 export function bookingData(data) {
   console.log('Method bookingData()');
   console.log(data);
