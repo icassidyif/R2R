@@ -6,6 +6,7 @@ import {searchData} from "./function";
 import {bookingData} from "./function";
 import {registerData} from "./function";
 import {loginData} from "./function";
+import {filterData} from "./function";
 
 
 $(document).ready(function(){
@@ -150,6 +151,14 @@ $(document).ready(function(){
       const modal = document.querySelector('#search-block');
       const modalInst = M.Modal.getInstance(modal);
       modalInst.close();
+    }
+  });
+
+
+  $('#filter-form-aside').validate({
+    submitHandler: function (form) {
+      let formData = $(form).serializeArray();
+      filterData(formData);
     }
   });
 

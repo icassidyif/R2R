@@ -1,0 +1,124 @@
+.developer-single
+  &__info
+    order: -1
+    padding: 0
+    +breakpoint(md)
+      padding: 0 0 0 30px
+      order: unset
+  &__unactive-queues
+    .card-queues-dev
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background: rgba(255, 255, 255, 0.5)
+        pointer-events: none
+        transition: background .2s ease-out
+      &:hover
+        &:after
+          background: none
+
+
+
+.info-developer
+  line-height: 16px
+  margin: 0 0 30px 0
+  +breakpoint(xl)
+    margin: 0
+  &__photo
+    display: flex
+    justify-content: center
+    width: 100%
+    border-style: solid
+    border-width: 0 0 6px 0
+    border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+    padding: 0 0 24px 0
+    margin: 0 0 30px 0
+    img
+      height: 150px
+  &__block
+    display: grid
+    grid-column-gap: 20px
+    grid-template-columns: 25px 1fr
+    margin: 0 0 25px 0
+    &:last-child
+      margin: 0
+
+  &__value
+    font-size: 18px
+    line-height: 21px
+    font-weight: 700
+    margin: 0 0 10px 0
+  &__label
+    color: $dark-grey
+
+
+
+
+.active-buildings
+  &__body
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))
+
+.unactive-buildings
+  &__body
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))
+
+  .card-complex
+    &:after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba(255, 255, 255, 0.5)
+      pointer-events: none
+      transition: background .2s ease-out
+    &:hover
+      &:after
+        background: none
+
+
+.queues-dev
+  &__body
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr))
+
+.card-queues-dev
+  position: relative
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  background-color: #ffffff
+  line-height: 16px
+  display: grid
+  grid-template-columns: 70px 1fr
+  grid-column-gap: 12px
+  &__photo
+    position: relative
+    overflow: hidden
+    height: 70px
+  img
+    position: absolute
+    top: 0
+    left: calc((-100% + 300px) / 2 * -1)
+    width: 300px
+
+  &__content
+    display: grid
+    align-items: center
+    padding: 10px 10px 10px 0
+
+  a
+    color: $text-color
+    &:hover
+      font-weight: 700
+
+
+
+
+
+
+

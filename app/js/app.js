@@ -187,9 +187,50 @@ window.addEventListener('DOMContentLoaded', () => {
       })
       // listener on btns
     })
-    // END collapse
   }
-  //
+
+
+  if($('.collapse__content').length) {
+    collapseInitAnother();
+  }
+  // Collapse another content
+  function collapseInitAnother() {
+    const collapseBodies = document.querySelectorAll('.collapse__content');
+    collapseBodies.forEach(body => {
+      let bodyHeight;
+      if (body.style.display === 'none') {
+        body.style.display = '';
+        bodyHeight = body.clientHeight;
+        body.style.display = 'none';
+      } else  {
+        bodyHeight = body.clientHeight;
+      }
+      if (bodyHeight > 330) {
+        body.classList.add('extended');
+        body.classList.toggle('collapse');
+        if(body.classList.contains('collapse')) {
+          body.style.height = 330 + 'px';
+        } else  {
+          body.style.height = bodyHeight + 60 + 'px';
+        }
+      }
+      // listener on btns
+      const btn = body.querySelector('.collapse__btn');
+      btn.addEventListener('click', evt => {
+        body.classList.toggle('collapse');
+        if(body.classList.contains('collapse')) {
+          body.style.height = 330 + 'px';
+        } else  {
+          body.style.height = bodyHeight + 60 + 'px';
+        }
+      })
+      // listener on btns
+    })
+  }
+
+
+
+  // END collapse
 
   // DatePicker
   $.fn.datepicker.language['ua'] =  {

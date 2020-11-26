@@ -31,6 +31,11 @@ $(document).ready(function() {
     zoom: true
   });
 
+  $(".queues__card-first").lightGallery({
+    selector: '.item-gallery',
+    zoom: true
+  });
+
 
 
 });

@@ -1,0 +1,77 @@
+.queues
+  line-height: 16px
+  perspective: 700px
+  &__body
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: repeat(auto-fit, minmax(270px, 5fr))
+
+  &__card-first
+    .item-gallery
+      height: 100%
+
+
+
+.first-card-queues
+  cursor: pointer
+  padding: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  background-color: #ffffff
+  height: inherit
+  &__body
+    width: 180px
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title
+    color: $text-color-blue
+    text-transform: uppercase
+    text-align: center
+
+
+
+.card-queues
+  display: flex
+  flex-direction: column
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  background-color: #ffffff
+  transition: all .2s ease-out
+  transform-style: preserve-3d
+  &__photo
+    position: relative
+    height: 170px
+    overflow: hidden
+    img
+      position: absolute
+      bottom: 0
+      left: calc((-100% + 570px) / 2 * -1)
+      width: 570px
+      height: 170px
+  &__body
+    padding: 30px
+    display: flex
+    flex-wrap: wrap
+  &__block
+    margin: 0 0 20px 0
+    &:first-child
+      margin: 0 25px 20px 0
+    &:last-child
+      margin: 0
+  &__value
+    color: $text-color
+    margin: 0 0 5px 0
+    span
+      font-weight: 400
+      margin: 0 5px 0 0
+      &:last-child
+        margin: 0
+      &:first-child
+        font-weight: 700
+  &__label
+    color: $dark-grey
+  &:hover
+    transform: translateY(-5px) translateZ(5px)
+

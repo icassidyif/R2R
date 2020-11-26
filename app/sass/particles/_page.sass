@@ -35,7 +35,7 @@
         display: flex
         align-items: center
         position: relative
-        z-index: 2
+        z-index: 3
         &.active
           &:before
             content: ''
@@ -91,6 +91,30 @@
     .red
       color: #FB4949
 
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    padding: 10px 30px
+    line-height: 16px
+    li
+      margin: 0 0 15px 0
+      &:last-child
+        margin: 0
+    span
+      display: inline-block
+      margin: 0 5px 0 0
+      padding: 0
+      color: $text-color
+      font-weight: 500
+      text-transform: unset
+      &:last-child
+        margin: 0
+        font-weight: 700
+        color: $text-color-blue
+        text-decoration: underline
+
+
   &__social
     display: flex
     padding: 10px 30px
@@ -107,7 +131,6 @@
 
 
 .page-description
-  //margin: 0 0 70px 0
   &__body
     display: grid
     grid-template: min-content min-content / minmax(0, 1fr)
@@ -411,3 +434,64 @@
     background: url("../img/icons-sprite/icons.svg#next-slider-course") no-repeat center center #ffffff
   iframe
     pointer-events: none
+
+
+
+
+
+
+
+
+.collapse
+  &__btn
+    display: none
+    svg
+      transform: rotate(180deg)
+      transition: all .2s ease-out
+  &__content
+    position: relative
+    overflow: hidden
+    min-width: 0
+    transition: all .3s ease-out
+    +breakpoint(md)
+      border-style: solid
+      border-width: 0 6px 0 0
+      border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+      padding: 0 24px 0 0
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      width: 100%
+      height: 30px
+      background-image: linear-gradient(to bottom, rgba(255, 254, 254, 0.5), rgb(255, 255, 255))
+      opacity: 0
+      transition: .2s opacity ease-out
+      pointer-events: none
+      z-index: 1
+      +breakpoint(lg)
+        height: 60px
+    p
+      margin: 0 0 15px 0
+
+    &.collapse
+      &:before
+        opacity: 1
+      .collapse__btn
+        svg
+          transform: rotate(0deg)
+    &.extended
+      .collapse__btn
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        cursor: pointer
+        bottom: 3px
+        left: calc(50% - 25px / 2)
+        width: 25px
+        height: 25px
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+        background-color: #ffffff
+        z-index: 2
+

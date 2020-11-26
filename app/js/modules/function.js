@@ -40,6 +40,11 @@ export function searchData(data) {
   console.log(data);
 }
 
+export function filterData(data) {
+  console.log('Method filterData()');
+  console.log(data);
+}
+
 export function bookingData(data) {
   console.log('Method bookingData()');
   console.log(data);
