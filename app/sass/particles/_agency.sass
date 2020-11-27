@@ -1,0 +1,103 @@
+.agency
+  &__services
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    +breakpoint(sm)
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+
+
+.service-agency-card
+  padding: 9px 9px 2px 9px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  font-size: 14px
+  line-height: 16px
+  text-transform: uppercase
+  border-style: solid
+  border-width: 6px 6px 6px 6px
+  border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+  +breakpoint(sm)
+    padding: 24px 24px 17px 24px
+  &__block
+    margin: 0 30px 7px 0
+    &:last-child
+      margin: 0 0 7px 0
+      text-align: right
+  &__title
+    flex: 1 1 260px
+    font-weight: 700
+    color: $text-color-blue
+  &__deadline
+    white-space: nowrap
+
+.statistic
+  font-weight: 700
+  font-size: 18px
+  line-height: 21px
+  display: grid
+  grid-gap: 10px
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr))
+  &__block
+    background-color: $dark-blue
+    display: flex
+    justify-content: center
+    padding: 30px
+    align-items: center
+    flex-direction: column
+    color: #ffffff
+  &__label
+    margin: 0 0 10px 0
+
+
+
+.rieltors-agency
+  font-size: 18px
+  line-height: 21px
+  white-space: nowrap
+  overflow-y: scroll
+  a
+    color: $accent
+    font-weight: 500
+    text-decoration: underline
+  &__table
+    border-spacing: 5px
+    border-collapse: separate
+    width: 100%
+    th
+      font-weight: 700
+      color: #ffffff
+      background-color: $dark-blue
+      padding: 20px
+      //width: 230px
+    td
+      text-align: center
+      padding: 20px
+      font-weight: 500
+      background-color: #F2F5FC
+    tr
+      &:nth-child(odd)
+        td
+          background-color: #E1E6F2
+      &:last-child
+        td
+          background-color: #F2F5FC
+        a
+          color: $text-color-blue
+          font-weight: 700
+          font-size: 14px
+          line-height: 16px
+          text-transform: uppercase
+          text-decoration: none
+          border-style: solid
+          border-width: 0 0 6px 0
+          border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+          span
+            margin: 0 10px 0 0
+          svg
+            transition: all .2s ease-out
+          &:hover
+            svg
+              transform: translateX(2px)
+

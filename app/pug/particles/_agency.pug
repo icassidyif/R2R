@@ -1,0 +1,210 @@
+section.agency
+  .agency__container.container
+    ul.agency__breadcrumbs.breadcrumbs
+      li.breadcumbs__item
+        a(href='#') Головна
+      li.breadcumbs__item
+        a(href='#') АН Тест
+    .page__title-block
+      h1.title АН Тест
+      ul.page__menu.visible
+        li.visible
+          a(href='#').menu-opener
+            +icon('settings')
+          ul.page__submenu
+            li
+              a(href='#') МОЇ КВАРТИРИ
+            li
+              a(href='#') Замовити послугу
+            li.line
+              a(href='#') Усі ріелтори
+            li
+              a(href='#') ПРОФІЛЬ АН
+            li
+              a(href='#') Управління ріелторами
+
+    h2.title-2 Активні послуги
+    .agency__services.page-block
+      .agency__sevice.service-agency-card
+        .service-agency-card__block.service-agency-card__title
+          span Пакет послуг “агентство нерухомості+”
+        .service-agency-card__block.service-agency-card__deadline
+          span до 20.10.2021
+      .agency__sevice.service-agency-card
+        .service-agency-card__block.service-agency-card__title
+          span РЕКЛАМНА КаМПАНІЯ У FACEBOOK
+        .service-agency-card__block.service-agency-card__deadline
+          span до 20.10.2021
+      .agency__sevice.service-agency-card
+        .service-agency-card__block.service-agency-card__title
+          span Пакет послуг “агентство нерухомості” а такод ще дуже і дуже багато різноманітних подарунків
+        .service-agency-card__block.service-agency-card__deadline
+          span до 20.10.2021
+      .agency__sevice.service-agency-card
+        .service-agency-card__block.service-agency-card__title
+          span Пакет послуг “агентство нерухомості”
+        .service-agency-card__block.service-agency-card__deadline
+          span до 20.10.2021
+
+    h2.title-2 Статистика
+    .agency__statistic.statistic.page-block
+      .statistic__block
+        .statistic__label
+          span ПОКАЗІВ
+        .statistic__value
+          span 153
+      .statistic__block
+        .statistic__label
+          span БРОНЮВАННЯ
+        .statistic__value
+          span 1238
+      .statistic__block
+        .statistic__label
+          span ЗАВДАТКІВ
+        .statistic__value
+          span 15
+      .statistic__block
+        .statistic__label
+          span ПРОДАЖ
+        .statistic__value
+          span 7
+
+    h2.title-2 Стрічка подій
+    .tape-events__tapes.tapes.page-block
+      .tape
+        .tape__block
+          span 14.07.2020
+        .tape__block
+          span 18:00
+        .tape__block
+          a(href='#') Іван Іванович
+        .tape__block.tape__activity
+          span здійснив
+          span.action показ
+          span в
+          a(href='#') “ЖК Кришталеві вежі”
+      .tape
+        .tape__block
+          span 17.09.2020
+        .tape__block
+          span 15:00
+        .tape__block
+          a(href='#') Іван Іванович
+        .tape__block.tape__activity
+          span здійснив
+          span.action бронювання
+          span в
+          a(href='#') “ЖК Кришталеві вежі”
+      .tape
+        .tape__block
+          span 18.10.2020
+        .tape__block
+          span 15:00
+        .tape__block
+          a(href='#') Іван Іванович
+        .tape__block.tape__activity
+          span здійснив
+          span.action показ
+          span в
+          a(href='#') “ЖК Кришталеві вежі”
+      .tape
+        .tape__block
+          span 17.09.2020
+        .tape__block
+          span 15:00
+        .tape__block
+          a(href='#') Іван Іванович
+        .tape__block.tape__activity
+          span здійснив
+          span.action бронювання
+          span в
+          a(href='#') “ЖК Кришталеві вежі”
+      .tape
+        .tape__block
+          span 17.09.2020
+        .tape__block
+          span 15:00
+        .tape__block
+          a(href='#') Іван Іванович
+        .tape__block.tape__activity
+          span здійснив
+          span.action продаж
+          span в
+          a(href='#') “ЖК Кришталеві вежі”
+
+
+    h2.title-2 Ріелтори
+      span (всього 55)
+    .agency__rieltors.rieltors-agency.page-block
+      table.rieltors-agency__table
+        tr
+          th
+            span РІЕЛТОР
+          th
+            span ПОКАЗИ
+          th
+            span ЗАБРОНЬОВАНО
+          th
+            span ЗАВДАТОК
+          th
+            span ПРОДАЖ
+        tr
+          td
+            a(href='#') Іван Іванович
+          td
+            span 15
+          td
+            span 7
+          td
+            span 3
+          td
+            span 23
+        tr
+          td
+            a(href='#') Петро Петрович
+          td
+            span 17
+          td
+            span 23
+          td
+            span 5
+          td
+            span 18
+        tr
+          td
+            a(href='#') Іван Іванович
+          td
+            span 15
+          td
+            span 76
+          td
+            span 3
+          td
+            span 23
+        tr
+          td
+            a(href='#') Петро Петрович
+          td
+            span 14
+          td
+            span 7
+          td
+            span 4
+          td
+            span 22
+        tr
+          td
+            a(href='#') Іван Іванович
+          td
+            span 15
+          td
+            span 7
+          td
+            span 3
+          td
+            span 23
+        tr
+          td(colspan='5')
+            a(href='#')
+              span Показати всіх
+              +icon('all-rieltors-icon')

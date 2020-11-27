@@ -1,0 +1,45 @@
+.tapes
+
+.tape
+  font-size: 15px
+  line-height: 18px
+  border-style: solid
+  border-width: 0 0 6px 0
+  border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+  padding: 0 0 2px 0
+  margin: 0 0 20px 0
+
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 30px
+  +breakpoint(460)
+    grid-template-columns: minmax(80px, .6fr) minmax(40px, .6fr) minmax(200px, 1fr)
+  +breakpoint(md)
+    grid-template-columns: minmax(80px, .6fr) minmax(40px, .6fr) minmax(200px, 1fr) minmax(200px, 2fr)
+  &:last-child
+    margin: 0
+  &__block
+    font-weight: 500
+    margin: 0 0 12px 0
+    display: flex
+    span
+      margin: 0 5px 0 0
+      &:last-child
+        margin: 0
+    a
+      color: $accent
+      font-weight: 700
+      text-decoration: underline
+    &:last-child
+      margin: 0 0 12px 0
+  &__activity
+    grid-column: span 2
+    flex-wrap: wrap
+    +breakpoint(460)
+      grid-column: span 3
+    +breakpoint(md)
+      grid-column: span 1
+  .action
+    color: $text-color-blue
+    font-weight: 700
+
