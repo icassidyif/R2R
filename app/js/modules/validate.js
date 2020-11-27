@@ -31,54 +31,78 @@ $(document).ready(function(){
     rules: {
       floorFrom: {
         required: false,
-        maxlength: 2
+        maxlength: 2,
+        min: 1,
+        number: true
       },
       floorTo: {
         required: false,
-        maxlength: 2
+        maxlength: 2,
+        min: 1,
+        number: true
         // customPhone: true
       },
       squareFrom: {
         required: false,
-        maxlength: 3
+        maxlength: 3,
+        min: 1,
+        number: true
       },
       squareTo: {
         required: false,
-        maxlength: 3
+        maxlength: 3,
+        min: 1,
+        number: true
       },
       priceFrom: {
         required: false,
-        maxlength: 6
+        maxlength: 6,
+        min: 1,
+        number: true
       },
       priceTo: {
         required: false,
-        maxlength: 6
+        maxlength: 6,
+        min: 1,
+        number: true
       },
     },
     messages: {
       floorFrom: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       floorTo: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       squareFrom: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       squareTo: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       priceFrom: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       priceTo: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
     },
     submitHandler: function (form) {
@@ -96,54 +120,78 @@ $(document).ready(function(){
     rules: {
       floorFrom: {
         required: false,
-        maxlength: 2
+        maxlength: 2,
+        min: 1,
+        number: true
       },
       floorTo: {
         required: false,
-        maxlength: 2
+        maxlength: 2,
+        min: 1,
+        number: true
         // customPhone: true
       },
       squareFrom: {
         required: false,
-        maxlength: 3
+        maxlength: 3,
+        min: 1,
+        number: true
       },
       squareTo: {
         required: false,
-        maxlength: 3
+        maxlength: 3,
+        min: 1,
+        number: true
       },
       priceFrom: {
         required: false,
-        maxlength: 6
+        maxlength: 6,
+        min: 1,
+        number: true
       },
       priceTo: {
         required: false,
-        maxlength: 6
+        maxlength: 6,
+        min: 1,
+        number: true
       },
     },
     messages: {
       floorFrom: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       floorTo: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       squareFrom: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       squareTo: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       priceFrom: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
       priceTo: {
         required: "",
-        maxlength: ''
+        maxlength: '',
+        min: '',
+        number: ''
       },
     },
     submitHandler: function (form) {
