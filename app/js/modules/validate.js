@@ -40,7 +40,6 @@ $(document).ready(function(){
         maxlength: 2,
         min: 1,
         number: true
-        // customPhone: true
       },
       squareFrom: {
         required: false,
@@ -352,13 +351,15 @@ $(document).ready(function(){
       },
     },
     submitHandler: function (form) {
-      let formData = $(form).serializeArray();
-      registerData(formData);
-      form.reset();
-      const modal = document.querySelector('.login-block');
-      const modalInst = M.Modal.getInstance(modal);
-      modalInst.close();
-      M.toast({html: 'Дякуємо за реєсрацію!'});
+      // let formData = $(form).serializeArray();
+      // registerData(formData);
+      // form.reset();
+      // const modal = document.querySelector('.login-block');
+      // const modalInst = M.Modal.getInstance(modal);
+      // modalInst.close();
+      // M.toast({html: 'Дякуємо за реєсрацію!'});
+
+      form.submit();
     }
   });
 
@@ -383,15 +384,15 @@ $(document).ready(function(){
         required: "Це обов\'язкове поле",
         minlength: 'Пароль повинен містити мінімум 6 символів'
       },
-
     },
     submitHandler: function (form) {
-      let formData = $(form).serializeArray();
-      loginData(formData);
-      form.reset();
-      const modal = document.querySelector('.login-block');
-      const modalInst = M.Modal.getInstance(modal);
-      modalInst.close();
+      // let formData = $(form).serializeArray();
+      // loginData(formData);
+      // form.reset();
+      // const modal = document.querySelector('.login-block');
+      // const modalInst = M.Modal.getInstance(modal);
+      // modalInst.close();
+      form.submit();
     }
   });
 
