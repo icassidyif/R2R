@@ -49,19 +49,19 @@ header.header.page-block
           p
             label.label
               span Елекстронна пошта:
-              input(type='text' name='emailRegistration').input
+              input(type='text' name='SignupForm[email]').input
           p
             label.label
               span Повне ім’я та прізвище:
-              input(type='text' name='nameRegistration').input
+              input(type='text' name='SignupForm[r_name]').input
           p
             label.label
               span Номер телефону:
-              input(type='text' name='phoneRegistration' placeholder='+38 (0--)').input.input-full-phone
+              input(type='text' name='SignupForm[phone]' placeholder='+38 (0--)').input.input-full-phone
           p
             label.label
               span Пароль:
-              input(type='password' name='passwordRegistration').input
+              input(type='password' name='SignupForm[password]').input
         button(type='submit').button.booking-room__btn
           span Зареєструватись
           +icon('registration')
@@ -72,14 +72,14 @@ header.header.page-block
           p
             label.label
               span Елекстронна пошта:
-              input(type='text' name='emailLogin').input
+              input(type='text' name='LoginForm[email]').input
           p
             label.label
               span Пароль:
-              input(type='password' name='passwordLogin').input
+              input(type='password' name='LoginForm[password]').input
           p
             label.input-checkbox
-              input(type='checkbox' name='rememberMe' value='true')
+              input(type='checkbox' name='LoginForm[rememberMe]' value='true')
               span Запам’ятати мене
           p
             span.form__info Якщо ви забули пароль, ви може його

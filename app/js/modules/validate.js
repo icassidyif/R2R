@@ -315,37 +315,37 @@ $(document).ready(function(){
 
   $('#registration-form').validate({
     rules: {
-      emailRegistration: {
+      'SignupForm[email]': {
         required: true,
         email: true
       },
-      nameRegistration: {
+      'SignupForm[r_name]': {
         required: true,
         twoWords: true
       },
-      phoneRegistration: {
+      'SignupForm[phone]': {
         required: true,
         customPhone: true
       },
-      passwordRegistration: {
+      'SignupForm[password]': {
         required: true,
         minlength: 6
       },
     },
     messages: {
-      emailRegistration: {
+      'SignupForm[email]': {
         required: 'Це обов\'язкове поле',
         email: 'Невірний email'
       },
-      nameRegistration: {
+      'SignupForm[r_name]': {
         required: "Це обов\'язкове поле",
         twoWords: 'Вкажіть ім\'я та прізвище'
       },
-      phoneRegistration: {
+      'SignupForm[phone]': {
         required: "Це обов\'язкове поле",
         customPhone: 'Не вірний номер телефону',
       },
-      passwordRegistration: {
+      'SignupForm[password]': {
         required: "Це обов\'язкове поле",
         minlength: 'Пароль повинен містити мінімум 6 символів'
       },
@@ -366,21 +366,21 @@ $(document).ready(function(){
 
   $('#login-form').validate({
     rules: {
-      emailLogin: {
+      'LoginForm[email]': {
         required: true,
         email: true
       },
-      passwordLogin: {
+      'LoginForm[password]': {
         required: true,
         minlength: 6
       },
     },
     messages: {
-      emailLogin: {
+      'LoginForm[email]': {
         required: 'Це обов\'язкове поле',
         email: 'Невірний email'
       },
-      passwordLogin: {
+      'LoginForm[password]': {
         required: "Це обов\'язкове поле",
         minlength: 'Пароль повинен містити мінімум 6 символів'
       },

@@ -60,10 +60,10 @@
         <div id="registration">
           <form class="form" id="registration-form">
             <div class="form__wrapper">
-              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="emailRegistration"></label></p>
-              <p><label class="label"><span>Повне ім’я та прізвище:</span><input class="input" type="text" name="nameRegistration"></label></p>
-              <p><label class="label"><span>Номер телефону:</span><input class="input input-full-phone" type="text" name="phoneRegistration" placeholder="+38 (0--)"></label></p>
-              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="passwordRegistration"></label></p>
+              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="SignupForm[email]"></label></p>
+              <p><label class="label"><span>Повне ім’я та прізвище:</span><input class="input" type="text" name="SignupForm[r_name]"></label></p>
+              <p><label class="label"><span>Номер телефону:</span><input class="input input-full-phone" type="text" name="SignupForm[phone]" placeholder="+38 (0--)"></label></p>
+              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="SignupForm[password]"></label></p>
             </div><button class="button booking-room__btn" type="submit"><span>Зареєструватись</span><svg class="svg-registration ">
                 <use href="/img/icons-sprite/icons.svg#registration"/>
               </svg></button>
@@ -72,9 +72,9 @@
         <div id="login-tab">
           <form class="form" id="login-form">
             <div class="form__wrapper">
-              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="emailLogin"></label></p>
-              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="passwordLogin"></label></p>
-              <p><label class="input-checkbox"><input type="checkbox" name="rememberMe" value="true"><span>Запам’ятати мене</span></label></p>
+              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="LoginForm[email]"></label></p>
+              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="LoginForm[password]"></label></p>
+              <p><label class="input-checkbox"><input type="checkbox" name="LoginForm[rememberMe]" value="true"><span>Запам’ятати мене</span></label></p>
               <p><span class="form__info">Якщо ви забули пароль, ви може його</span><a class="link blue" href="#">відновити</a></p>
             </div><button class="button booking-room__btn" type="submit"><span>Увійти</span><svg class="svg-login ">
                 <use href="/img/icons-sprite/icons.svg#login"/>
