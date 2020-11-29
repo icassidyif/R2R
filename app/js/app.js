@@ -258,6 +258,33 @@ window.addEventListener('DOMContentLoaded', () => {
     maxDate: maxDay,
   })
   // End DatePicker
+
+
+
+
+
+
+  // Success Toast
+  const successMessage = document.querySelector('button.success');
+  successMessage.addEventListener('click', e => {
+    console.log('success');
+    M.toast({html: '<span>Квартира заброньована!</span><button class="closeToast" onclick="M.Toast.dismissAll()" ></button>', classes: 'success', displayLength: 10000});
+
+  })
+  // Error Toast
+  const errorMessage = document.querySelector('button.error');
+  errorMessage.addEventListener('click', e => {
+    M.toast({html: '<span>Квартира заброньована!</span><button class="closeToast" onclick="M.Toast.dismissAll()" ></button>', classes: 'error', displayLength: 4000});
+  })
+  //
+  //  close Toast
+  const closeToastBtns = document.querySelectorAll('.closeToast');
+  closeToastBtns.forEach(closeBtn => {
+    closeBtn.addEventListener('click', e => {
+      console.log('sdsds');
+    })
+  })
+//  End close Toast
 })
 
 

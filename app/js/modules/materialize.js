@@ -32,9 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-
-
 //  modals
+
 
 
 });
