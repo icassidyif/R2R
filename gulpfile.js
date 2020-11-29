@@ -27,7 +27,8 @@ const cheerio = require('gulp-cheerio');
 const FAVICON_DATA_FILE = 'faviconData.json';
 
 //configurations
-const isProd = true;
+const isProd = true
+;
 const isDev = !isProd;
 const projectFolder = require('path').basename(__dirname);
 const sourceFolder = 'app';
