@@ -1,0 +1,100 @@
+header.header-main
+  .header-main__container.container
+    .header-main__body
+      a(href='/').header-main__logo
+        +image('logo.svg')
+      .header-main__burger
+        span
+        span
+        span
+nav.header-main__menu.menu-header-main
+  a(href='#').menu-header-main__close
+    +icon('close-menu-orange')
+  .menu-header-main__block
+    ul
+      li
+        a(href='#login-block').modal-trigger
+          +icon('login-menu-orange')
+          span Вхід
+      li
+        a(href='#registration-block').modal-trigger
+          +icon('user-menu-orange')
+          span Реєстрація
+
+  .menu-header-main__block
+    ul
+      li
+        a(href='#')
+          span Забудовники
+      li
+        a(href='#')
+          span Житлові комплекси
+      li
+        a(href='#')
+          span Забудовники
+      li
+        a(href='#')
+          span Житлові комплекси
+
+
+
+
+#login-block.login-block.modal.modal_small
+  a(href='#!').modal-close
+    +icon('close-modal')
+  .modal__container.container
+    .modal__title  Вхід
+    form.form#login-form
+      .form__wrapper
+        p
+          label.label
+            span Елекстронна пошта:
+            input(type='text' name='LoginForm[email]').input
+        p
+          label.label
+            span Пароль:
+            input(type='password' name='LoginForm[password]').input
+        p
+          label.input-checkbox
+            input(type='checkbox' name='LoginForm[rememberMe]' value='true')
+            span Запам’ятати мене
+        p
+          span.form__info Якщо ви забули пароль, ви може його
+          a(href='#').link.blue відновити
+
+      button(type='submit').button.booking-room__btn
+        span Увійти
+        +icon('login')
+
+
+
+#registration-block.login-block.modal.modal_small
+  a(href='#!').modal-close
+    +icon('close-modal')
+  .modal__container.container
+    .modal__title Реєстрація
+    form.form#registration-form
+      .form__wrapper
+        p
+          label.label
+            span Елекстронна пошта:
+            input(type='text' name='SignupForm[email]').input
+        p
+          label.label
+            span Повне ім’я та прізвище:
+            input(type='text' name='SignupForm[r_name]').input
+        p
+          label.label
+            span Номер телефону:
+            input(type='text' name='SignupForm[phone]' placeholder='+38 (0--)').input.input-full-phone
+        p
+          label.label
+            span Пароль:
+            input(type='password' name='SignupForm[password]').input
+      button(type='submit').button.booking-room__btn
+        span Зареєструватись
+        +icon('registration')
+
+
+
+

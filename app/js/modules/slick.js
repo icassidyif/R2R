@@ -222,4 +222,46 @@ $(document).ready(function () {
 
 
 
+
+
+  $('.single-main-slider').slick({
+    slidesToShow: 1,
+    infinite: true,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    speed: 500,
+    easing: 'ease',
+    lazyLoad: 'ondemand',
+    draggable: true,
+    swipe: true,
+    touchThreshold: 5,
+    touchMove: true,
+    accessibility: true,
+    asNavFor: '.nav-main-slider',
+  })
+
+
+  $('.nav-main-slider').slick({
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    focusOnSelect: true,
+    easing: 'ease',
+    speed: 300,
+    draggable: true,
+    swipe: true,
+    touchThreshold: 5,
+    touchMove: true,
+    centerMode: true,
+    infinite: true,
+    asNavFor: '.single-main-slider',
+  });
+
+
+
+
+
+
 })

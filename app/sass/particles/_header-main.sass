@@ -1,0 +1,100 @@
+.header-main
+  position: absolute
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 3
+  &__body
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 70px
+    +breakpoint(md)
+      height: 100px
+  &__logo
+    height: 40px
+    position: relative
+    +breakpoint(md)
+      height: 50px
+    img
+      height: 100%
+  &__burger
+    width: 35px
+    height: 32px
+    position: relative
+    cursor: pointer
+    +breakpoint(md)
+      width: 50px
+      height: 45px
+    span
+      position: absolute
+      background-color: $accent
+      height: 5px
+      width: 100%
+      border-radius: 2.5px
+      top: calc(50% - 2.5px)
+      &:first-child
+        top: 0
+      &:last-child
+        top: unset
+        bottom: 0
+
+
+
+.menu-header-main
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  background-color: #ffffff
+  position: fixed
+  right: -110%
+  min-width: 320px
+  height: 100%
+  top: 0
+  padding: 50px 30px
+  font-size: 18px
+  line-height: 21px
+  text-transform: uppercase
+  font-weight: 500
+  transition: right .2s ease-out
+  z-index: 100
+  +breakpoint(sm)
+    padding: 90px 70px
+  &.active
+    right: 0
+
+  a
+    display: flex
+    align-items: center
+    color: $text-color
+    transition: color .1s ease-out
+    +breakpoint(md)
+      &:hover
+        color: #BEC2C4
+        svg
+          transform: translateX(-1px)
+
+    svg
+      margin: -1px 10px 0 0
+      transition: all .2s ease-out
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+  &__block
+    border-bottom: 1px solid #EBEBEB
+    margin: 0 0 25px 0
+    &:last-child
+      border: none
+      margin: 0
+      ul
+        margin: 0
+    ul
+      margin: 0 0 25px 0
+
+  li
+    margin: 0 0 25px 0
+    &:last-child
+      margin: 0
+
+
+
+

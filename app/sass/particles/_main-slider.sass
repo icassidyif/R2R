@@ -1,0 +1,145 @@
+.main-slider
+  position: relative
+  height: 100vh
+  overflow-x: hidden
+
+
+.single-main-slider
+  height: 100%
+  position: relative
+  z-index: 1
+  &__item
+    position: relative
+    height: 100%
+    overflow: hidden
+    &:after
+      content: ''
+      position: absolute
+      background: rgba(255, 255, 255, 0.75)
+      width: 100%
+      height: 100%
+      z-index: 1
+      top: 0
+      left: 0
+      +breakpoint(md)
+        //background: linear-gradient(90deg, rgba(255, 255, 255, 0.84) 29.24%, rgba(255, 255, 255, 0.2) 48.76%)
+        background: none
+    img
+      position: absolute
+      object-fit: cover
+      height: 100%
+      width: 100%
+  &__block
+    position: absolute
+    top: calc(50% + 70px)
+    width: 100%
+    height: max-content!important
+    transform: translateY(calc(-50% - 82px))
+    z-index: 2
+    +breakpoint(md)
+      top: calc(50% + 100px)
+  &__title
+    color: #3E5379
+    font-weight: 900
+    font-size: 22px
+    line-height: 33px
+    text-transform: uppercase
+    max-width: 570px
+    margin: 0 0 20px 0
+    +breakpoint(md)
+      font-size: 34px
+      line-height: 45px
+
+  &__description
+    display: none
+    visibility: hidden
+    max-width: 530px
+    font-size: 18px
+    line-height: 27px
+    margin: 0 0 20px 0
+    +breakpoint(md)
+      display: block
+      visibility: visible
+  &__list
+    font-size: 18px
+    line-height: 21px
+    font-weight: 500
+    margin: 0 0 35px 0
+    li
+      position: relative
+      padding:  0 0 0 27px
+      margin: 0 0 20px 0
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 1px
+        width: 15px
+        height: 15px
+        background-color: $accent
+  &__btn
+    font-size: 14px
+    line-height: 16px
+    font-weight: 700
+    text-transform: uppercase
+    display: inline-flex
+    align-items: center
+    background-color: #4F596C
+    color: #ffffff
+    padding: 20px 25px
+    +breakpoint(md)
+      font-size: 18px
+      line-height: 21px
+      padding: 30px 35px
+    span
+      margin: 0 10px 0 0
+      +breakpoint(md)
+        margin: 0 15px 0 0
+
+
+  .slick-slide
+    height: inherit
+    div
+      height: inherit
+  .slick-list
+    height: inherit
+
+
+
+.nav-main-slider
+  position: absolute
+  bottom: 0
+  left: 50%
+  width: 480px
+  transform: translateX(-50%)
+  z-index: 2
+  font-size: 14px
+  line-height: 16px
+  color: #4F596C
+  text-transform: uppercase
+  font-weight: 700
+  &__item
+    height: 65px
+    cursor: pointer
+    display: flex!important
+    align-items: center
+    justify-content: center
+
+  .slick-list
+    padding: 17px 0!important
+    margin: 0 -7px
+
+  .slick-slide
+    margin: 0 7px
+    background-color: rgba(255, 255, 255, 0.64)
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+
+  .slick-center
+    transform: scale(1.1)
+    background-color: #ffffff
+
+
+
+
+
+

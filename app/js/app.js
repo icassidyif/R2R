@@ -17,32 +17,57 @@ import './modules/validate';
 import './modules/datepicker';
 
 
-
+const body = document.querySelector('body');
+const menu = document.querySelector('.header__menu') || document.querySelector('.menu-header-main');
+const menuClose = document.querySelector('.menu-header-main__close');
+const logo = document.querySelector('.header__logo');
+const overlay = document.querySelector('.overlay');
+const burger = document.querySelector('.header__burger') || document.querySelector('.header-main__burger');
+const search = document.querySelector('.header__search');
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Main menu
-  const body = document.querySelector('body');
-  const menu = document.querySelector('.header__menu');
-  const logo = document.querySelector('.header__logo');
-  const overlay = document.querySelector('.overlay');
-  const burger = document.querySelector('.header__burger');
-  const search = document.querySelector('.header__search');
-  //console.log(logo.clientWidth + menu.clientWidth + search.clientWidth + 60);
-  if(logo.clientWidth + menu.clientWidth + search.clientWidth + 60 > window.innerWidth ) {
-    const header = document.querySelector('.header');
-    header.classList.add('small');
+  if(document.querySelectorAll('.header').length > 0) {
+    // Main menu
+    //console.log(logo.clientWidth + menu.clientWidth + search.clientWidth + 60);
+    if(logo.clientWidth + menu.clientWidth + search.clientWidth + 60 > window.innerWidth ) {
+      const header = document.querySelector('.header');
+      header.classList.add('small');
+    }
+    burger.addEventListener('click', e => {
+      menu.classList.add('active');
+      overlay.classList.add('active');
+      body.classList.add('lock');
+    })
+    overlay.addEventListener('click', e => {
+      menu.classList.remove('active');
+      overlay.classList.remove('active');
+      (document.querySelector('.sidebar'))? sidebar.classList.remove('active') : '';
+      body.classList.remove('lock');
+    })
   }
-  burger.addEventListener('click', e => {
-    menu.classList.add('active');
-    overlay.classList.add('active');
-    body.classList.add('lock');
-  })
-  overlay.addEventListener('click', e => {
-    menu.classList.remove('active');
-    overlay.classList.remove('active');
-    (document.querySelector('.sidebar'))? sidebar.classList.remove('active') : '';
-    body.classList.remove('lock');
-  })
+
+
+  if(document.querySelectorAll('.header-main').length > 0) {
+    // Main menu 2
+    burger.addEventListener('click', e => {
+      menu.classList.add('active');
+      overlay.classList.add('active');
+      body.classList.add('lock');
+    })
+    overlay.addEventListener('click', e => {
+      menu.classList.remove('active');
+      overlay.classList.remove('active');
+      (document.querySelector('.sidebar'))? sidebar.classList.remove('active') : '';
+      body.classList.remove('lock');
+    })
+    menuClose.addEventListener('click', e => {
+      menu.classList.remove('active');
+      overlay.classList.remove('active');
+      (document.querySelector('.sidebar'))? sidebar.classList.remove('active') : '';
+      body.classList.remove('lock');
+    })
+  }
+
 
   // sidebar show
   const sidebar = document.querySelector('.sidebar');
@@ -70,15 +95,20 @@ window.addEventListener('DOMContentLoaded', () => {
   let touchstartX = 0;
   let touchendX = 0;
 
-  let swipedZoneMenu = document.querySelector('.header__menu');
+  if(document.querySelectorAll('.header').length > 0) {
 
-  swipedZoneMenu.addEventListener('touchstart', function(event) {
-    touchstartX = event.changedTouches[0].screenX;
-  }, false);
-  swipedZoneMenu.addEventListener('touchend', function(event) {
-    touchendX = event.changedTouches[0].screenX;
-    handleMenu();
-  }, false);
+    let swipedZoneMenu = document.querySelector('.header__menu');
+
+    swipedZoneMenu.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+    }, false);
+    swipedZoneMenu.addEventListener('touchend', function(event) {
+      touchendX = event.changedTouches[0].screenX;
+      handleMenu();
+    }, false);
+  }
+
+
 
   if(document.querySelector('.sidebar')) {
     let swipedZoneSidebar = document.querySelector('.sidebar');
