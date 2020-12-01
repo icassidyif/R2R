@@ -1,1 +1,322 @@
-<!-- insert icon from iconSprite=========================--><!--======================================================--><!--insert img tag========================================--><!--======================================================--><!DOCTYPE html><html lang="ua"><head><title>R2R</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="css/style-vendors.css" type="text/css"><link rel="stylesheet" href="css/style.css" type="text/css"></head></html><body><div class="overlay"></div><div class="wrapper"><!-- $$ You can add class login to header--><header class="header page-block"><div class="header__container container"><div class="header__body"><a class="header__logo" href="/"><picture><source srcset="/img/Logo.svg" type="image/webp"><img class=" " src="/img/Logo.svg" alt="Logo.svg"/></picture></a><nav class="header__menu"><ul><li><a href="#">Забудовники</a></li><li><a href="#">Про нас</a></li><li><a href="#">Житлові комплекси</a></li></ul><a class="header__login button modal-trigger" href="#login-block"><span>Увійти</span><svg class="svg-login "><use xlink:href="/img/icons-sprite/icons.svg#login"></use></svg></a><ul class="header__logout"><li><a class="menu-opener" href="#"><img class=" " src="/img/rieltors/01.png" alt="rieltors/01.png"/></a><ul class="header__logout-submenu"><li><a href="#">Редагувати профіль</a></li><li><a href="#">Вийти</a></li></ul></li></ul></nav><a class="header__search button modal-trigger" href="#search-block"><span>Пошук</span><svg class="svg-search "><use xlink:href="/img/icons-sprite/icons.svg#search"></use></svg></a><div class="header__burger"><svg class="svg-burger "><use xlink:href="/img/icons-sprite/icons.svg#burger"></use></svg></div></div></div></header><div class="login-block modal modal_small" id="login-block"><a class="modal-close" href="#!"><svg class="svg-close-modal "><use xlink:href="/img/icons-sprite/icons.svg#close-modal"></use></svg></a><div class="modal__container container"><ul class="tabs"><li class="tab"><a class="active" href="#registration">Реєстрація для ріелтора</a></li><li class="tab"><a href="#login-tab">Вхід</a></li></ul><div id="registration"><form class="form" id="registration-form"><div class="form__wrapper"><p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="SignupForm[email]"></label></p><p><label class="label"><span>Повне ім’я та прізвище:</span><input class="input" type="text" name="SignupForm[r_name]"></label></p><p><label class="label"><span>Номер телефону:</span><input class="input input-full-phone" type="text" name="SignupForm[phone]" placeholder="+38 (0--)"></label></p><p><label class="label"><span>Пароль:</span><input class="input" type="password" name="SignupForm[password]"></label></p></div><button class="button booking-room__btn" type="submit"><span>Зареєструватись</span><svg class="svg-registration "><use xlink:href="/img/icons-sprite/icons.svg#registration"></use></svg></button></form></div><div id="login-tab"><form class="form" id="login-form"><div class="form__wrapper"><p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="LoginForm[email]"></label></p><p><label class="label"><span>Пароль:</span><input class="input" type="password" name="LoginForm[password]"></label></p><p><label class="input-checkbox"><input type="checkbox" name="LoginForm[rememberMe]" value="true"><span>Запам’ятати мене</span></label></p><p><span class="form__info">Якщо ви забули пароль, ви може його</span><a class="link blue" href="#">відновити</a></p></div><button class="button booking-room__btn" type="submit"><span>Увійти</span><svg class="svg-login "><use xlink:href="/img/icons-sprite/icons.svg#login"></use></svg></button></form></div></div></div><div class="search modal" id="search-block"><a class="modal-close" href="#!"><svg class="svg-close-modal "><use xlink:href="/img/icons-sprite/icons.svg#close-modal"></use></svg></a><div class="modal__container container"><h2 class="modal__title title title_2">Пошук по квартирам</h2><form id="search-form"><div class="search__options"><div class="search__option search__room"><span>Кімнат:</span><div class="search__group"><label class="input-pick"><input type="checkbox" checked name="room" value="1К"><span>1К</span></label><label class="input-pick"><input type="checkbox" name="room" value="2К"><span>2К</span></label><label class="input-pick"><input type="checkbox" name="room" value="3К"><span>3К</span></label><label class="input-pick"><input type="checkbox" name="room" value="4К+"><span>4К+</span></label></div></div><div class="search__option search__floor"><span>Поверх:</span><input class="input" type="number" name="floorFrom" placeholder="від"><input class="input" type="number" name="floorTo" placeholder="до"></div><div class="search__option search__square"><span>Площа:</span><input class="input" type="number" name="squareFrom" placeholder="від"><input class="input" type="number" name="squareTo" placeholder="до"></div><div class="search__option search__price"><span>Ціна:</span><input class="input" type="number" name="priceFrom" placeholder="від"><input class="input" type="number" name="priceTo" placeholder="до"><select name="currencyForm"><option>UAH</option><option>USD</option><option>EUR</option></select></div><div class="search__option search__terms"><span>Термін здачі:</span><select name="termsForm"><option>до 2021 IV квартал</option><option>до 2020 II квартал</option><option>до 2022 V квартал</option></select></div></div><div class="search__block block-search filter__block"><div class="block-search__header"><h4 class="block-search__title title-4">Житловий комплекс</h4><div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div></div><div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label></div></div><div class="search__block block-search filter__block"><div class="block-search__header"><h4 class="block-search__title title-4">Район</h4><div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div></div><div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label></div></div><button class="button block-search__btn" type="submit"><span>Шукати</span><svg class="svg-search "><use xlink:href="/img/icons-sprite/icons.svg#search"></use></svg></button></form></div></div><div class="page"><section class="developers page-block"><div class="developers__container container"><ul class="section__breadcrumbs breadcrumbs"><li class="breadcumbs__item"><a href="#">Головна</a></li><li class="breadcumbs__item"><a href="#">Забудовники</a></li></ul><div class="page__title-block"><h1 class="title">Забудовники</h1><ul class="page__menu visible"><li class="visible"><a class="menu-opener" href="#"><svg class="svg-settings "><use xlink:href="/img/icons-sprite/icons.svg#settings"></use></svg></a><ul class="page__submenu"><li><a class="modal-trigger" href="#booking-room">Забронювати галіму квартиру</a></li><li><a href="#">Редагувати інформацію</a></li><li><a href="#">Редагувати фотогалерею</a></li><li><a href="#">Додати звіт</a></li><li class="line"><a href="#">додати підїзд</a></li><li><a href="#">показати усім ріелторам</a></li><li class="line"><a href="#">Закрити від усіх ріелторів</a></li><li><a class="green" href="#">активувати</a></li><li><a class="red" href="#">Деактивувати</a></li></ul></li></ul></div><div class="page__filter"><select name="devFilter"><option>Обрати фільтр</option><option>По рейтингу</option><option>По кількості ЖК</option><option>Від А до Я</option><option>Від Я до А</option></select></div><div class="developers__body"><div class="developers__developer developer sale"><a class="developer__title title-3" href="#">BAU comfort</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/bau.png" alt="/developers/bau.png"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт, економ, преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 15</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">Вертикаль</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/vert.png" alt="/developers/vert.png"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer sale"><a class="developer__title title-3" href="#">МЖК Експрес-24</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/mjk.jpeg" alt="/developers/mjk.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт, економ</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 7</a></div><div class="developers__developer developer sale"><a class="developer__title title-3" href="#">Ярковиця</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/yark.png" alt="/developers/yark.png"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">Kontilium Group</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/kontilium.jpeg" alt="/developers/kontilium.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">IF MISKBUD Development IF MISKBUD Development</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/misk.jpeg" alt="/developers/misk.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">Lake Club</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/lake-club.jpeg" alt="/developers/lake-club.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">Kontilium Group</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/kontilium.jpeg" alt="/developers/kontilium.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">МЖК Експрес-24</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/mjk.jpeg" alt="/developers/mjk.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт, економ</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 7</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">Ярковиця</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/yark.png" alt="/developers/yark.png"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">Kontilium Group</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/kontilium.jpeg" alt="/developers/kontilium.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div><div class="developers__developer developer"><a class="developer__title title-3" href="#">Lake Club</a><div class="developer__card card-developer"><div class="card-developer__photo"><img class=" " src="/img//developers/lake-club.jpeg" alt="/developers/lake-club.jpeg"/></div><div class="card-developer__body"><div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div><div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div><div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div></div></div><a class="developer__projects" href="#">Всього ЖК 24</a></div></div><div class="pagination-wrapper"><ul class="search-content__pagination pagination"><li class="disabled"><a href="#!"><svg class="svg-pagination-prev "><use xlink:href="/img/icons-sprite/icons.svg#pagination-prev"></use></svg></a></li><li class="active"><a href="#!">1</a></li><li class="waves-effect"><a href="#!">2</a></li><li class="waves-effect"><a href="#!">3</a></li><li class="waves-effect"><a href="#!">4</a></li><li class="waves-effect"><a href="#!">5</a></li><li class="waves-effect"><a href="#!"><svg class="svg-pagination-next "><use xlink:href="/img/icons-sprite/icons.svg#pagination-next"></use></svg></a></li></ul></div></div></section></div><footer class="footer"><div class="footer__container container"><div class="footer__body"><div class="footer__header"><div class="footer__logo"><a href="/"><img class=" " src="/img/Logo-footer.svg" alt="Logo-footer.svg"/></a></div><ul class="footer__menu"><li><a href="#">Забудівники</a></li><li><a href="#">Житлові комплекси</a></li><li><a href="#">РЕЄСТРАЦІЯ</a></li></ul><div class="footer__contacts"><span>ГАРЯЧА ЛІНІЯ</span><a href="tel:+380666666666">+3 8067 575 75 77</a></div></div><div class="footer__copyright"><span class="footer__year">© 2008-2020 R2R.ua</span><div class="footer__dev"><span>розроблено</span><a href="https://dwave.space/" target="blank">D-wave studio</a></div></div></div></div></footer></div><script src="js/script.js"></script></body>
+<!-- insert icon from iconSprite=========================--><!--======================================================--><!--insert img tag========================================--><!--======================================================--><!DOCTYPE html><html lang="ua"><head>
+  <title>R2R</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style-vendors.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="apple-touch-icon" sizes="x" href="/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="overlay"></div>
+  <div class="wrapper">
+    <!-- $$ You can add class login to header-->
+    <header class="header page-block">
+      <div class="header__container container">
+        <div class="header__body"><a class="header__logo" href="/">
+            <picture>
+              <source srcset="/img/Logo.svg" type="image/webp"><img class=" " src="/img/Logo.svg" alt="Logo.svg">
+            </picture>
+          </a>
+          <nav class="header__menu">
+            <ul>
+              <li><a href="#">Забудовники</a></li>
+              <li><a href="#">Про нас</a></li>
+              <li><a href="#">Житлові комплекси</a></li>
+            </ul><a class="header__login button modal-trigger" href="#login-block"><span>Увійти</span><svg class="svg-login ">
+                <use href="/img/icons-sprite/icons.svg#login"/>
+              </svg></a>
+            <ul class="header__logout">
+              <li><a class="menu-opener" href="#"><img class=" " src="/img/rieltors/01.png" alt="rieltors/01.png"></a>
+                <ul class="header__logout-submenu">
+                  <li><a href="#">Редагувати профіль</a></li>
+                  <li><a href="#">Вийти</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav><a class="header__search button modal-trigger" href="#search-block"><span>Пошук</span><svg class="svg-search ">
+              <use href="/img/icons-sprite/icons.svg#search"/>
+            </svg></a>
+          <div class="header__burger"><svg class="svg-burger ">
+              <use href="/img/icons-sprite/icons.svg#burger"/>
+            </svg></div>
+        </div>
+      </div>
+    </header>
+    <div class="login-block modal modal_small" id="login-block"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+          <use href="/img/icons-sprite/icons.svg#close-modal"/>
+        </svg></a>
+      <div class="modal__container container">
+        <ul class="tabs">
+          <li class="tab"><a class="active" href="#registration">Реєстрація для ріелтора</a></li>
+          <li class="tab"><a href="#login-tab">Вхід</a></li>
+        </ul>
+        <div id="registration">
+          <form class="form" id="registration-form">
+            <div class="form__wrapper">
+              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="SignupForm[email]"></label></p>
+              <p><label class="label"><span>Повне ім’я та прізвище:</span><input class="input" type="text" name="SignupForm[r_name]"></label></p>
+              <p><label class="label"><span>Номер телефону:</span><input class="input input-full-phone" type="text" name="SignupForm[phone]" placeholder="+38 (0--)"></label></p>
+              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="SignupForm[password]"></label></p>
+            </div><button class="button booking-room__btn" type="submit"><span>Зареєструватись</span><svg class="svg-registration ">
+                <use href="/img/icons-sprite/icons.svg#registration"/>
+              </svg></button>
+          </form>
+        </div>
+        <div id="login-tab">
+          <form class="form" id="login-form">
+            <div class="form__wrapper">
+              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="LoginForm[email]"></label></p>
+              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="LoginForm[password]"></label></p>
+              <p><label class="input-checkbox"><input type="checkbox" name="LoginForm[rememberMe]" value="true"><span>Запам’ятати мене</span></label></p>
+              <p><span class="form__info">Якщо ви забули пароль, ви може його</span><a class="link blue" href="#">відновити</a></p>
+            </div><button class="button booking-room__btn" type="submit"><span>Увійти</span><svg class="svg-login ">
+                <use href="/img/icons-sprite/icons.svg#login"/>
+              </svg></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="search modal" id="search-block"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+          <use href="/img/icons-sprite/icons.svg#close-modal"/>
+        </svg></a>
+      <div class="modal__container container">
+        <h2 class="modal__title title title_2">Пошук по квартирам</h2>
+        <form id="search-form">
+          <div class="search__options">
+            <div class="search__option search__room"><span>Кімнат:</span>
+              <div class="search__group"><label class="input-pick"><input type="checkbox" checked name="room" value="1К"><span>1К</span></label><label class="input-pick"><input type="checkbox" name="room" value="2К"><span>2К</span></label><label class="input-pick"><input type="checkbox" name="room" value="3К"><span>3К</span></label><label class="input-pick"><input type="checkbox" name="room" value="4К+"><span>4К+</span></label></div>
+            </div>
+            <div class="search__option search__floor"><span>Поверх:</span><input class="input" type="number" name="floorFrom" placeholder="від"><input class="input" type="number" name="floorTo" placeholder="до"></div>
+            <div class="search__option search__square"><span>Площа:</span><input class="input" type="number" name="squareFrom" placeholder="від"><input class="input" type="number" name="squareTo" placeholder="до"></div>
+            <div class="search__option search__price"><span>Ціна:</span><input class="input" type="number" name="priceFrom" placeholder="від"><input class="input" type="number" name="priceTo" placeholder="до"><select name="currencyForm">
+                <option>UAH</option>
+                <option>USD</option>
+                <option>EUR</option>
+              </select></div>
+            <div class="search__option search__terms"><span>Термін здачі:</span><select name="termsForm">
+                <option>до 2021 IV квартал</option>
+                <option>до 2020 II квартал</option>
+                <option>до 2022 V квартал</option>
+              </select></div>
+          </div>
+          <div class="search__block block-search filter__block">
+            <div class="block-search__header">
+              <h4 class="block-search__title title-4">Житловий комплекс</h4>
+              <div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div>
+            </div>
+            <div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label></div>
+          </div>
+          <div class="search__block block-search filter__block">
+            <div class="block-search__header">
+              <h4 class="block-search__title title-4">Район</h4>
+              <div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div>
+            </div>
+            <div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label></div>
+          </div><button class="button block-search__btn" type="submit"><span>Шукати</span><svg class="svg-search ">
+              <use href="/img/icons-sprite/icons.svg#search"/>
+            </svg></button>
+        </form>
+      </div>
+    </div>
+    <div class="page">
+      <section class="developers page-block">
+        <div class="developers__container container">
+          <ul class="section__breadcrumbs breadcrumbs">
+            <li class="breadcumbs__item"><a href="#">Головна</a></li>
+            <li class="breadcumbs__item"><a href="#">Забудовники</a></li>
+          </ul>
+          <div class="page__title-block">
+            <h1 class="title">Забудовники</h1>
+            <ul class="page__menu visible">
+              <li class="visible"><a class="menu-opener" href="#"><svg class="svg-settings ">
+                    <use href="/img/icons-sprite/icons.svg#settings"/>
+                  </svg></a>
+                <ul class="page__submenu">
+                  <li><a class="modal-trigger" href="#booking-room">Забронювати галіму квартиру</a></li>
+                  <li><a href="#">Редагувати інформацію</a></li>
+                  <li><a href="#">Редагувати фотогалерею</a></li>
+                  <li><a href="#">Додати звіт</a></li>
+                  <li class="line"><a href="#">додати підїзд</a></li>
+                  <li><a href="#">показати усім ріелторам</a></li>
+                  <li class="line"><a href="#">Закрити від усіх ріелторів</a></li>
+                  <li><a class="green" href="#">активувати</a></li>
+                  <li><a class="red" href="#">Деактивувати</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="page__filter"><select name="devFilter">
+              <option>Обрати фільтр</option>
+              <option>По рейтингу</option>
+              <option>По кількості ЖК</option>
+              <option>Від А до Я</option>
+              <option>Від Я до А</option>
+            </select></div>
+          <div class="developers__body">
+            <div class="developers__developer developer sale"><a class="developer__title title-3" href="#">BAU comfort</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/bau.png" alt="/developers/bau.png"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт, економ, преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 15</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">Вертикаль</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/vert.png" alt="/developers/vert.png"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer sale"><a class="developer__title title-3" href="#">МЖК Експрес-24</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/mjk.jpeg" alt="/developers/mjk.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт, економ</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 7</a>
+            </div>
+            <div class="developers__developer developer sale"><a class="developer__title title-3" href="#">Ярковиця</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/yark.png" alt="/developers/yark.png"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">Kontilium Group</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/kontilium.jpeg" alt="/developers/kontilium.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">IF MISKBUD Development IF MISKBUD Development</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/misk.jpeg" alt="/developers/misk.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">Lake Club</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/lake-club.jpeg" alt="/developers/lake-club.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">Kontilium Group</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/kontilium.jpeg" alt="/developers/kontilium.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">МЖК Експрес-24</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/mjk.jpeg" alt="/developers/mjk.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт, економ</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 7</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">Ярковиця</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/yark.png" alt="/developers/yark.png"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">Kontilium Group</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/kontilium.jpeg" alt="/developers/kontilium.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+            <div class="developers__developer developer"><a class="developer__title title-3" href="#">Lake Club</a>
+              <div class="developer__card card-developer">
+                <div class="card-developer__photo"><img class=" " src="/img//developers/lake-club.jpeg" alt="/developers/lake-club.jpeg"></div>
+                <div class="card-developer__body">
+                  <div class="card-developer__block"><span class="card-developer__label">Вартість М2 від:</span><span class="card-developer__value">11 500 грн.</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Клас житла:</span><span class="card-developer__value">преміум, комфорт</span></div>
+                  <div class="card-developer__block"><span class="card-developer__label">Квартир в продажі:</span><span class="card-developer__value">10 000+</span></div>
+                </div>
+              </div><a class="developer__projects" href="#">Всього ЖК 24</a>
+            </div>
+          </div>
+          <div class="pagination-wrapper">
+            <ul class="search-content__pagination pagination">
+              <li class="disabled"><a href="#!"><svg class="svg-pagination-prev ">
+                    <use href="/img/icons-sprite/icons.svg#pagination-prev"/>
+                  </svg></a></li>
+              <li class="active"><a href="#!">1</a></li>
+              <li class="waves-effect"><a href="#!">2</a></li>
+              <li class="waves-effect"><a href="#!">3</a></li>
+              <li class="waves-effect"><a href="#!">4</a></li>
+              <li class="waves-effect"><a href="#!">5</a></li>
+              <li class="waves-effect"><a href="#!"><svg class="svg-pagination-next ">
+                    <use href="/img/icons-sprite/icons.svg#pagination-next"/>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__body">
+          <div class="footer__header">
+            <div class="footer__logo"><a href="/"><img class=" " src="/img/Logo-footer.svg" alt="Logo-footer.svg"></a></div>
+            <ul class="footer__menu">
+              <li><a href="#">Забудівники</a></li>
+              <li><a href="#">Житлові комплекси</a></li>
+              <li><a href="#">РЕЄСТРАЦІЯ</a></li>
+            </ul>
+            <div class="footer__contacts"><span>ГАРЯЧА ЛІНІЯ</span><a href="tel:+380666666666">+3 8067 575 75 77</a></div>
+          </div>
+          <div class="footer__copyright"><span class="footer__year">© 2008-2020 R2R.ua</span>
+            <div class="footer__dev"><span>розроблено</span><a href="https://dwave.space/" target="blank">D-wave studio</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body></html>

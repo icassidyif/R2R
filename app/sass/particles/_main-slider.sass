@@ -34,7 +34,8 @@
     top: calc(50% + 70px)
     width: 100%
     height: max-content!important
-    transform: translateY(calc(-50% - 82px))
+    transform: translateY(calc(-50% - 82px)) translateX(-100%)
+    transition: all .2s ease-out .3s
     z-index: 2
     +breakpoint(md)
       top: calc(50% + 100px)
@@ -49,7 +50,6 @@
     +breakpoint(md)
       font-size: 34px
       line-height: 45px
-
   &__description
     display: none
     visibility: hidden
@@ -96,6 +96,10 @@
       +breakpoint(md)
         margin: 0 15px 0 0
 
+  .slick-active
+    .single-main-slider
+      &__block
+        transform: translateY(calc(-50% - 82px)) translateX(0)
 
   .slick-slide
     height: inherit
@@ -125,6 +129,8 @@
     align-items: center
     justify-content: center
 
+
+
   .slick-list
     padding: 17px 0!important
     margin: 0 -7px
@@ -133,6 +139,7 @@
     margin: 0 7px
     background-color: rgba(255, 255, 255, 0.64)
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+
 
   .slick-center
     transform: scale(1.1)

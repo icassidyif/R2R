@@ -1,1 +1,496 @@
-<!-- insert icon from iconSprite=========================--><!--======================================================--><!--insert img tag========================================--><!--======================================================--><!DOCTYPE html><html lang="ua"><head><title>R2R</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="css/style-vendors.css" type="text/css"><link rel="stylesheet" href="css/style.css" type="text/css"></head></html><body><div class="overlay"></div><div class="wrapper"><!-- $$ You can add class login to header--><header class="header page-block"><div class="header__container container"><div class="header__body"><a class="header__logo" href="/"><picture><source srcset="/img/Logo.svg" type="image/webp"><img class=" " src="/img/Logo.svg" alt="Logo.svg"/></picture></a><nav class="header__menu"><ul><li><a href="#">Забудовники</a></li><li><a href="#">Про нас</a></li><li><a href="#">Житлові комплекси</a></li></ul><a class="header__login button modal-trigger" href="#login-block"><span>Увійти</span><svg class="svg-login "><use xlink:href="/img/icons-sprite/icons.svg#login"></use></svg></a><ul class="header__logout"><li><a class="menu-opener" href="#"><img class=" " src="/img/rieltors/01.png" alt="rieltors/01.png"/></a><ul class="header__logout-submenu"><li><a href="#">Редагувати профіль</a></li><li><a href="#">Вийти</a></li></ul></li></ul></nav><a class="header__search button modal-trigger" href="#search-block"><span>Пошук</span><svg class="svg-search "><use xlink:href="/img/icons-sprite/icons.svg#search"></use></svg></a><div class="header__burger"><svg class="svg-burger "><use xlink:href="/img/icons-sprite/icons.svg#burger"></use></svg></div></div></div></header><div class="login-block modal modal_small" id="login-block"><a class="modal-close" href="#!"><svg class="svg-close-modal "><use xlink:href="/img/icons-sprite/icons.svg#close-modal"></use></svg></a><div class="modal__container container"><ul class="tabs"><li class="tab"><a class="active" href="#registration">Реєстрація для ріелтора</a></li><li class="tab"><a href="#login-tab">Вхід</a></li></ul><div id="registration"><form class="form" id="registration-form"><div class="form__wrapper"><p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="SignupForm[email]"></label></p><p><label class="label"><span>Повне ім’я та прізвище:</span><input class="input" type="text" name="SignupForm[r_name]"></label></p><p><label class="label"><span>Номер телефону:</span><input class="input input-full-phone" type="text" name="SignupForm[phone]" placeholder="+38 (0--)"></label></p><p><label class="label"><span>Пароль:</span><input class="input" type="password" name="SignupForm[password]"></label></p></div><button class="button booking-room__btn" type="submit"><span>Зареєструватись</span><svg class="svg-registration "><use xlink:href="/img/icons-sprite/icons.svg#registration"></use></svg></button></form></div><div id="login-tab"><form class="form" id="login-form"><div class="form__wrapper"><p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="LoginForm[email]"></label></p><p><label class="label"><span>Пароль:</span><input class="input" type="password" name="LoginForm[password]"></label></p><p><label class="input-checkbox"><input type="checkbox" name="LoginForm[rememberMe]" value="true"><span>Запам’ятати мене</span></label></p><p><span class="form__info">Якщо ви забули пароль, ви може його</span><a class="link blue" href="#">відновити</a></p></div><button class="button booking-room__btn" type="submit"><span>Увійти</span><svg class="svg-login "><use xlink:href="/img/icons-sprite/icons.svg#login"></use></svg></button></form></div></div></div><div class="search modal" id="search-block"><a class="modal-close" href="#!"><svg class="svg-close-modal "><use xlink:href="/img/icons-sprite/icons.svg#close-modal"></use></svg></a><div class="modal__container container"><h2 class="modal__title title title_2">Пошук по квартирам</h2><form id="search-form"><div class="search__options"><div class="search__option search__room"><span>Кімнат:</span><div class="search__group"><label class="input-pick"><input type="checkbox" checked name="room" value="1К"><span>1К</span></label><label class="input-pick"><input type="checkbox" name="room" value="2К"><span>2К</span></label><label class="input-pick"><input type="checkbox" name="room" value="3К"><span>3К</span></label><label class="input-pick"><input type="checkbox" name="room" value="4К+"><span>4К+</span></label></div></div><div class="search__option search__floor"><span>Поверх:</span><input class="input" type="number" name="floorFrom" placeholder="від"><input class="input" type="number" name="floorTo" placeholder="до"></div><div class="search__option search__square"><span>Площа:</span><input class="input" type="number" name="squareFrom" placeholder="від"><input class="input" type="number" name="squareTo" placeholder="до"></div><div class="search__option search__price"><span>Ціна:</span><input class="input" type="number" name="priceFrom" placeholder="від"><input class="input" type="number" name="priceTo" placeholder="до"><select name="currencyForm"><option>UAH</option><option>USD</option><option>EUR</option></select></div><div class="search__option search__terms"><span>Термін здачі:</span><select name="termsForm"><option>до 2021 IV квартал</option><option>до 2020 II квартал</option><option>до 2022 V квартал</option></select></div></div><div class="search__block block-search filter__block"><div class="block-search__header"><h4 class="block-search__title title-4">Житловий комплекс</h4><div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div></div><div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label></div></div><div class="search__block block-search filter__block"><div class="block-search__header"><h4 class="block-search__title title-4">Район</h4><div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div></div><div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label></div></div><button class="button block-search__btn" type="submit"><span>Шукати</span><svg class="svg-search "><use xlink:href="/img/icons-sprite/icons.svg#search"></use></svg></button></form></div></div><div class="page"><section class="section page-block"><div class="section__container container"><ul class="section__breadcrumbs breadcrumbs"><li class="breadcumbs__item"><a href="#">Головна</a></li><li class="breadcumbs__item"><a href="#">Забудовники</a></li><li class="breadcumbs__item"><a href="#">Ярковиця</a></li><li class="breadcumbs__item"><a href="#">Містечко Липки Секція І</a></li></ul><div class="page__title-block"><h1 class="title">Містечко Липки Секція І</h1><ul class="page__menu visible"><li class="visible"><a class="menu-opener" href="#"><svg class="svg-settings "><use xlink:href="/img/icons-sprite/icons.svg#settings"></use></svg></a><ul class="page__submenu"><li><a class="modal-trigger" href="#booking-room">Забронювати галіму квартиру</a></li><li><a href="#">Редагувати інформацію</a></li><li><a href="#">Редагувати фотогалерею</a></li><li><a href="#">Додати звіт</a></li><li class="line"><a href="#">додати підїзд</a></li><li><a href="#">показати усім ріелторам</a></li><li class="line"><a href="#">Закрити від усіх ріелторів</a></li><li><a class="green" href="#">активувати</a></li><li><a class="red" href="#">Деактивувати</a></li></ul></li><li class="visible"><a href="#apartment-table"><svg class="svg-table "><use xlink:href="/img/icons-sprite/icons.svg#table"></use></svg></a></li><li class="visible"><a class="menu-opener" href="#"><svg class="svg-share "><use xlink:href="/img/icons-sprite/icons.svg#share"></use></svg></a><ul class="page__submenu"><li><span>Поділитися</span><div class="page__social"><a href="#"><svg class="svg-telegram "><use xlink:href="/img/icons-sprite/icons.svg#telegram"></use></svg></a><a href="#"><svg class="svg-viber "><use xlink:href="/img/icons-sprite/icons.svg#viber"></use></svg></a><a href="#"><svg class="svg-whatsapp "><use xlink:href="/img/icons-sprite/icons.svg#whatsapp"></use></svg></a><a href="#"><svg class="svg-messenger "><use xlink:href="/img/icons-sprite/icons.svg#messenger"></use></svg></a><a href="#"><svg class="svg-link-icon "><use xlink:href="/img/icons-sprite/icons.svg#link-icon"></use></svg></a></div></li></ul></li></ul></div></div><div class="section__wrapper"><div class="section__container container"><div class="section__slider-block"><div class="slider-section-single section__slider" id="lightgallery"><div class="section__slider__item"><div class="item-gallery" data-src="../img/section-lupky/01.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"/></div></div><div class="section__slider__item"><div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"/></div></div><div class="section__slider__item"><div class="item-gallery" data-src="../img/section-lupky/03.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/03.jpeg" alt="../img/section-lupky/03.jpeg"/></div></div><div class="section__slider__item"><div class="item-gallery" data-src="../img/section-lupky/04.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"/></div></div><div class="section__slider__item"><div class="item-gallery" data-src="../img/section-lupky/05.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/05.jpeg" alt="../img/section-lupky/05.jpeg"/></div></div><div class="section__slider__item"><div class="item-gallery" data-src="../img/section-lupky/01.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"/></div></div><div class="section__slider__item"><div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"/></div></div></div><div class="slider-section-nav section__slider"><div class="section__slider__item" data-item="0"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"/></div><div class="section__slider__item" data-item="1"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"/></div><div class="section__slider__item" data-item="2"><img class=" " src="/img/../img/section-lupky/03.jpeg" alt="../img/section-lupky/03.jpeg"/></div><div class="section__slider__item" data-item="3"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"/></div><div class="section__slider__item" data-item="4"><img class=" " src="/img/../img/section-lupky/05.jpeg" alt="../img/section-lupky/05.jpeg"/></div><div class="section__slider__item" data-item="5"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"/></div><div class="section__slider__item" data-item="6"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"/></div></div></div></div></div><div class="section__description page-description page-block"><div class="section__container container"><div class="page-description__body"><div class="page-description__tabs tabs-page"><div class="tabs-page__wrapper"><ul class="tabs"><li class="tab"><a class="active" href="#about">Про комплекс</a></li><li class="tab"><a href="#options">Характеристики</a></li><li class="tab"><a class="tab-slider-init" href="#course">Хід будівництва</a></li></ul></div><div class="tabs-page__content" id="about"><p>Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально.  Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально.</p><div class="tabs-page__btn"><svg class="svg-collapse "><use xlink:href="/img/icons-sprite/icons.svg#collapse"></use></svg></div></div><div class="tabs-page__content" id="options"><div class="options"><div><h4 class="options__title">Загальна інформація</h4><ul><li><span>Район:</span><span>ценрт</span></li><li><span>Клас житла:</span><span>комфорт</span></li><li><span>К-сть поверхів:</span><span>10</span></li><li><span>К-сть підїздів:</span><span>40</span></li></ul></div><div><h4 class="options__title">Локація</h4><ul><li><span>Район:</span><span>ценрт</span></li><li><span>Клас житла:</span><span>комфорт</span></li><li><span>К-сть поверхів:</span><span>10</span></li><li><span>К-сть будинків:</span><span>11</span></li><li><span>К-сть підїздів:</span><span>40</span></li><li><span>К-сть квартир:</span><span>150</span></li><li><span>Ліфт:</span><span>якісний безшумний ліфт якісний безшумний ліфт якісний безшумний ліфт якісний безшумний ліфт</span></li><li><span>Ціна за кв.м. (від - до):</span><span>13000</span></li></ul></div></div><div class="tabs-page__btn"><svg class="svg-collapse "><use xlink:href="/img/icons-sprite/icons.svg#collapse"></use></svg></div></div><div class="tabs-page__content" id="course"><div class="course-block"><div class="course-block__header"><div class="course-block__info"><span class="course-block__label">Звітність за</span><span class="course-block__date">23.07.2020</span></div><div class="course-block__controls visible"><a class="course-block__btn button-2 visible" href="#">Редагувати<svg class="svg-edit "><use xlink:href="/img/icons-sprite/icons.svg#edit"></use></svg></a><a class="course-block__btn button-2 visible" href="#">Редагувати фото<svg class="svg-edit-photo "><use xlink:href="/img/icons-sprite/icons.svg#edit-photo"></use></svg></a></div></div><div class="course-block__content"><div class="course-block__slider tab-slider"><div class="tab-slider__item"><div class="item-gallery" data-src="https://www.youtube.com/watch?v=pU0RAQWM4SI" data-sub-html="text"><iframe type="text/html" width="100%" height="100%" autoplay="0" src="https://www.youtube.com/embed/pU0RAQWM4SI"></iframe></div></div><div class="tab-slider__item"><div class="item-gallery" data-src="../img/section-lupky/04.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"/></div></div><div class="tab-slider__item"><div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"/></div></div></div></div></div><div class="course-block"><div class="course-block__header"><div class="course-block__info"><span class="course-block__label">Звітність за</span><span class="course-block__date">23.07.2020</span></div><div class="course-block__controls visible"><a class="course-block__btn button-2 visible" href="#">Редагувати<svg class="svg-edit "><use xlink:href="/img/icons-sprite/icons.svg#edit"></use></svg></a><a class="course-block__btn button-2 visible" href="#">Редагувати фото<svg class="svg-edit-photo "><use xlink:href="/img/icons-sprite/icons.svg#edit-photo"></use></svg></a></div></div><div class="course-block__content"><div class="course-block__slider tab-slider"><div class="tab-slider__item"><div class="item-gallery" data-src="../img/section-lupky/03.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/03.jpeg" alt="../img/section-lupky/03.jpeg"/></div></div><div class="tab-slider__item"><div class="item-gallery" data-src="../img/section-lupky/04.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"/></div></div><div class="tab-slider__item"><div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"/></div></div></div></div></div><div class="tabs-page__btn"><svg class="svg-collapse "><use xlink:href="/img/icons-sprite/icons.svg#collapse"></use></svg></div></div></div><div class="description-section__realtor realtor-page"><div class="realtor-page__card realtor-card"><div class="realtor-card__photo"><img class=" " src="/img/../img/rieltors/01.png" alt="../img/rieltors/01.png"/></div><div class="realtor-card__info"><span class="realtor-card__depart">Відділ продажу</span><h4 class="realtor-card__name">Роман Сурмачевський</h4><a class="realtor-card__phone" href="tel:+380633565234">0669159819</a></div></div><div class="realtor-page__block" id="realtor-task"><div class="realtor-page__icon"><svg class="svg-calendar "><use xlink:href="/img/icons-sprite/icons.svg#calendar"></use></svg></div><div class="realtor-page__text"><h4 class="realtor-page__title title-4">IV квартал 2020 року</h4><span class="realtor-page__label">Запланована здача</span></div></div><div class="realtor-page__block" id="developer"><div class="realtor-page__icon"><svg class="svg-safety "><use xlink:href="/img/icons-sprite/icons.svg#safety"></use></svg></div><div class="realtor-page__text"><h4 class="realtor-page__title title-4"> Ярковиця</h4><span class="realtor-page__label">Забудовник</span></div></div><div class="realtor-page__block" id="adress-building"><div class="realtor-page__icon"><svg class="svg-locate "><use xlink:href="/img/icons-sprite/icons.svg#locate"></use></svg></div><div class="realtor-section__text"><h4 class="realtor-page__title title-4"> вул. Мазепи, 164</h4><span class="realtor-page__label">Адреса будинку</span></div></div></div></div></div></div><div class="section__table table-block" id="apartment-table"><div class="section__container container"><h2 class="title">Оберіть квартиру</h2><div class="table-block__filter filter-table"><div class="filter-table__currency"><label class="input-pick"><input type="radio" name="currency" value="UAH"><span>uah</span></label><label class="input-pick"><input type="radio" name="currency" checked value="USD"><span>usd</span></label><label class="input-pick"><input type="radio" name="currency" value="EUR"><span>eur</span></label></div><div class="filter-table__info filter-table__update"><span class="filter-table__label">Останнє оновлення</span><span class="filter-table__value">23.07.2020</span></div><div class="filter-table__info filter-table__free"><span class="filter-table__label">Вільні квартири</span><span class="filter-table__value">35</span></div><div class="filter-table__rooms"><label class="input-pick"><input type="checkbox" checked name="room" value="1К"><span>1К</span></label><label class="input-pick"><input type="checkbox" name="room" value="2К"><span>2К</span></label><label class="input-pick"><input type="checkbox" name="room" value="3К"><span>3К</span></label><label class="input-pick"><input type="checkbox" name="room" value="4К+"><span>4К+</span></label></div></div><div class="table-block__table table"><div class="table__wrapper"><div class="table__header" style="width:1475px"><div class="table__cell table__menu menu-opener"><svg class="svg-table-menu "><use xlink:href="/img/icons-sprite/icons.svg#table-menu"></use></svg><ul class="table__submenu"><li><a href="#">Режим перегляду</a></li><li><a href="#">гРУПОВА ФІКСАЦІЯ ПОКАЗІВ</a></li><li><a href="#">гРУПОВЕ ДОДАВАННЯ В ЛІСТИНГ</a></li></ul></div><div class="table__cell" style="grid-column:span 4"><span>під'їзд 1</span></div><div class="table__cell" style="grid-column:span 4"><span>під'їзд 2</span></div><div class="table__cell" style="grid-column:span 4"><span>під'їзд 3</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span>1к</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span> 1к</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span>1к</span></div><div class="table__cell"><span>2к</span></div><div class="table__cell"><span>2к</span></div></div><div class="table__body" style="width:1475px"><div class="table__cell table__header-row"><span>Поверх 9</span></div><div class="table__cell"></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div><div class="table__cell"></div><div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell active inactive"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell table__header-row"><span>Поверх 8</span></div><div class="table__cell"></div><div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell booked inactive"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell active inactive"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell"></div><div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell table__header-row"><span>Поверх 7</span></div><div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell"></div><div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell table__header-row"><span>Поверх 6</span></div><div class="table__cell"></div><div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell table__header-row"><span>Поверх 5</span></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div><div class="table__cell"></div><div class="table__cell"></div><div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div></div></div></div></div></div></section><div class="booking-room modal modal_small" id="booking-room"><a class="modal-close" href="#!"><svg class="svg-close-modal "><use xlink:href="/img/icons-sprite/icons.svg#close-modal"></use></svg></a><div class="modal__container container"><h2 class="title title_3">Забронювати квартиру</h2><form class="form" id="booking-form"><div class="form__wrapper"><p><label class="label"><span>Деталі бронювання</span><textarea name="detailsBooking"></textarea></label></p><p><label class="label"><span>Ім’я та прізвище клієнта</span><input class="input" type="text" name="clientNameBooking"></label></p><p><label class="label"><span>Номер телефону клієнта</span><input class="input input-phone" type="text" name="clientPhoneBooking" placeholder="+38 (0--) "><span class="details">Код мобліьного оператора та номер без 3-х останніх цифр</span></label></p><p><label class="label"><span>До коли (макс. 2 дні)</span><input class="input datepicker-booking" type="text" name="deadLineBooking"></label></p></div><button class="button booking-room__btn" type="submit"><span>Забронювати</span></button></form></div></div></div><footer class="footer"><div class="footer__container container"><div class="footer__body"><div class="footer__header"><div class="footer__logo"><a href="/"><img class=" " src="/img/Logo-footer.svg" alt="Logo-footer.svg"/></a></div><ul class="footer__menu"><li><a href="#">Забудівники</a></li><li><a href="#">Житлові комплекси</a></li><li><a href="#">РЕЄСТРАЦІЯ</a></li></ul><div class="footer__contacts"><span>ГАРЯЧА ЛІНІЯ</span><a href="tel:+380666666666">+3 8067 575 75 77</a></div></div><div class="footer__copyright"><span class="footer__year">© 2008-2020 R2R.ua</span><div class="footer__dev"><span>розроблено</span><a href="https://dwave.space/" target="blank">D-wave studio</a></div></div></div></div></footer></div><script src="js/script.js"></script></body>
+<!-- insert icon from iconSprite=========================--><!--======================================================--><!--insert img tag========================================--><!--======================================================--><!DOCTYPE html><html lang="ua"><head>
+  <title>R2R</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style-vendors.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="apple-touch-icon" sizes="x" href="/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="overlay"></div>
+  <div class="wrapper">
+    <!-- $$ You can add class login to header-->
+    <header class="header page-block">
+      <div class="header__container container">
+        <div class="header__body"><a class="header__logo" href="/">
+            <picture>
+              <source srcset="/img/Logo.svg" type="image/webp"><img class=" " src="/img/Logo.svg" alt="Logo.svg">
+            </picture>
+          </a>
+          <nav class="header__menu">
+            <ul>
+              <li><a href="#">Забудовники</a></li>
+              <li><a href="#">Про нас</a></li>
+              <li><a href="#">Житлові комплекси</a></li>
+            </ul><a class="header__login button modal-trigger" href="#login-block"><span>Увійти</span><svg class="svg-login ">
+                <use href="/img/icons-sprite/icons.svg#login"/>
+              </svg></a>
+            <ul class="header__logout">
+              <li><a class="menu-opener" href="#"><img class=" " src="/img/rieltors/01.png" alt="rieltors/01.png"></a>
+                <ul class="header__logout-submenu">
+                  <li><a href="#">Редагувати профіль</a></li>
+                  <li><a href="#">Вийти</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav><a class="header__search button modal-trigger" href="#search-block"><span>Пошук</span><svg class="svg-search ">
+              <use href="/img/icons-sprite/icons.svg#search"/>
+            </svg></a>
+          <div class="header__burger"><svg class="svg-burger ">
+              <use href="/img/icons-sprite/icons.svg#burger"/>
+            </svg></div>
+        </div>
+      </div>
+    </header>
+    <div class="login-block modal modal_small" id="login-block"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+          <use href="/img/icons-sprite/icons.svg#close-modal"/>
+        </svg></a>
+      <div class="modal__container container">
+        <ul class="tabs">
+          <li class="tab"><a class="active" href="#registration">Реєстрація для ріелтора</a></li>
+          <li class="tab"><a href="#login-tab">Вхід</a></li>
+        </ul>
+        <div id="registration">
+          <form class="form" id="registration-form">
+            <div class="form__wrapper">
+              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="SignupForm[email]"></label></p>
+              <p><label class="label"><span>Повне ім’я та прізвище:</span><input class="input" type="text" name="SignupForm[r_name]"></label></p>
+              <p><label class="label"><span>Номер телефону:</span><input class="input input-full-phone" type="text" name="SignupForm[phone]" placeholder="+38 (0--)"></label></p>
+              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="SignupForm[password]"></label></p>
+            </div><button class="button booking-room__btn" type="submit"><span>Зареєструватись</span><svg class="svg-registration ">
+                <use href="/img/icons-sprite/icons.svg#registration"/>
+              </svg></button>
+          </form>
+        </div>
+        <div id="login-tab">
+          <form class="form" id="login-form">
+            <div class="form__wrapper">
+              <p><label class="label"><span>Елекстронна пошта:</span><input class="input" type="text" name="LoginForm[email]"></label></p>
+              <p><label class="label"><span>Пароль:</span><input class="input" type="password" name="LoginForm[password]"></label></p>
+              <p><label class="input-checkbox"><input type="checkbox" name="LoginForm[rememberMe]" value="true"><span>Запам’ятати мене</span></label></p>
+              <p><span class="form__info">Якщо ви забули пароль, ви може його</span><a class="link blue" href="#">відновити</a></p>
+            </div><button class="button booking-room__btn" type="submit"><span>Увійти</span><svg class="svg-login ">
+                <use href="/img/icons-sprite/icons.svg#login"/>
+              </svg></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="search modal" id="search-block"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+          <use href="/img/icons-sprite/icons.svg#close-modal"/>
+        </svg></a>
+      <div class="modal__container container">
+        <h2 class="modal__title title title_2">Пошук по квартирам</h2>
+        <form id="search-form">
+          <div class="search__options">
+            <div class="search__option search__room"><span>Кімнат:</span>
+              <div class="search__group"><label class="input-pick"><input type="checkbox" checked name="room" value="1К"><span>1К</span></label><label class="input-pick"><input type="checkbox" name="room" value="2К"><span>2К</span></label><label class="input-pick"><input type="checkbox" name="room" value="3К"><span>3К</span></label><label class="input-pick"><input type="checkbox" name="room" value="4К+"><span>4К+</span></label></div>
+            </div>
+            <div class="search__option search__floor"><span>Поверх:</span><input class="input" type="number" name="floorFrom" placeholder="від"><input class="input" type="number" name="floorTo" placeholder="до"></div>
+            <div class="search__option search__square"><span>Площа:</span><input class="input" type="number" name="squareFrom" placeholder="від"><input class="input" type="number" name="squareTo" placeholder="до"></div>
+            <div class="search__option search__price"><span>Ціна:</span><input class="input" type="number" name="priceFrom" placeholder="від"><input class="input" type="number" name="priceTo" placeholder="до"><select name="currencyForm">
+                <option>UAH</option>
+                <option>USD</option>
+                <option>EUR</option>
+              </select></div>
+            <div class="search__option search__terms"><span>Термін здачі:</span><select name="termsForm">
+                <option>до 2021 IV квартал</option>
+                <option>до 2020 II квартал</option>
+                <option>до 2022 V квартал</option>
+              </select></div>
+          </div>
+          <div class="search__block block-search filter__block">
+            <div class="block-search__header">
+              <h4 class="block-search__title title-4">Житловий комплекс</h4>
+              <div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div>
+            </div>
+            <div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="building" value="Мілленіум"><span>Мілленіум</span></label></div>
+          </div>
+          <div class="search__block block-search filter__block">
+            <div class="block-search__header">
+              <h4 class="block-search__title title-4">Район</h4>
+              <div class="block-search__control"><a class="select-all link green" href="#">Обрати всі</a><a class="reset-all link red" href="#">Скинути</a></div>
+            </div>
+            <div class="block-search__body"><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Житловий комплекс Sttk#3"><span>Житловий комплекс Sttk#3</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко паркове"><span>Містечко паркове</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Містечко липки"><span>Містечко липки</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="ЖК Park Residence"><span>ЖК Park Residence</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Опришківська слобода"><span>Опришківська слобода</span></label><label class="input-checkbox"><input type="checkbox" name="district" value="Мілленіум"><span>Мілленіум</span></label></div>
+          </div><button class="button block-search__btn" type="submit"><span>Шукати</span><svg class="svg-search ">
+              <use href="/img/icons-sprite/icons.svg#search"/>
+            </svg></button>
+        </form>
+      </div>
+    </div>
+    <div class="page">
+      <section class="section page-block">
+        <div class="section__container container">
+          <ul class="section__breadcrumbs breadcrumbs">
+            <li class="breadcumbs__item"><a href="#">Головна</a></li>
+            <li class="breadcumbs__item"><a href="#">Забудовники</a></li>
+            <li class="breadcumbs__item"><a href="#">Ярковиця</a></li>
+            <li class="breadcumbs__item"><a href="#">Містечко Липки Секція І</a></li>
+          </ul>
+          <div class="page__title-block">
+            <h1 class="title">Містечко Липки Секція І</h1>
+            <ul class="page__menu visible">
+              <li class="visible"><a class="menu-opener" href="#"><svg class="svg-settings ">
+                    <use href="/img/icons-sprite/icons.svg#settings"/>
+                  </svg></a>
+                <ul class="page__submenu">
+                  <li><a class="modal-trigger" href="#booking-room">Забронювати галіму квартиру</a></li>
+                  <li><a href="#">Редагувати інформацію</a></li>
+                  <li><a href="#">Редагувати фотогалерею</a></li>
+                  <li><a href="#">Додати звіт</a></li>
+                  <li class="line"><a href="#">додати підїзд</a></li>
+                  <li><a href="#">показати усім ріелторам</a></li>
+                  <li class="line"><a href="#">Закрити від усіх ріелторів</a></li>
+                  <li><a class="green" href="#">активувати</a></li>
+                  <li><a class="red" href="#">Деактивувати</a></li>
+                </ul>
+              </li>
+              <li class="visible"><a href="#apartment-table"><svg class="svg-table ">
+                    <use href="/img/icons-sprite/icons.svg#table"/>
+                  </svg></a></li>
+              <li class="visible"><a class="menu-opener" href="#"><svg class="svg-share ">
+                    <use href="/img/icons-sprite/icons.svg#share"/>
+                  </svg></a>
+                <ul class="page__submenu">
+                  <li><span>Поділитися</span>
+                    <div class="page__social"><a href="#"><svg class="svg-telegram ">
+                          <use href="/img/icons-sprite/icons.svg#telegram"/>
+                        </svg></a><a href="#"><svg class="svg-viber ">
+                          <use href="/img/icons-sprite/icons.svg#viber"/>
+                        </svg></a><a href="#"><svg class="svg-whatsapp ">
+                          <use href="/img/icons-sprite/icons.svg#whatsapp"/>
+                        </svg></a><a href="#"><svg class="svg-messenger ">
+                          <use href="/img/icons-sprite/icons.svg#messenger"/>
+                        </svg></a><a href="#"><svg class="svg-link-icon ">
+                          <use href="/img/icons-sprite/icons.svg#link-icon"/>
+                        </svg></a></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section__wrapper">
+          <div class="section__container container">
+            <div class="section__slider-block">
+              <div class="slider-section-single section__slider" id="lightgallery">
+                <div class="section__slider__item">
+                  <div class="item-gallery" data-src="../img/section-lupky/01.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"></div>
+                </div>
+                <div class="section__slider__item">
+                  <div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"></div>
+                </div>
+                <div class="section__slider__item">
+                  <div class="item-gallery" data-src="../img/section-lupky/03.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/03.jpeg" alt="../img/section-lupky/03.jpeg"></div>
+                </div>
+                <div class="section__slider__item">
+                  <div class="item-gallery" data-src="../img/section-lupky/04.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"></div>
+                </div>
+                <div class="section__slider__item">
+                  <div class="item-gallery" data-src="../img/section-lupky/05.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/05.jpeg" alt="../img/section-lupky/05.jpeg"></div>
+                </div>
+                <div class="section__slider__item">
+                  <div class="item-gallery" data-src="../img/section-lupky/01.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"></div>
+                </div>
+                <div class="section__slider__item">
+                  <div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"></div>
+                </div>
+              </div>
+              <div class="slider-section-nav section__slider">
+                <div class="section__slider__item" data-item="0"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"></div>
+                <div class="section__slider__item" data-item="1"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"></div>
+                <div class="section__slider__item" data-item="2"><img class=" " src="/img/../img/section-lupky/03.jpeg" alt="../img/section-lupky/03.jpeg"></div>
+                <div class="section__slider__item" data-item="3"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"></div>
+                <div class="section__slider__item" data-item="4"><img class=" " src="/img/../img/section-lupky/05.jpeg" alt="../img/section-lupky/05.jpeg"></div>
+                <div class="section__slider__item" data-item="5"><img class=" " src="/img/../img/section-lupky/01.jpeg" alt="../img/section-lupky/01.jpeg"></div>
+                <div class="section__slider__item" data-item="6"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__description page-description page-block">
+          <div class="section__container container">
+            <div class="page-description__body">
+              <div class="page-description__tabs tabs-page">
+                <div class="tabs-page__wrapper">
+                  <ul class="tabs">
+                    <li class="tab"><a class="active" href="#about">Про комплекс</a></li>
+                    <li class="tab"><a href="#options">Характеристики</a></li>
+                    <li class="tab"><a class="tab-slider-init" href="#course">Хід будівництва</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-page__content" id="about">
+                  <p>Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально. Життя в містечку «Липки» - це розумний вибір людей, які знаються на перевагах міського життя поблизу затишних місць відпочинку. Чудове розташування, розвинена інфраструктура, раціональне планування помешкань, підземний паркінг та безумовна надійність забудовника – в поєднанні з вигідною ціною – робить цей вибір по-справжньому вдалим. Місце, де зручно мешкати і відпочивати. Парк з підсвіткою – для тих, хто любить безпечні нічні прогулянки. Бато паркомісць, охорона та відеонагляд: безпека – понад усе! Авто у безпеці, а діти в першу чергу. Велика увага у містечку «Липки» приділена плануванню всіх без винятку житлових та комерційних приміщень. Тут нема зайвих квадратних метрів – натомість у кожній квартирі створено достатній життєвий простір і багато світла. Використання сучасних матеріалів забезпечують не лише комфорт та затишок, але й роблять проживання здоровим та емоційно приємним. Все продумано. Все раціонально.</p>
+                  <div class="tabs-page__btn"><svg class="svg-collapse ">
+                      <use href="/img/icons-sprite/icons.svg#collapse"/>
+                    </svg></div>
+                </div>
+                <div class="tabs-page__content" id="options">
+                  <div class="options">
+                    <div>
+                      <h4 class="options__title">Загальна інформація</h4>
+                      <ul>
+                        <li><span>Район:</span><span>ценрт</span></li>
+                        <li><span>Клас житла:</span><span>комфорт</span></li>
+                        <li><span>К-сть поверхів:</span><span>10</span></li>
+                        <li><span>К-сть підїздів:</span><span>40</span></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="options__title">Локація</h4>
+                      <ul>
+                        <li><span>Район:</span><span>ценрт</span></li>
+                        <li><span>Клас житла:</span><span>комфорт</span></li>
+                        <li><span>К-сть поверхів:</span><span>10</span></li>
+                        <li><span>К-сть будинків:</span><span>11</span></li>
+                        <li><span>К-сть підїздів:</span><span>40</span></li>
+                        <li><span>К-сть квартир:</span><span>150</span></li>
+                        <li><span>Ліфт:</span><span>якісний безшумний ліфт якісний безшумний ліфт якісний безшумний ліфт якісний безшумний ліфт</span></li>
+                        <li><span>Ціна за кв.м. (від - до):</span><span>13000</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tabs-page__btn"><svg class="svg-collapse ">
+                      <use href="/img/icons-sprite/icons.svg#collapse"/>
+                    </svg></div>
+                </div>
+                <div class="tabs-page__content" id="course">
+                  <div class="course-block">
+                    <div class="course-block__header">
+                      <div class="course-block__info"><span class="course-block__label">Звітність за</span><span class="course-block__date">23.07.2020</span></div>
+                      <div class="course-block__controls visible"><a class="course-block__btn button-2 visible" href="#">Редагувати<svg class="svg-edit ">
+                            <use href="/img/icons-sprite/icons.svg#edit"/>
+                          </svg></a><a class="course-block__btn button-2 visible" href="#">Редагувати фото<svg class="svg-edit-photo ">
+                            <use href="/img/icons-sprite/icons.svg#edit-photo"/>
+                          </svg></a></div>
+                    </div>
+                    <div class="course-block__content">
+                      <div class="course-block__slider tab-slider">
+                        <div class="tab-slider__item">
+                          <div class="item-gallery" data-src="https://www.youtube.com/watch?v=pU0RAQWM4SI" data-sub-html="text"><iframe type="text/html" width="100%" height="100%" autoplay="0" src="https://www.youtube.com/embed/pU0RAQWM4SI"></iframe></div>
+                        </div>
+                        <div class="tab-slider__item">
+                          <div class="item-gallery" data-src="../img/section-lupky/04.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"></div>
+                        </div>
+                        <div class="tab-slider__item">
+                          <div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="course-block">
+                    <div class="course-block__header">
+                      <div class="course-block__info"><span class="course-block__label">Звітність за</span><span class="course-block__date">23.07.2020</span></div>
+                      <div class="course-block__controls visible"><a class="course-block__btn button-2 visible" href="#">Редагувати<svg class="svg-edit ">
+                            <use href="/img/icons-sprite/icons.svg#edit"/>
+                          </svg></a><a class="course-block__btn button-2 visible" href="#">Редагувати фото<svg class="svg-edit-photo ">
+                            <use href="/img/icons-sprite/icons.svg#edit-photo"/>
+                          </svg></a></div>
+                    </div>
+                    <div class="course-block__content">
+                      <div class="course-block__slider tab-slider">
+                        <div class="tab-slider__item">
+                          <div class="item-gallery" data-src="../img/section-lupky/03.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/03.jpeg" alt="../img/section-lupky/03.jpeg"></div>
+                        </div>
+                        <div class="tab-slider__item">
+                          <div class="item-gallery" data-src="../img/section-lupky/04.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/04.jpeg" alt="../img/section-lupky/04.jpeg"></div>
+                        </div>
+                        <div class="tab-slider__item">
+                          <div class="item-gallery" data-src="../img/section-lupky/02.jpeg" data-sub-html="text"><img class=" " src="/img/../img/section-lupky/02.jpeg" alt="../img/section-lupky/02.jpeg"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs-page__btn"><svg class="svg-collapse ">
+                      <use href="/img/icons-sprite/icons.svg#collapse"/>
+                    </svg></div>
+                </div>
+              </div>
+              <div class="description-section__realtor realtor-page">
+                <div class="realtor-page__card realtor-card">
+                  <div class="realtor-card__photo"><img class=" " src="/img/../img/rieltors/01.png" alt="../img/rieltors/01.png"></div>
+                  <div class="realtor-card__info"><span class="realtor-card__depart">Відділ продажу</span>
+                    <h4 class="realtor-card__name">Роман Сурмачевський</h4><a class="realtor-card__phone" href="tel:+380633565234">0669159819</a>
+                  </div>
+                </div>
+                <div class="realtor-page__block" id="realtor-task">
+                  <div class="realtor-page__icon"><svg class="svg-calendar ">
+                      <use href="/img/icons-sprite/icons.svg#calendar"/>
+                    </svg></div>
+                  <div class="realtor-page__text">
+                    <h4 class="realtor-page__title title-4">IV квартал 2020 року</h4><span class="realtor-page__label">Запланована здача</span>
+                  </div>
+                </div>
+                <div class="realtor-page__block" id="developer">
+                  <div class="realtor-page__icon"><svg class="svg-safety ">
+                      <use href="/img/icons-sprite/icons.svg#safety"/>
+                    </svg></div>
+                  <div class="realtor-page__text">
+                    <h4 class="realtor-page__title title-4"> Ярковиця</h4><span class="realtor-page__label">Забудовник</span>
+                  </div>
+                </div>
+                <div class="realtor-page__block" id="adress-building">
+                  <div class="realtor-page__icon"><svg class="svg-locate ">
+                      <use href="/img/icons-sprite/icons.svg#locate"/>
+                    </svg></div>
+                  <div class="realtor-section__text">
+                    <h4 class="realtor-page__title title-4"> вул. Мазепи, 164</h4><span class="realtor-page__label">Адреса будинку</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__table table-block" id="apartment-table">
+          <div class="section__container container">
+            <h2 class="title">Оберіть квартиру</h2>
+            <div class="table-block__filter filter-table">
+              <div class="filter-table__currency"><label class="input-pick"><input type="radio" name="currency" value="UAH"><span>uah</span></label><label class="input-pick"><input type="radio" name="currency" checked value="USD"><span>usd</span></label><label class="input-pick"><input type="radio" name="currency" value="EUR"><span>eur</span></label></div>
+              <div class="filter-table__info filter-table__update"><span class="filter-table__label">Останнє оновлення</span><span class="filter-table__value">23.07.2020</span></div>
+              <div class="filter-table__info filter-table__free"><span class="filter-table__label">Вільні квартири</span><span class="filter-table__value">35</span></div>
+              <div class="filter-table__rooms"><label class="input-pick"><input type="checkbox" checked name="room" value="1К"><span>1К</span></label><label class="input-pick"><input type="checkbox" name="room" value="2К"><span>2К</span></label><label class="input-pick"><input type="checkbox" name="room" value="3К"><span>3К</span></label><label class="input-pick"><input type="checkbox" name="room" value="4К+"><span>4К+</span></label></div>
+            </div>
+            <div class="table-block__table table">
+              <div class="table__wrapper">
+                <div class="table__header" style="width:1475px">
+                  <div class="table__cell table__menu menu-opener"><svg class="svg-table-menu ">
+                      <use href="/img/icons-sprite/icons.svg#table-menu"/>
+                    </svg>
+                    <ul class="table__submenu">
+                      <li><a href="#">Режим перегляду</a></li>
+                      <li><a href="#">гРУПОВА ФІКСАЦІЯ ПОКАЗІВ</a></li>
+                      <li><a href="#">гРУПОВЕ ДОДАВАННЯ В ЛІСТИНГ</a></li>
+                    </ul>
+                  </div>
+                  <div class="table__cell" style="grid-column:span 4"><span>під'їзд 1</span></div>
+                  <div class="table__cell" style="grid-column:span 4"><span>під'їзд 2</span></div>
+                  <div class="table__cell" style="grid-column:span 4"><span>під'їзд 3</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span>1к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span> 1к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span>1к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                  <div class="table__cell"><span>2к</span></div>
+                </div>
+                <div class="table__body" style="width:1475px">
+                  <div class="table__cell table__header-row"><span>Поверх 9</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell active inactive"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell table__header-row"><span>Поверх 8</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell booked inactive"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell active inactive"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell table__header-row"><span>Поверх 7</span></div>
+                  <div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell table__header-row"><span>Поверх 6</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell soled"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell table__header-row"><span>Поверх 5</span></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Переуступка</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell booked"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span><span class="table__status">Завдаток</span></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell"></div>
+                  <div class="table__cell active"><span class="table__square">64.50 м2</span><span class="table__price">837 000 $</span><span class="table__type">Дворівнева</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="booking-room modal modal_small" id="booking-room"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+            <use href="/img/icons-sprite/icons.svg#close-modal"/>
+          </svg></a>
+        <div class="modal__container container">
+          <h2 class="title title_3">Забронювати квартиру</h2>
+          <form class="form" id="booking-form">
+            <div class="form__wrapper">
+              <p><label class="label"><span>Деталі бронювання</span><textarea name="detailsBooking"></textarea></label></p>
+              <p><label class="label"><span>Ім’я та прізвище клієнта</span><input class="input" type="text" name="clientNameBooking"></label></p>
+              <p><label class="label"><span>Номер телефону клієнта</span><input class="input input-phone" type="text" name="clientPhoneBooking" placeholder="+38 (0--) "><span class="details">Код мобліьного оператора та номер без 3-х останніх цифр</span></label></p>
+              <p><label class="label"><span>До коли (макс. 2 дні)</span><input class="input datepicker-booking" type="text" name="deadLineBooking"></label></p>
+            </div><button class="button booking-room__btn" type="submit"><span>Забронювати</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__body">
+          <div class="footer__header">
+            <div class="footer__logo"><a href="/"><img class=" " src="/img/Logo-footer.svg" alt="Logo-footer.svg"></a></div>
+            <ul class="footer__menu">
+              <li><a href="#">Забудівники</a></li>
+              <li><a href="#">Житлові комплекси</a></li>
+              <li><a href="#">РЕЄСТРАЦІЯ</a></li>
+            </ul>
+            <div class="footer__contacts"><span>ГАРЯЧА ЛІНІЯ</span><a href="tel:+380666666666">+3 8067 575 75 77</a></div>
+          </div>
+          <div class="footer__copyright"><span class="footer__year">© 2008-2020 R2R.ua</span>
+            <div class="footer__dev"><span>розроблено</span><a href="https://dwave.space/" target="blank">D-wave studio</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body></html>
