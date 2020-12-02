@@ -11,6 +11,7 @@ import './modules/table';
 import './modules/form';
 //import './modules/scrollBar';
 import $ from "jquery";
+import "jquery";
 import 'slick-carousel';
 import './modules/validate';
 
@@ -294,15 +295,18 @@ window.addEventListener('DOMContentLoaded', () => {
   //orientation change
 
   // Прослушка события смены ориентации
-  window.addEventListener("orientationchange", function() {
-    const windowWidth =window.innerWidth;
-    const errorBlock = document.querySelector('#error-rotate');
-    if(windowWidth < 500){
-      errorBlock.classList.add('active');
-    }else {
-      errorBlock.classList.remove('active');
-    }
-  }, false);
+  if(document.querySelectorAll('.header-main').length > 0) {
+    window.addEventListener("orientationchange", function() {
+      const windowWidth =window.innerWidth;
+      const errorBlock = document.querySelector('#error-rotate');
+      if(windowWidth < 500){
+        errorBlock.classList.add('active');
+      }else {
+        errorBlock.classList.remove('active');
+      }
+    }, false);
+  }
+
 
 })
 
