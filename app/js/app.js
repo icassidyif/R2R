@@ -156,14 +156,28 @@ window.addEventListener('DOMContentLoaded', () => {
           link2.classList.remove('active');
         }
       })
+      tableSubmenu.classList.remove('active');
     })
   })
   document.addEventListener('click', e => {
     menuOpeners.forEach(link => {
       link.classList.remove('active');
     })
+    tableSubmenu.classList.remove('active');
   })
   // EndSub menu
+  // tablesubMenu
+  const tableMenuOpener = document.querySelector('.table__menu');
+  const tableSubmenu = document.querySelector('.table__submenu');
+  tableMenuOpener.addEventListener('click', e => {
+    e.stopPropagation();
+    e.preventDefault();
+    tableSubmenu.classList.toggle('active');
+    menuOpeners.forEach(link => {
+      link.classList.remove('active');
+    })
+  })
+  // EndtablesubMenu
 
   // collapse
 
@@ -282,12 +296,22 @@ window.addEventListener('DOMContentLoaded', () => {
   let maxDay = new Date();
   maxDay.setDate(maxDay.getDate() + 2);
 
+
+  // var myDatepicker = $('#my-elem').datepicker().data('datepicker');
+  // myDatepicker.show();
+
+
+
   $('.datepicker-booking').datepicker({
     autoClose: true,
     language: 'ua',
     minDate: minDay,
     maxDate: maxDay,
-  })
+  });
+
+  let bookingDatePicker = $('.datepicker-booking').datepicker().data('datepicker');
+  bookingDatePicker.selectDate(minDay);
+
   // End DatePicker
 
 
@@ -309,10 +333,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 })
-
-
-
-
 
 
 

@@ -283,15 +283,15 @@ section.section.page-block
       .table-block__table.table
         .table__wrapper
           .table__header(style='width:1475px')
-            .table__cell.table__menu.menu-opener
+            .table__cell.table__menu
               +icon('table-menu')
-              ul.table__submenu
-                li
-                  a(href='#') Режим перегляду
-                li
-                  a(href='#') гРУПОВА ФІКСАЦІЯ ПОКАЗІВ
-                li
-                  a(href='#') гРУПОВЕ ДОДАВАННЯ В ЛІСТИНГ
+              //ul.table__submenu
+              //  li
+              //    a(href='#') Режим перегляду
+              //  li
+              //    a(href='#') гРУПОВА ФІКСАЦІЯ ПОКАЗІВ
+              //  li
+              //    a(href='#') гРУПОВЕ ДОДАВАННЯ В ЛІСТИНГ
             .table__cell(style='grid-column:span 4')
               span під'їзд 1
             .table__cell(style='grid-column:span 4')
@@ -327,22 +327,22 @@ section.section.page-block
             .table__cell.table__header-row
               span Поверх 9
             .table__cell
-            .table__cell.active
+            a(href='#').table__cell.active
               span.table__square 64.50 м2
               span.table__price 837 000 $
               span.table__type Дворівнева
               span.table__status Переуступка
-            .table__cell.booked
+            a(href='#').table__cell.booked
               span.table__square 64.50 м2
               span.table__price 837 000 $
               span.table__type Дворівнева
               span.table__status Завдаток
-            .table__cell.active
+            a(href='#').table__cell.active
               span.table__square 64.50 м2
               span.table__price 837 000 $
               span.table__type Дворівнева
-            .table__cell
-            .table__cell.booked
+            a(href='#').table__cell
+            a(href='#').table__cell.booked
               span.table__square 64.50 м2
               span.table__price 837 000 $
               span.table__type Дворівнева
@@ -498,6 +498,15 @@ section.section.page-block
               span.table__price 837 000 $
               span.table__type Дворівнева
 
+
+
+        ul.table__submenu
+          li
+            a(href='#') Режим перегляду
+          li
+            a(href='#') гРУПОВА ФІКСАЦІЯ ПОКАЗІВ
+          li
+            a(href='#') гРУПОВЕ ДОДАВАННЯ В ЛІСТИНГ
 
 
 

@@ -12,13 +12,19 @@ import {filterFlatData} from "./function";
 
 $(document).ready(function(){
 
-
   $(".input-phone").mask("+38 (999) 999-9*-**");
   $(".input-full-phone").mask("+38 (999) 999-99-99");
 
   $.validator.addMethod('customPhone', function (value, element) {
     return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(value);
   }, "Please enter a valid phone number");
+
+  $.validator.addMethod('uaPhone', function (value, element) {
+    return this.optional(element) || /^\+38 (\(0(39|50|63|66|67|68|91|92|93|94|95|96|97|98|99| 73)\) [0-9]{3}\-[0-9]{1}\*\-\*\*)$/g.test(value);
+  }, "Please enter a valid phone number");
+
+
+
 
   let tagCheckRE = new RegExp("(\\w+)(\\s+)(\\w+)");
   $.validator.addMethod("twoWords", function(value, element) {
@@ -283,6 +289,8 @@ $(document).ready(function(){
       },
       clientPhoneBooking: {
         required: true,
+        uaPhone: true
+        //minlength: 6
       },
       deadLineBooking: {
         required: true,
@@ -297,19 +305,21 @@ $(document).ready(function(){
       },
       clientPhoneBooking: {
         required: "Це обов\'язкове поле",
+        minlength: "Номер надто короткий",
       },
       deadLineBooking: {
         required: "Це обов\'язкове поле",
       }
     },
     submitHandler: function (form) {
-      let formData = $(form).serializeArray();
-      bookingData(formData);
-      form.reset();
-      const modal = document.querySelector('.booking-room');
-      const modalInst = M.Modal.getInstance(modal);
-      modalInst.close();
-      M.toast({html: 'Квартира заброньована!'});
+      //let formData = $(form).serializeArray();
+      //bookingData(formData);
+      //form.reset();
+      //const modal = document.querySelector('.booking-room');
+      //const modalInst = M.Modal.getInstance(modal);
+      //modalInst.close();
+      //M.toast({html: 'Квартира заброньована!'});
+      form.submit();
     }
   });
 
@@ -321,7 +331,7 @@ $(document).ready(function(){
       },
       'SignupForm[r_name]': {
         required: true,
-        twoWords: true
+        minlength: 3
       },
       'SignupForm[phone]': {
         required: true,
@@ -339,7 +349,8 @@ $(document).ready(function(){
       },
       'SignupForm[r_name]': {
         required: "Це обов\'язкове поле",
-        twoWords: 'Вкажіть ім\'я та прізвище'
+        minlength: "Надто коротке значення",
+        // twoWords: 'Вкажіть ім\'я та прізвище'
       },
       'SignupForm[phone]': {
         required: "Це обов\'язкове поле",
