@@ -146,6 +146,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Sub menu
   //const sectionMenuLinks = document.querySelectorAll('.section__menu > li > a');
   const menuOpeners = document.querySelectorAll('.menu-opener');
+
+  const tableMenuOpener = document.querySelector('.table__menu');
+  const tableSubmenu = document.querySelector('.table__submenu');
+
+
   menuOpeners.forEach(link => {
     link.addEventListener('click', e => {
       e.stopPropagation();
@@ -156,27 +161,33 @@ window.addEventListener('DOMContentLoaded', () => {
           link2.classList.remove('active');
         }
       })
-      tableSubmenu.classList.remove('active');
+      if(document.querySelectorAll('.table').length){
+        tableSubmenu.classList.remove('active');
+      }
     })
   })
   document.addEventListener('click', e => {
     menuOpeners.forEach(link => {
       link.classList.remove('active');
     })
-    tableSubmenu.classList.remove('active');
+    if(document.querySelectorAll('.table').length){
+      tableSubmenu.classList.remove('active');
+    }
   })
   // EndSub menu
   // tablesubMenu
-  const tableMenuOpener = document.querySelector('.table__menu');
-  const tableSubmenu = document.querySelector('.table__submenu');
-  tableMenuOpener.addEventListener('click', e => {
-    e.stopPropagation();
-    e.preventDefault();
-    tableSubmenu.classList.toggle('active');
-    menuOpeners.forEach(link => {
-      link.classList.remove('active');
+  if(document.querySelectorAll('.table').length) {
+
+    tableMenuOpener.addEventListener('click', e => {
+      e.stopPropagation();
+      e.preventDefault();
+      tableSubmenu.classList.toggle('active');
+      menuOpeners.forEach(link => {
+        link.classList.remove('active');
+      })
     })
-  })
+  }
+
   // EndtablesubMenu
 
   // collapse
@@ -300,17 +311,19 @@ window.addEventListener('DOMContentLoaded', () => {
   // var myDatepicker = $('#my-elem').datepicker().data('datepicker');
   // myDatepicker.show();
 
+  if(document.querySelectorAll('.datepicker-booking').length) {
+    $('.datepicker-booking').datepicker({
+      autoClose: true,
+      language: 'ua',
+      minDate: minDay,
+      maxDate: maxDay,
+    });
+
+    let bookingDatePicker = $('.datepicker-booking').datepicker().data('datepicker');
+    bookingDatePicker.selectDate(minDay);
+  }
 
 
-  $('.datepicker-booking').datepicker({
-    autoClose: true,
-    language: 'ua',
-    minDate: minDay,
-    maxDate: maxDay,
-  });
-
-  let bookingDatePicker = $('.datepicker-booking').datepicker().data('datepicker');
-  bookingDatePicker.selectDate(minDay);
 
   // End DatePicker
 

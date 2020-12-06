@@ -1,0 +1,106 @@
+.list-flats
+  &__body
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
+
+  .card-search
+    &__title
+      height: 1em
+      //margin: 0 0 10px 0
+      margin: 14px 0 10px 0
+      padding: 0 20px 0 20px
+      display: block
+    &__content
+    &__info
+      padding: 0 20px 14px 20px
+      grid-row-gap: 10px
+    &__label
+      font-size: 12px
+      line-height: 14px
+    &__button
+      font-size: 12px
+      line-height: 14px
+
+
+
+
+.rieltor-list-flats
+  margin: 0 0 30px 0
+  +breakpoint(sm)
+    margin: 0 0 45px 0
+  &__body
+    display: grid
+    grid-row-gap: 15px
+    grid-template-columns: 1fr
+    +breakpoint(415)
+      grid-row-gap: 20px
+      grid-column-gap: 30px
+      grid-template-columns: minmax(max-content, 195px) minmax(max-content, 160px)
+    +breakpoint(sm)
+      grid-template-columns: minmax(max-content, 245px) minmax(max-content, 172px)
+    +breakpoint(830)
+      grid-template-columns: minmax(max-content, 290px) minmax(max-content, 245px) 175px
+  &__block
+    height: 100%
+    display: flex
+    align-items: center
+    +breakpoint(415)
+      &:not(:last-child):not(:first-child)
+        border-style: solid
+        border-width: 0 6px 0 0
+        border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+        padding: 0 24px 0 0
+    +breakpoint(830)
+      &:not(:last-child)
+        border-style: solid
+        border-width: 0 6px 0 0
+        border-image: url('../img/Rectangle.svg') 6 6 6 6 round round
+        padding: 0 24px 0 0
+    &_rieltor
+      +breakpoint(415)
+        grid-column: span 2
+      +breakpoint(830)
+        grid-column: unset
+      .rieltor-list-flats__value
+        font-weight: 500
+  &__content
+    display: grid
+    grid-row-gap: 5px
+    grid-template-columns: minmax(18px, min-content) 1fr
+    grid-column-gap: 15px
+    +breakpoint(sm)
+      grid-template-columns: minmax(25px, min-content) 1fr
+      grid-row-gap: 7px
+      grid-column-gap: 20px
+
+
+  &__photo
+    position: relative
+    width: 75px
+    height: 75px
+    grid-row: span 2
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__icon
+    grid-row: span 2
+  &__label
+    font-size: 14px
+    line-height: 16px
+    color: $dark-grey
+    align-self: start
+  &__value, a
+    color: $text-color
+    font-size: 14px
+    line-height: 16px
+    font-weight: 700
+    align-self: end
+    +breakpoint(sm)
+      font-size: 18px
+      line-height: 21px
+
+
+
