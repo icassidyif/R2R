@@ -186,16 +186,17 @@ window.addEventListener('DOMContentLoaded', () => {
         link.classList.remove('active');
       })
     })
+
     // close submenu when click on link of
+
     const linksTableSubmenus = tableSubmenu.querySelectorAll('a');
     linksTableSubmenus.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
         tableSubmenu.classList.remove('active');
-
+        console.log('Cassidy CODE');
       })
     })
-
   }
 
   // EndtablesubMenu
