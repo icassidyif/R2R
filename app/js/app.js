@@ -190,6 +190,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const linksTableSubmenus = tableSubmenu.querySelectorAll('a');
     linksTableSubmenus.forEach(link => {
       link.addEventListener('click', e => {
+        e.preventDefault();
         tableSubmenu.classList.remove('active');
 
       })
@@ -315,8 +316,6 @@ window.addEventListener('DOMContentLoaded', () => {
   let minDay = new Date();
   let maxDay = new Date();
   maxDay.setDate(maxDay.getDate() + 2);
-
-
   // var myDatepicker = $('#my-elem').datepicker().data('datepicker');
   // myDatepicker.show();
 
