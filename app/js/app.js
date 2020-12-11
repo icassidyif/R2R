@@ -194,7 +194,6 @@ window.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', e => {
         e.preventDefault();
         tableSubmenu.classList.remove('active');
-        console.log('Cassidy CODE');
       })
     })
   }
