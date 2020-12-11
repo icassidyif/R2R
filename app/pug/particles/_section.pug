@@ -512,7 +512,7 @@ section.section.page-block
 
 
 #booking-room.booking-room.modal.modal_small
-  a(href='#!').modal-close
+  a(href='#!').modal-close.close-window
     +icon('close-modal')
   .modal__container.container
     h2.title.title_3 Забронювати квартиру
@@ -534,7 +534,7 @@ section.section.page-block
         p
           label.label
             span До коли (макс. 2 дні)
-            input(type='text' name='deadLineBooking').input.datepicker-booking
+            input(type='text' name='deadLineBooking' readonly="readonly").input.datepicker-booking
 
       button(type='submit').button.booking-room__btn
         span Забронювати

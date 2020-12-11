@@ -12,7 +12,20 @@ import {filterFlatData} from "./function";
 
 $(document).ready(function(){
 
-  $(".input-phone").mask("+38 (999) 999-9*-**");
+  let options =  {
+    onComplete: function(cep, e, field, options) {
+      let masks = ["+38 (999) 999-9", "+38 (999) 999-9*-**"];
+      let mask= '';
+      if(cep.length===15) {
+        mask =  masks[1];
+        $('.input-phone').val(cep + '*-**');
+      }else {
+        mask = masks[0];
+      }
+      $('.input-phone').mask(mask, options);
+    }};
+
+  $(".input-phone").mask("+38 (999) 999-9", options);
   $(".input-full-phone").mask("+38 (999) 999-99-99");
 
   $.validator.addMethod('customPhone', function (value, element) {
@@ -24,13 +37,10 @@ $(document).ready(function(){
   }, "Please enter a valid phone number");
 
 
-
-
   let tagCheckRE = new RegExp("(\\w+)(\\s+)(\\w+)");
   $.validator.addMethod("twoWords", function(value, element) {
     return tagCheckRE.test(value);
   }, "At least two words.");
-
 
 
   $('#search-form').validate({
@@ -306,6 +316,7 @@ $(document).ready(function(){
       clientPhoneBooking: {
         required: "Це обов\'язкове поле",
         minlength: "Номер надто короткий",
+        uaPhone: "Введіть коректний номер телефону"
       },
       deadLineBooking: {
         required: "Це обов\'язкове поле",
@@ -322,6 +333,7 @@ $(document).ready(function(){
       form.submit();
     }
   });
+
 
   $('#registration-form').validate({
     rules: {
@@ -406,6 +418,5 @@ $(document).ready(function(){
       form.submit();
     }
   });
-
 
 })

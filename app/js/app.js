@@ -186,6 +186,15 @@ window.addEventListener('DOMContentLoaded', () => {
         link.classList.remove('active');
       })
     })
+    // close submenu when click on link of
+    const linksTableSubmenus = tableSubmenu.querySelectorAll('a');
+    linksTableSubmenus.forEach(link => {
+      link.addEventListener('click', e => {
+        tableSubmenu.classList.remove('active');
+
+      })
+    })
+
   }
 
   // EndtablesubMenu

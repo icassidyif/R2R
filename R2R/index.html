@@ -49,7 +49,7 @@
         </div>
       </div>
     </header>
-    <div class="login-block modal modal_small" id="login-block"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+    <div class="login-block modal modal_small" id="login-block"><a class="modal-close close-window" href="#!"><svg class="svg-close-modal ">
           <use href="/img/icons-sprite/icons.svg#close-modal"/>
         </svg></a>
       <div class="modal__container container">
@@ -83,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="search modal" id="search-block"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+    <div class="search modal" id="search-block"><a class="modal-close close-window" href="#!"><svg class="svg-close-modal ">
           <use href="/img/icons-sprite/icons.svg#close-modal"/>
         </svg></a>
       <div class="modal__container container">
@@ -459,7 +459,7 @@
           </div>
         </div>
       </section>
-      <div class="booking-room modal modal_small" id="booking-room"><a class="modal-close" href="#!"><svg class="svg-close-modal ">
+      <div class="booking-room modal modal_small" id="booking-room"><a class="modal-close close-window" href="#!"><svg class="svg-close-modal ">
             <use href="/img/icons-sprite/icons.svg#close-modal"/>
           </svg></a>
         <div class="modal__container container">
@@ -469,7 +469,7 @@
               <p><label class="label"><span>Деталі бронювання</span><textarea name="detailsBooking"></textarea></label></p>
               <p><label class="label"><span>Ім’я та прізвище клієнта</span><input class="input" type="text" name="clientNameBooking"></label></p>
               <p><label class="label"><span>Номер телефону клієнта</span><input class="input input-phone" type="text" name="clientPhoneBooking" placeholder="+38 (0--) "><span class="details">Код мобліьного оператора та номер без 3-х останніх цифр</span></label></p>
-              <p><label class="label"><span>До коли (макс. 2 дні)</span><input class="input datepicker-booking" type="text" name="deadLineBooking"></label></p>
+              <p><label class="label"><span>До коли (макс. 2 дні)</span><input class="input datepicker-booking" type="text" name="deadLineBooking" readonly="readonly"></label></p>
             </div><button class="button booking-room__btn" type="submit"><span>Забронювати</span></button>
           </form>
         </div>
