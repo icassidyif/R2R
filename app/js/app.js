@@ -313,26 +313,36 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   // $$ change available range of days
-  let minDay = new Date();
-  let maxDay = new Date();
-  maxDay.setDate(maxDay.getDate() + 2);
-  // var myDatepicker = $('#my-elem').datepicker().data('datepicker');
-  // myDatepicker.show();
-
   if(document.querySelectorAll('.datepicker-booking').length) {
-    $('.datepicker-booking').datepicker({
-      autoClose: true,
-      language: 'ua',
-      minDate: minDay,
-      maxDate: maxDay,
-    });
+    let minDay = new Date();
+    let maxDay;
 
-    let bookingDatePicker = $('.datepicker-booking').datepicker().data('datepicker');
-    bookingDatePicker.selectDate(minDay);
+    const dataPickers = document.querySelectorAll('.datepicker-booking');
+    dataPickers.forEach(dataPicker => {
+      maxDay = new Date();
+      maxDay.setDate(maxDay.getDate());
+      if(dataPicker.classList.contains('max2')) {
+        maxDay = new Date();
+        maxDay.setDate(maxDay.getDate() + 2);
+      } else if(dataPicker.classList.contains('max60')) {
+        maxDay = new Date();
+        maxDay.setDate(maxDay.getDate() + 60);
+      }
+      $(dataPicker).datepicker({
+        autoClose: true,
+        language: 'ua',
+        minDate: minDay,
+        maxDate: maxDay,
+      });
+
+      let bookingDatePicker = $(dataPicker).datepicker().data('datepicker');
+      bookingDatePicker.selectDate(minDay);
+    })
+
+
+
+
   }
-
-
-
   // End DatePicker
 
 

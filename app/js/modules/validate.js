@@ -419,4 +419,155 @@ $(document).ready(function(){
     }
   });
 
+
+
+
+  $('#id12').validate({
+    rules: {
+      detailsBooking: {
+        required: true,
+      },
+      clientNameBooking: {
+        required: true,
+      },
+      clientPhoneBooking: {
+        required: true,
+        uaPhone: true
+      },
+      deadLineBooking: {
+        required: true,
+      }
+    },
+    messages: {
+      detailsBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientNameBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientPhoneBooking: {
+        required: "Це обов\'язкове поле",
+        minlength: "Номер надто короткий",
+        uaPhone: "Введіть коректний номер телефону"
+      },
+      deadLineBooking: {
+        required: "Це обов\'язкове поле",
+      }
+    },
+    submitHandler: function (form) {
+      form.submit();
+    }
+  });
+
+  $('#id13').validate({
+    rules: {
+      detailsBooking: {
+        required: true,
+      },
+      clientNameBooking: {
+        required: true,
+      },
+      clientPhoneBooking: {
+        required: true,
+        uaPhone: true
+      },
+      deadLineBooking: {
+        required: true,
+      }
+    },
+    messages: {
+      detailsBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientNameBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientPhoneBooking: {
+        required: "Це обов\'язкове поле",
+        minlength: "Номер надто короткий",
+        uaPhone: "Введіть коректний номер телефону"
+      },
+      deadLineBooking: {
+        required: "Це обов\'язкове поле",
+      }
+    },
+    submitHandler: function (form) {
+      form.submit();
+    }
+  });
+
+  $('#id14').validate({
+    rules: {
+      detailsBooking: {
+        required: true,
+      },
+      clientNameBooking: {
+        required: true,
+      },
+      clientPhoneBooking: {
+        required: true,
+        uaPhone: true
+      },
+      deadLineBooking: {
+        required: true,
+      }
+    },
+    messages: {
+      detailsBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientNameBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientPhoneBooking: {
+        required: "Це обов\'язкове поле",
+        minlength: "Номер надто короткий",
+        uaPhone: "Введіть коректний номер телефону"
+      },
+      deadLineBooking: {
+        required: "Це обов\'язкове поле",
+      }
+    },
+    submitHandler: function (form) {
+      form.submit();
+    }
+  });
+
+  $('#id15').validate({
+    rules: {
+      detailsBooking: {
+        required: true,
+      },
+      clientNameBooking: {
+        required: true,
+      },
+      clientPhoneBooking: {
+        required: true,
+        uaPhone: true
+      },
+      deadLineBooking: {
+        required: true,
+      }
+    },
+    messages: {
+      detailsBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientNameBooking: {
+        required: 'Це обов\'язкове поле',
+      },
+      clientPhoneBooking: {
+        required: "Це обов\'язкове поле",
+        minlength: "Номер надто короткий",
+        uaPhone: "Введіть коректний номер телефону"
+      },
+      deadLineBooking: {
+        required: "Це обов\'язкове поле",
+      }
+    },
+    submitHandler: function (form) {
+      form.submit();
+    }
+  });
+
 })
