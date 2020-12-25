@@ -27,7 +27,7 @@ const cheerio = require('gulp-cheerio');
 const FAVICON_DATA_FILE = 'faviconData.json';
 
 //configurations
-const isProd = true;
+const isProd = false;
 const isDev = !isProd;
 const projectFolder = require('path').basename(__dirname);
 const sourceFolder = 'app';
@@ -76,10 +76,19 @@ const webpackConfig = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: '/node_modules/',
+        exclude: '/node_modules/'
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name: 'vendors'
+    }
   }
+  // externals: {
+  //   jquery: 'jQuery'
+  // }
 }
 // end configurations
 
@@ -218,11 +227,13 @@ function imgCompiler() {
 }
 function htmlCompiler() {
   return src(path.app.html)
-    .pipe(pug())
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(webpHTML())
-    .pipe(gulpIf(isProd, prettyHtml({
+    .pipe(prettyHtml({
       indent_size: 2
-    })))
+    }))
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());
 }
@@ -274,6 +285,7 @@ function otfToTtf() {
     }))
     .pipe(dest(path.app.fonts))
 }
+
 function nothing(cb) {
   cb();
 }
